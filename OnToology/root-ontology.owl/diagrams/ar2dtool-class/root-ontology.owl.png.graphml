@@ -2066,6 +2066,29 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_18fe81b2:16971bf7b95:-7ffa">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ffa</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdf:rest88" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7ffa">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_storage-reliability-ontology:SCSIDisk">
          <data key="d0">
             <y:ShapeNode>
@@ -2078,7 +2101,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom88" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDisk">
+    <edge id="eid_owl:someValuesFrom89" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDisk">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2101,7 +2124,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom89" source="nid_NULL" target="nid_storage-reliability-ontology:UserConnectionLost">
+    <edge id="eid_owl:someValuesFrom90" source="nid_NULL" target="nid_storage-reliability-ontology:UserConnectionLost">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2124,7 +2147,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom90" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#6AccumulatedLoad-UnloadCycles">
+    <edge id="eid_owl:someValuesFrom91" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#6AccumulatedLoad-UnloadCycles">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2135,7 +2158,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:onProperty91" source="nid_NULL" target="nid_storage-reliability-ontology:strongly_depends_on">
+    <edge id="eid_owl:onProperty92" source="nid_NULL" target="nid_storage-reliability-ontology:strongly_depends_on">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2158,7 +2181,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom92" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#6TotalUncorErr">
+    <edge id="eid_owl:someValuesFrom93" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#6TotalUncorErr">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2181,12 +2204,58 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom93" source="nid_NULL" target="nid_storage-reliability-ontology:NetworkInterface">
+    <edge id="eid_owl:someValuesFrom94" source="nid_NULL" target="nid_storage-reliability-ontology:NetworkInterface">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_18fe81b2:16971bf7b95:-7fbd">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7fbd</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:intersectionOf95" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7fbd">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:intersectionOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_18fe81b2:16971bf7b95:-7ff9">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ff9</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdf:rest96" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7ff9">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -2204,7 +2273,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom94" source="nid_NULL" target="nid_storage-reliability-ontology:DataPathNetwork">
+    <edge id="eid_owl:someValuesFrom97" source="nid_NULL" target="nid_storage-reliability-ontology:DataPathNetwork">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2215,7 +2284,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:onProperty95" source="nid_NULL" target="nid_storage-reliability-ontology:is_normal_above">
+    <edge id="eid_owl:onProperty98" source="nid_NULL" target="nid_storage-reliability-ontology:is_normal_above">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2226,7 +2295,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:onProperty96" source="nid_NULL" target="nid_storage-reliability-ontology:if_warning_manifests_in">
+    <edge id="eid_owl:onProperty99" source="nid_NULL" target="nid_storage-reliability-ontology:if_warning_manifests_in">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2249,7 +2318,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom97" source="nid_NULL" target="nid_storage-reliability-ontology:StoragePool">
+    <edge id="eid_owl:someValuesFrom100" source="nid_NULL" target="nid_storage-reliability-ontology:StoragePool">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2272,7 +2341,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty98" source="nid_NULL" target="nid_storage-reliability-ontology:has_russian_term">
+    <edge id="eid_owl:onProperty101" source="nid_NULL" target="nid_storage-reliability-ontology:has_russian_term">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2295,7 +2364,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:allValuesFrom99" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime">
+    <edge id="eid_owl:allValuesFrom102" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2318,30 +2387,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom100" source="nid_NULL" target="nid_storage-reliability-ontology:DataLoss">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_storage-reliability-ontology:PowerSupplyUnit">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="440.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">storage-reliability-ontology:PowerSupplyUnit</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_owl:someValuesFrom101" source="nid_NULL" target="nid_storage-reliability-ontology:PowerSupplyUnit">
+    <edge id="eid_owl:someValuesFrom103" source="nid_NULL" target="nid_storage-reliability-ontology:DataLoss">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2364,7 +2410,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom102" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskMediaExpectedDegradation">
+    <edge id="eid_owl:someValuesFrom104" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskMediaExpectedDegradation">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2375,24 +2421,24 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ff4">
+      <node id="nid_storage-reliability-ontology:PowerSupplyUnit">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="440.0" x="0.0" y="0.0" />
                <y:Fill color="#FFFFFF" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ff4</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">storage-reliability-ontology:PowerSupplyUnit</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:unionOf103" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7ff4">
+    <edge id="eid_owl:someValuesFrom105" source="nid_NULL" target="nid_storage-reliability-ontology:PowerSupplyUnit">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:unionOf</y:EdgeLabel>
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -2410,7 +2456,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom104" source="nid_NULL" target="nid_storage-reliability-ontology:Fatal">
+    <edge id="eid_owl:someValuesFrom106" source="nid_NULL" target="nid_storage-reliability-ontology:Fatal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2433,7 +2479,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom105" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#4AccumulatedStart-StopCycles">
+    <edge id="eid_owl:someValuesFrom107" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#4AccumulatedStart-StopCycles">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2444,7 +2490,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:onProperty106" source="nid_NULL" target="nid_storage-reliability-ontology:if_warning_causes">
+    <edge id="eid_owl:onProperty108" source="nid_NULL" target="nid_storage-reliability-ontology:if_warning_causes">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2467,7 +2513,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom107" source="nid_NULL" target="nid_storage-reliability-ontology:ClusterManagementConnectionLoss">
+    <edge id="eid_owl:someValuesFrom109" source="nid_NULL" target="nid_storage-reliability-ontology:ClusterManagementConnectionLoss">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2490,35 +2536,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom108" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskLoss">
+    <edge id="eid_owl:someValuesFrom110" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskLoss">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7fbd">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7fbd</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_owl:intersectionOf109" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7fbd">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:intersectionOf</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -2536,7 +2559,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom110" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskWearOut">
+    <edge id="eid_owl:someValuesFrom111" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskWearOut">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2559,7 +2582,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom111" source="nid_NULL" target="nid_storage-reliability-ontology:ControlPathService">
+    <edge id="eid_owl:someValuesFrom112" source="nid_NULL" target="nid_storage-reliability-ontology:ControlPathService">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2582,12 +2605,35 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom112" source="nid_NULL" target="nid_storage-reliability-ontology:LinkDown">
+    <edge id="eid_owl:someValuesFrom113" source="nid_NULL" target="nid_storage-reliability-ontology:LinkDown">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_18fe81b2:16971bf7b95:-7fbb">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7fbb</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdf:rest114" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7fbb">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -2605,35 +2651,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdf:first113" source="nid_NULL" target="nid_xsd:string">
+    <edge id="eid_rdf:first115" source="nid_NULL" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:first</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ff6">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ff6</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdf:rest114" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7ff6">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -2651,7 +2674,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty115" source="nid_NULL" target="nid_storage-reliability-ontology:is_normal_below">
+    <edge id="eid_owl:onProperty116" source="nid_NULL" target="nid_storage-reliability-ontology:is_normal_below">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2674,7 +2697,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty116" source="nid_NULL" target="nid_storage-reliability-ontology:interprets_as">
+    <edge id="eid_owl:onProperty117" source="nid_NULL" target="nid_storage-reliability-ontology:interprets_as">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2697,7 +2720,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom117" source="nid_NULL" target="nid_storage-reliability-ontology:HardwareRAIDArray">
+    <edge id="eid_owl:someValuesFrom118" source="nid_NULL" target="nid_storage-reliability-ontology:HardwareRAIDArray">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2720,7 +2743,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom118" source="nid_NULL" target="nid_storage-reliability-ontology:NetworkDevice">
+    <edge id="eid_owl:someValuesFrom119" source="nid_NULL" target="nid_storage-reliability-ontology:NetworkDevice">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2731,7 +2754,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:someValuesFrom119" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskPartialLoss">
+    <edge id="eid_owl:someValuesFrom120" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskPartialLoss">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2754,35 +2777,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty120" source="nid_NULL" target="nid_storage-reliability-ontology:has_another_name">
+    <edge id="eid_owl:onProperty121" source="nid_NULL" target="nid_storage-reliability-ontology:has_another_name">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:onProperty</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ff3">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ff3</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdf:rest121" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7ff3">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -2834,6 +2834,29 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_18fe81b2:16971bf7b95:-7ff4">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ff4</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:unionOf124" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7ff4">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:unionOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_storage-reliability-ontology:DiskEnclosureOffline">
          <data key="d0">
             <y:ShapeNode>
@@ -2846,7 +2869,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom124" source="nid_NULL" target="nid_storage-reliability-ontology:DiskEnclosureOffline">
+    <edge id="eid_owl:someValuesFrom125" source="nid_NULL" target="nid_storage-reliability-ontology:DiskEnclosureOffline">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2869,7 +2892,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom125" source="nid_NULL" target="nid_storage-reliability-ontology:Vulnurable">
+    <edge id="eid_owl:someValuesFrom126" source="nid_NULL" target="nid_storage-reliability-ontology:Vulnurable">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2892,53 +2915,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom126" source="nid_NULL" target="nid_storage-reliability-ontology:InternalManagementNetwork">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7f70">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7f70</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdf:rest127" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7f70">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_storage-reliability-ontology:UserAppCutoff">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="420.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">storage-reliability-ontology:UserAppCutoff</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_owl:someValuesFrom128" source="nid_NULL" target="nid_storage-reliability-ontology:UserAppCutoff">
+    <edge id="eid_owl:someValuesFrom127" source="nid_NULL" target="nid_storage-reliability-ontology:InternalManagementNetwork">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2961,7 +2938,30 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom129" source="nid_NULL" target="nid_storage-reliability-ontology:AdditionalSenseCode">
+    <edge id="eid_owl:someValuesFrom128" source="nid_NULL" target="nid_storage-reliability-ontology:AdditionalSenseCode">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_storage-reliability-ontology:UserAppCutoff">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="420.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">storage-reliability-ontology:UserAppCutoff</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:someValuesFrom129" source="nid_NULL" target="nid_storage-reliability-ontology:UserAppCutoff">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3064,29 +3064,6 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ff7">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ff7</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_owl:unionOf134" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7ff7">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:unionOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
       <node id="nid_storage-reliability-ontology:StorageProcessor">
          <data key="d0">
             <y:ShapeNode>
@@ -3099,7 +3076,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom135" source="nid_NULL" target="nid_storage-reliability-ontology:StorageProcessor">
+    <edge id="eid_owl:someValuesFrom134" source="nid_NULL" target="nid_storage-reliability-ontology:StorageProcessor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3122,7 +3099,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom136" source="nid_NULL" target="nid_storage-reliability-ontology:BackgroundScanStatus">
+    <edge id="eid_owl:someValuesFrom135" source="nid_NULL" target="nid_storage-reliability-ontology:BackgroundScanStatus">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3145,35 +3122,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdf:rest137" source="nid_NULL" target="nid_rdf:nil">
+    <edge id="eid_rdf:rest136" source="nid_NULL" target="nid_rdf:nil">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ffb">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ffb</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_owl:unionOf138" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7ffb">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:unionOf</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -3191,7 +3145,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom139" source="nid_NULL" target="nid_storage-reliability-ontology:Health">
+    <edge id="eid_owl:someValuesFrom137" source="nid_NULL" target="nid_storage-reliability-ontology:Health">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3214,7 +3168,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdf:first140" source="nid_NULL" target="nid_storage-reliability-ontology:StorageSubsystem">
+    <edge id="eid_rdf:first138" source="nid_NULL" target="nid_storage-reliability-ontology:StorageSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3225,7 +3179,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:onProperty141" source="nid_NULL" target="nid_storage-reliability-ontology:depends_with_ecc_on">
+    <edge id="eid_owl:onProperty139" source="nid_NULL" target="nid_storage-reliability-ontology:depends_with_ecc_on">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3236,7 +3190,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:onProperty142" source="nid_NULL" target="nid_storage-reliability-ontology:if_fatal_manifests_in">
+    <edge id="eid_owl:onProperty140" source="nid_NULL" target="nid_storage-reliability-ontology:if_fatal_manifests_in">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3259,12 +3213,35 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom143" source="nid_NULL" target="nid_storage-reliability-ontology:MaxTemperature">
+    <edge id="eid_owl:someValuesFrom141" source="nid_NULL" target="nid_storage-reliability-ontology:MaxTemperature">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_18fe81b2:16971bf7b95:-7ff7">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ff7</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:unionOf142" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7ff7">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:unionOf</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -3282,35 +3259,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom144" source="nid_NULL" target="nid_storage-reliability-ontology:PercentageUsedEnduranceIndicator">
+    <edge id="eid_owl:someValuesFrom143" source="nid_NULL" target="nid_storage-reliability-ontology:PercentageUsedEnduranceIndicator">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7f72">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7f72</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_owl:unionOf145" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7f72">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:unionOf</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -3328,7 +3282,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty146" source="nid_NULL" target="nid_storage-reliability-ontology:has_info_from">
+    <edge id="eid_owl:onProperty144" source="nid_NULL" target="nid_storage-reliability-ontology:has_info_from">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3339,47 +3293,24 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ffa">
+      <node id="nid_18fe81b2:16971bf7b95:-7ff6">
          <data key="d0">
             <y:ShapeNode>
                <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
                <y:Fill color="#FFFFFF" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ffa</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ff6</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdf:rest147" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7ffa">
+    <edge id="eid_rdf:rest145" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7ff6">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_storage-reliability-ontology:ClusterManagementFailure">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="530.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">storage-reliability-ontology:ClusterManagementFailure</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_owl:someValuesFrom148" source="nid_NULL" target="nid_storage-reliability-ontology:ClusterManagementFailure">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -3397,7 +3328,30 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom149" source="nid_NULL" target="nid_storage-reliability-ontology:Non-MediumErrCnt">
+    <edge id="eid_owl:someValuesFrom146" source="nid_NULL" target="nid_storage-reliability-ontology:Non-MediumErrCnt">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_storage-reliability-ontology:ClusterManagementFailure">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="530.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">storage-reliability-ontology:ClusterManagementFailure</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:someValuesFrom147" source="nid_NULL" target="nid_storage-reliability-ontology:ClusterManagementFailure">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3420,12 +3374,35 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom150" source="nid_NULL" target="nid_storage-reliability-ontology:EthernetController">
+    <edge id="eid_owl:someValuesFrom148" source="nid_NULL" target="nid_storage-reliability-ontology:EthernetController">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_18fe81b2:16971bf7b95:-7ff3">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ff3</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdf:rest149" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7ff3">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -3443,7 +3420,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom151" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel">
+    <edge id="eid_owl:someValuesFrom150" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3454,7 +3431,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:onProperty152" source="nid_NULL" target="nid_storage-reliability-ontology:majorly_depends_on">
+    <edge id="eid_owl:onProperty151" source="nid_NULL" target="nid_storage-reliability-ontology:majorly_depends_on">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3477,7 +3454,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom153" source="nid_NULL" target="nid_storage-reliability-ontology:FanFailure">
+    <edge id="eid_owl:someValuesFrom152" source="nid_NULL" target="nid_storage-reliability-ontology:FanFailure">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3500,7 +3477,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom154" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskControlError">
+    <edge id="eid_owl:someValuesFrom153" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskControlError">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3511,7 +3488,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_owl:someValuesFrom155" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskSectorUnavailable">
+    <edge id="eid_owl:someValuesFrom154" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIDiskSectorUnavailable">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3534,7 +3511,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty156" source="nid_NULL" target="nid_storage-reliability-ontology:if_failed_causes">
+    <edge id="eid_owl:onProperty155" source="nid_NULL" target="nid_storage-reliability-ontology:if_failed_causes">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3545,24 +3522,24 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ff9">
+      <node id="nid_18fe81b2:16971bf7b95:-7f72">
          <data key="d0">
             <y:ShapeNode>
                <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
                <y:Fill color="#FFFFFF" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ff9</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7f72</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdf:rest157" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7ff9">
+    <edge id="eid_owl:unionOf156" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7f72">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:unionOf</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -3580,7 +3557,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:allValuesFrom158" source="nid_NULL" target="nid_storage-reliability-ontology:VendorHDATmpTripPoint">
+    <edge id="eid_owl:allValuesFrom157" source="nid_NULL" target="nid_storage-reliability-ontology:VendorHDATmpTripPoint">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3603,7 +3580,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom159" source="nid_NULL" target="nid_storage-reliability-ontology:Self-TestResults">
+    <edge id="eid_owl:someValuesFrom158" source="nid_NULL" target="nid_storage-reliability-ontology:Self-TestResults">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3626,7 +3603,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom160" source="nid_NULL" target="nid_storage-reliability-ontology:DASInterface">
+    <edge id="eid_owl:someValuesFrom159" source="nid_NULL" target="nid_storage-reliability-ontology:DASInterface">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3649,7 +3626,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom161" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIStorageMediaFailure">
+    <edge id="eid_owl:someValuesFrom160" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIStorageMediaFailure">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3672,7 +3649,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdf:first162" source="nid_NULL" target="nid_xsd:integer">
+    <edge id="eid_rdf:first161" source="nid_NULL" target="nid_xsd:integer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3695,7 +3672,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom163" source="nid_NULL" target="nid_storage-reliability-ontology:Link">
+    <edge id="eid_owl:someValuesFrom162" source="nid_NULL" target="nid_storage-reliability-ontology:Link">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3718,7 +3695,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom164" source="nid_NULL" target="nid_storage-reliability-ontology:SoftwareRAID">
+    <edge id="eid_owl:someValuesFrom163" source="nid_NULL" target="nid_storage-reliability-ontology:SoftwareRAID">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3741,7 +3718,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom165" source="nid_NULL" target="nid_storage-reliability-ontology:SASPhyLog">
+    <edge id="eid_owl:someValuesFrom164" source="nid_NULL" target="nid_storage-reliability-ontology:SASPhyLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3764,7 +3741,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty166" source="nid_NULL" target="nid_storage-reliability-ontology:is_normal_when">
+    <edge id="eid_owl:onProperty165" source="nid_NULL" target="nid_storage-reliability-ontology:is_normal_when">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3787,7 +3764,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom167" source="nid_NULL" target="nid_storage-reliability-ontology:EndPoint">
+    <edge id="eid_owl:someValuesFrom166" source="nid_NULL" target="nid_storage-reliability-ontology:EndPoint">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3810,7 +3787,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom168" source="nid_NULL" target="nid_storage-reliability-ontology:StorageProcessorConnectionCutoff">
+    <edge id="eid_owl:someValuesFrom167" source="nid_NULL" target="nid_storage-reliability-ontology:StorageProcessorConnectionCutoff">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3833,12 +3810,58 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom169" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIPHYFault">
+    <edge id="eid_owl:someValuesFrom168" source="nid_NULL" target="nid_storage-reliability-ontology:SCSIPHYFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:someValuesFrom</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_18fe81b2:16971bf7b95:-7ffb">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ffb</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_owl:unionOf169" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7ffb">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:unionOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_18fe81b2:16971bf7b95:-7f70">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7f70</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdf:rest170" source="nid_NULL" target="nid_18fe81b2:16971bf7b95:-7f70">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -3856,7 +3879,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom170" source="nid_NULL" target="nid_storage-reliability-ontology:Redriver">
+    <edge id="eid_owl:someValuesFrom171" source="nid_NULL" target="nid_storage-reliability-ontology:Redriver">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3879,7 +3902,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom171" source="nid_NULL" target="nid_storage-reliability-ontology:FanSpeed">
+    <edge id="eid_owl:someValuesFrom172" source="nid_NULL" target="nid_storage-reliability-ontology:FanSpeed">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3902,7 +3925,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom172" source="nid_NULL" target="nid_storage-reliability-ontology:DataVulnurability">
+    <edge id="eid_owl:someValuesFrom173" source="nid_NULL" target="nid_storage-reliability-ontology:DataVulnurability">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3925,7 +3948,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:allValuesFrom173" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime">
+    <edge id="eid_owl:allValuesFrom174" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3948,7 +3971,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom174" source="nid_NULL" target="nid_storage-reliability-ontology:LinkIsUp">
+    <edge id="eid_owl:someValuesFrom175" source="nid_NULL" target="nid_storage-reliability-ontology:LinkIsUp">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3971,7 +3994,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:onProperty175" source="nid_NULL" target="nid_storage-reliability-ontology:shows_in_parameter">
+    <edge id="eid_owl:onProperty176" source="nid_NULL" target="nid_storage-reliability-ontology:shows_in_parameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3994,7 +4017,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:someValuesFrom176" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc">
+    <edge id="eid_owl:someValuesFrom177" source="nid_NULL" target="nid_urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4017,35 +4040,12 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_owl:hasValue177" source="nid_NULL" target="nid_storage-reliability-ontology:ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers">
+    <edge id="eid_owl:hasValue178" source="nid_NULL" target="nid_storage-reliability-ontology:ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
                <y:Arrows source="none" target="normal" />
                <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">owl:hasValue</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7fbb">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7fbb</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdf:rest178" source="nid_NULL" target="nid_2cfdca92:16971bb5e2f:-7fbb">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdf:rest</y:EdgeLabel>
                <y:BendStyle smoothed="false" />
             </y:PolyLineEdge>
          </data>
@@ -5607,31 +5607,31 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ffc">
+      <node id="nid_18fe81b2:16971bf7b95:-7ffc">
          <data key="d0">
             <y:ShapeNode>
                <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
                <y:Fill color="#FFA500" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ffc</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ffc</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ff8">
+      <node id="nid_18fe81b2:16971bf7b95:-7ff8">
          <data key="d0">
             <y:ShapeNode>
                <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
                <y:Fill color="#FFA500" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ff8</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ff8</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_storage-reliability-ontology:structural279" source="nid_2cfdca92:16971bb5e2f:-7ffc" target="nid_2cfdca92:16971bb5e2f:-7ff8">
+    <edge id="eid_storage-reliability-ontology:structural279" source="nid_18fe81b2:16971bf7b95:-7ffc" target="nid_18fe81b2:16971bf7b95:-7ff8">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5642,19 +5642,19 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_2cfdca92:16971bb5e2f:-7ff5">
+      <node id="nid_18fe81b2:16971bf7b95:-7ff5">
          <data key="d0">
             <y:ShapeNode>
                <y:Geometry height="30.0" width="260.0" x="0.0" y="0.0" />
                <y:Fill color="#FFFFFF" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">2cfdca92:16971bb5e2f:-7ff5</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">18fe81b2:16971bf7b95:-7ff5</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_storage-reliability-ontology:is_normal_when280" source="nid_owl:Thing" target="nid_2cfdca92:16971bb5e2f:-7ff5">
+    <edge id="eid_storage-reliability-ontology:is_normal_when280" source="nid_owl:Thing" target="nid_18fe81b2:16971bf7b95:-7ff5">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
