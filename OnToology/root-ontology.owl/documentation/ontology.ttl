@@ -51,7 +51,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in
 :if_fatal_manifests_in rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf :manifests_in .
+                       rdfs:subPropertyOf :manifests_in ;
+                       rdfs:label "if_fatal_manifests_in" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#if_warning_causes
@@ -208,8 +209,8 @@
 :Ambience rdf:type owl:Class ;
           rdfs:subClassOf :Parameter ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :has_info_from ;
-                            owl:hasValue :ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers
+                            owl:onProperty :has_info_at ;
+                            owl:hasValue "ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers"
                           ] .
 
 
@@ -272,6 +273,11 @@
 ###  urn:absolute://local/storage-reliability-ontology#CPUUsage
 :CPUUsage rdf:type owl:Class ;
           rdfs:subClassOf :CPUSpecific .
+
+
+###  urn:absolute://local/storage-reliability-ontology#CacheComponent
+:CacheComponent rdf:type owl:Class ;
+                rdfs:subClassOf :StorageComponent .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ClientAppNetwork
@@ -410,6 +416,11 @@
               rdfs:subClassOf :NetworkInterface .
 
 
+###  urn:absolute://local/storage-reliability-ontology#DRAMcache
+:DRAMcache rdf:type owl:Class ;
+           rdfs:subClassOf :CacheComponent .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#DataLoss
 :DataLoss rdf:type owl:Class ;
           rdfs:subClassOf :SystemFault ,
@@ -481,8 +492,8 @@
         rdfs:subClassOf :Component .
 
 
-###  urn:absolute://local/storage-reliability-ontology#DireсtAttachedStorage
-:DireсtAttachedStorage rdf:type owl:Class ;
+###  urn:absolute://local/storage-reliability-ontology#DirectAttachedStorage
+:DirectAttachedStorage rdf:type owl:Class ;
                        rdfs:subClassOf :StorageMacroComponent ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :has_another_name ;
@@ -490,9 +501,14 @@
                                        ] .
 
 
+###  urn:absolute://local/storage-reliability-ontology#Disk
+:Disk rdf:type owl:Class ;
+      rdfs:subClassOf :StorageComponent .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#DiskEnclosure
 :DiskEnclosure rdf:type owl:Class ;
-               rdfs:subClassOf :DireсtAttachedStorage ,
+               rdfs:subClassOf :DirectAttachedStorage ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :if_failed_causes ;
                                  owl:someValuesFrom :DiskEnclosureOffline
@@ -512,6 +528,10 @@
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :majorly_depends_on ;
                                  owl:someValuesFrom :Redriver
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :has_another_name ;
+                                 owl:hasValue "shelf"
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :has_russian_term ;
@@ -800,6 +820,21 @@
                                        ] .
 
 
+###  urn:absolute://local/storage-reliability-ontology#NVMeDisk
+:NVMeDisk rdf:type owl:Class ;
+          rdfs:subClassOf :Disk .
+
+
+###  urn:absolute://local/storage-reliability-ontology#NVMeNAND
+:NVMeNAND rdf:type owl:Class ;
+          rdfs:subClassOf :CacheComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#NVMeSCM
+:NVMeSCM rdf:type owl:Class ;
+         rdfs:subClassOf :CacheComponent .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#Network
 :Network rdf:type owl:Class ;
          rdfs:subClassOf :MacroComponent .
@@ -906,6 +941,10 @@
               rdfs:label "R-W-V-ErrCnt" .
 
 
+###  urn:absolute://local/storage-reliability-ontology#RandomTestClass
+:RandomTestClass rdf:type owl:Class .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#ReadOperationsRate
 :ReadOperationsRate rdf:type owl:Class ;
                     rdfs:subClassOf :VolumeSpecific .
@@ -970,7 +1009,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#SCSIDisk
 :SCSIDisk rdf:type owl:Class ;
-          rdfs:subClassOf :StorageComponent ,
+          rdfs:subClassOf :Disk ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :if_fatal_manifests_in ;
                             owl:someValuesFrom :SCSIDiskLoss
@@ -1101,8 +1140,8 @@
 :SCSILogParameters rdf:type owl:Class ;
                    rdfs:subClassOf :Parameter ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty :has_info_from ;
-                                     owl:hasValue :Seagate_SCSI_Commands_Reference_Manual_rev_H
+                                     owl:onProperty :has_info_at ;
+                                     owl:hasValue "Seagate_SCSI_Commands_Reference_Manual_rev_H"
                                    ] .
 
 
@@ -1221,7 +1260,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#StorageProcessor
 :StorageProcessor rdf:type owl:Class ;
-                  rdfs:subClassOf :StorageComponent ,
+                  rdfs:subClassOf :Device ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :has_russian_term ;
                                     owl:hasValue "Контроллер хранения"
@@ -1290,6 +1329,387 @@
 ###  urn:absolute://local/storage-reliability-ontology#TemperatureLog
 :TemperatureLog rdf:type owl:Class ;
                 rdfs:subClassOf :Temperature .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestAggregateSubsystem-level1
+:TestAggregateSubsystem-level1 rdf:type owl:Class ;
+                               rdfs:subClassOf :TestSubsystem ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :majorly_depends_on ;
+                                                 owl:someValuesFrom :TestSubsystem2-level1
+                                               ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestAggregateSubsystem-level2
+:TestAggregateSubsystem-level2 rdf:type owl:Class ;
+                               rdfs:subClassOf :TestAggregateSubsystem-level1 ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :if_failed_causes ;
+                                                 owl:someValuesFrom :TestSystemAggrFail
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :if_warning_causes ;
+                                                 owl:someValuesFrom :TestSystemAggrError-level2
+                                               ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestAnotherComponent
+:TestAnotherComponent rdf:type owl:Class ;
+                      rdfs:subClassOf :TestComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponent
+:TestComponent rdf:type owl:Class ;
+               rdfs:subClassOf :Component .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponent-level1
+:TestComponent-level1 rdf:type owl:Class ;
+                      rdfs:subClassOf :TestComponent ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :if_fatal_manifests_in ;
+                                        owl:someValuesFrom :TestComponentFailure1
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :if_warning_manifests_in ;
+                                        owl:someValuesFrom :TestComponentError1
+                                      ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponent-level2
+:TestComponent-level2 rdf:type owl:Class ;
+                      rdfs:subClassOf :TestComponent-level1 ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :if_fatal_manifests_in ;
+                                        owl:someValuesFrom :TestComponentFailure2
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :if_warning_manifests_in ;
+                                        owl:someValuesFrom :TestComponentError2
+                                      ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponent-level3
+:TestComponent-level3 rdf:type owl:Class ;
+                      rdfs:subClassOf :TestComponent-level2 ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :if_fatal_manifests_in ;
+                                        owl:someValuesFrom :TestComponentFailure3
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :if_warning_manifests_in ;
+                                        owl:someValuesFrom :TestComponentError3
+                                      ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponentError1
+:TestComponentError1 rdf:type owl:Class ;
+                     rdfs:subClassOf :TestComponentFault ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :shows_in_parameter ;
+                                       owl:someValuesFrom :TestParameter2-level1
+                                     ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponentError2
+:TestComponentError2 rdf:type owl:Class ;
+                     rdfs:subClassOf :TestComponentFault ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :shows_in_parameter ;
+                                       owl:someValuesFrom :TestParameter2-level2
+                                     ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponentError3
+:TestComponentError3 rdf:type owl:Class ;
+                     rdfs:subClassOf :TestComponentFault ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :shows_in_parameter ;
+                                       owl:someValuesFrom :TestParameter2-level3
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :shows_in_parameter ;
+                                       owl:someValuesFrom :TestParameter22-level3
+                                     ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponentFailure1
+:TestComponentFailure1 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestComponentFault ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :shows_in_parameter ;
+                                         owl:someValuesFrom :TestParameter1-level1
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponentFailure2
+:TestComponentFailure2 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestComponentFault ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :shows_in_parameter ;
+                                         owl:someValuesFrom :TestParameter1-level2
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponentFailure3
+:TestComponentFailure3 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestComponentFault ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :shows_in_parameter ;
+                                         owl:someValuesFrom :TestParameter1-level3
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :shows_in_parameter ;
+                                         owl:someValuesFrom :TestParameter11-level3
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestComponentFault
+:TestComponentFault rdf:type owl:Class ;
+                    rdfs:subClassOf :ComponentFault .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter
+:TestParameter rdf:type owl:Class ;
+               rdfs:subClassOf :Parameter .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter1-level1
+:TestParameter1-level1 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestParameter ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :is_normal_when ;
+                                         owl:hasValue 1
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter1-level2
+:TestParameter1-level2 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestParameter1-level1 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :is_normal_below ;
+                                         owl:hasValue 1
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter1-level3
+:TestParameter1-level3 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestParameter1-level2 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :is_normal_above ;
+                                         owl:hasValue 1
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter1-threshold
+:TestParameter1-threshold rdf:type owl:Class ;
+                          rdfs:subClassOf :TestParameter1-level2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter11-level3
+:TestParameter11-level3 rdf:type owl:Class ;
+                        rdfs:subClassOf :TestParameter1-level2 ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :is_normal_with_threshold ;
+                                          owl:someValuesFrom :TestParameter1-threshold
+                                        ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter2-level1
+:TestParameter2-level1 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestParameter ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :is_normal_when ;
+                                         owl:hasValue 2
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter2-level2
+:TestParameter2-level2 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestParameter2-level1 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :is_normal_below ;
+                                         owl:hasValue 2
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter2-level3
+:TestParameter2-level3 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestParameter2-level2 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :is_normal_above ;
+                                         owl:hasValue 2
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter2-threshold
+:TestParameter2-threshold rdf:type owl:Class ;
+                          rdfs:subClassOf :TestParameter2-level2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestParameter22-level3
+:TestParameter22-level3 rdf:type owl:Class ;
+                        rdfs:subClassOf :TestParameter2-level2 ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :is_normal_with_threshold ;
+                                          owl:someValuesFrom :TestParameter2-threshold
+                                        ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestRandomComponent
+:TestRandomComponent rdf:type owl:Class ;
+                     rdfs:subClassOf :TestComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestRandomSubsystem
+:TestRandomSubsystem rdf:type owl:Class ;
+                     rdfs:subClassOf :TestSubsystem ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :strongly_depends_on ;
+                                       owl:someValuesFrom :TestRandomComponent
+                                     ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSubsystem
+:TestSubsystem rdf:type owl:Class ;
+               rdfs:subClassOf :StorageSubsystem .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSubsystem1
+:TestSubsystem1 rdf:type owl:Class ;
+                rdfs:subClassOf :TestSubsystem ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :if_failed_causes ;
+                                  owl:someValuesFrom :TestSystemFail1
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :if_warning_causes ;
+                                  owl:someValuesFrom :TestSystemError1
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :majorly_depends_on ;
+                                  owl:someValuesFrom :TestAnotherComponent
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :strongly_depends_on ;
+                                  owl:someValuesFrom :TestComponent-level1
+                                ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSubsystem2-level1
+:TestSubsystem2-level1 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestSubsystem ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :if_failed_causes ;
+                                         owl:someValuesFrom :TestSystemFail2
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :if_warning_causes ;
+                                         owl:someValuesFrom :TestSystemError2
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :majorly_depends_on ;
+                                         owl:someValuesFrom :TestComponent-level2
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSubsystem2-level2
+:TestSubsystem2-level2 rdf:type owl:Class ;
+                       rdfs:subClassOf :TestSubsystem2-level1 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :depends_with_ecc_on ;
+                                         owl:someValuesFrom :TestComponent-level3
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :if_failed_causes ;
+                                         owl:someValuesFrom :TestSystemFail3
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :if_warning_causes ;
+                                         owl:someValuesFrom :TestSystemError3
+                                       ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemAggrError
+:TestSystemAggrError rdf:type owl:Class ;
+                     rdfs:subClassOf :TestSystemFault ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :interprets_as ;
+                                       owl:someValuesFrom :Error
+                                     ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemAggrError-level2
+:TestSystemAggrError-level2 rdf:type owl:Class ;
+                            rdfs:subClassOf :TestSystemAggrError .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemAggrFail
+:TestSystemAggrFail rdf:type owl:Class ;
+                    rdfs:subClassOf :TestSystemFault ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :interprets_as ;
+                                      owl:someValuesFrom :Fatal
+                                    ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemError1
+:TestSystemError1 rdf:type owl:Class ;
+                  rdfs:subClassOf :TestSystemFault ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :interprets_as ;
+                                    owl:someValuesFrom :Error
+                                  ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemError2
+:TestSystemError2 rdf:type owl:Class ;
+                  rdfs:subClassOf :TestSystemFault ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :interprets_as ;
+                                    owl:someValuesFrom :Vulnurable
+                                  ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemError3
+:TestSystemError3 rdf:type owl:Class ;
+                  rdfs:subClassOf :TestSystemFault ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :interprets_as ;
+                                    owl:someValuesFrom :Vulnurable
+                                  ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemFail1
+:TestSystemFail1 rdf:type owl:Class ;
+                 rdfs:subClassOf :TestSystemFault ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :interprets_as ;
+                                   owl:someValuesFrom :Error
+                                 ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemFail2
+:TestSystemFail2 rdf:type owl:Class ;
+                 rdfs:subClassOf :TestSystemFault ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :interprets_as ;
+                                   owl:someValuesFrom :Vulnurable
+                                 ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemFail3
+:TestSystemFail3 rdf:type owl:Class ;
+                 rdfs:subClassOf :TestSystemFault ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :interprets_as ;
+                                   owl:someValuesFrom :Fatal
+                                 ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#TestSystemFault
+:TestSystemFault rdf:type owl:Class ;
+                 rdfs:subClassOf :SystemFault .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#TotalVolumeCapacityMB
@@ -1718,6 +2138,12 @@
                                  :Standard .
 
 
+###  urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification
+:SNIA_Storage_Management_Initiative_Specification rdf:type owl:NamedIndividual ,
+                                                           :Standard ;
+                                                  :has_another_name "SMI-S" .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#SPM
 :SPM rdf:type owl:NamedIndividual ,
               :ControlPathService .
@@ -2037,7 +2463,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e938d00
 :scsi-35000cca03e938d00 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :HDD ;
+                        rdfs:label "scsi-35000cca03e938d00" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e94a4f0
@@ -2195,6 +2622,11 @@
                                  :HDD .
 
 
+###  urn:absolute://local/storage-reliability-ontology#smth-random
+:smth-random rdf:type owl:NamedIndividual ,
+                      :RandomTestClass .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-1
 :sp-0-1 rdf:type owl:NamedIndividual ,
                  :StorageProcessor ;
@@ -2286,6 +2718,214 @@
                               :pacemaker .
 
 
+###  urn:absolute://local/storage-reliability-ontology#test-tatlin
+:test-tatlin rdf:type owl:NamedIndividual ,
+                      :EnterpriseStorageSystem ;
+             :consists_of :tst-AggregateSubsystem ,
+                          :tst-Subsystem1 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-AggregateSubsystem
+:tst-AggregateSubsystem rdf:type owl:NamedIndividual ,
+                                 :TestAggregateSubsystem-level2 ;
+                        :consists_of :smth-random ,
+                                     :tst-Subsystem2-lvl1-1 ,
+                                     :tst-Subsystem2-lvl1-2 ,
+                                     :tst-Subsystem2-lvl2 ,
+                                     :tst-comp-rand-1 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-Subsystem1
+:tst-Subsystem1 rdf:type owl:NamedIndividual ,
+                         :TestSubsystem1 ;
+                :consists_of :smth-random ,
+                             :tst-cmp-lvl1-1 ,
+                             :tst-cmp-lvl2-1 ,
+                             :tst-cmp-lvl3-1 ,
+                             :tst-comp-rand-2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-Subsystem2-lvl1-1
+:tst-Subsystem2-lvl1-1 rdf:type owl:NamedIndividual ,
+                                :TestSubsystem2-level1 ;
+                       :consists_of :smth-random ,
+                                    :tst-cmp-lvl1-2 ,
+                                    :tst-cmp-lvl1-3 ,
+                                    :tst-cmp-lvl2-2 ,
+                                    :tst-cmp-lvl2-3 ,
+                                    :tst-cmp-lvl3-2 ,
+                                    :tst-cmp-lvl3-3 ,
+                                    :tst-comp-rand-3 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-Subsystem2-lvl1-2
+:tst-Subsystem2-lvl1-2 rdf:type owl:NamedIndividual ,
+                                :TestSubsystem2-level1 ;
+                       :consists_of :smth-random ,
+                                    :tst-cmp-lvl1-6 ,
+                                    :tst-cmp-lvl2-6 ,
+                                    :tst-cmp-lvl3-6 ,
+                                    :tst-comp-rand-4 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-Subsystem2-lvl2
+:tst-Subsystem2-lvl2 rdf:type owl:NamedIndividual ,
+                              :TestSubsystem2-level2 ;
+                     :consists_of :smth-random ,
+                                  :tst-cmp-lvl1-4 ,
+                                  :tst-cmp-lvl1-5 ,
+                                  :tst-cmp-lvl2-4 ,
+                                  :tst-cmp-lvl2-5 ,
+                                  :tst-cmp-lvl3-4 ,
+                                  :tst-cmp-lvl3-5 ,
+                                  :tst-comp-rand-5 ,
+                                  :tstprotection_sch .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-another-cmp1
+:tst-another-cmp1 rdf:type owl:NamedIndividual ,
+                           :TestAnotherComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-another-cmp2
+:tst-another-cmp2 rdf:type owl:NamedIndividual ,
+                           :TestAnotherComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl1-1
+:tst-cmp-lvl1-1 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level1 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl1-2
+:tst-cmp-lvl1-2 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level1 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl1-3
+:tst-cmp-lvl1-3 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level1 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl1-4
+:tst-cmp-lvl1-4 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level1 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl1-5
+:tst-cmp-lvl1-5 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level1 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl1-6
+:tst-cmp-lvl1-6 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level1 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl2-1
+:tst-cmp-lvl2-1 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl2-2
+:tst-cmp-lvl2-2 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl2-3
+:tst-cmp-lvl2-3 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl2-4
+:tst-cmp-lvl2-4 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl2-5
+:tst-cmp-lvl2-5 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl2-6
+:tst-cmp-lvl2-6 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl3-1
+:tst-cmp-lvl3-1 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level3 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl3-2
+:tst-cmp-lvl3-2 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level3 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl3-3
+:tst-cmp-lvl3-3 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level3 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl3-4
+:tst-cmp-lvl3-4 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level3 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl3-5
+:tst-cmp-lvl3-5 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level3 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-cmp-lvl3-6
+:tst-cmp-lvl3-6 rdf:type owl:NamedIndividual ,
+                         :TestComponent-level3 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-comp-rand-1
+:tst-comp-rand-1 rdf:type owl:NamedIndividual ,
+                          :TestRandomComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-comp-rand-2
+:tst-comp-rand-2 rdf:type owl:NamedIndividual ,
+                          :TestRandomComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-comp-rand-3
+:tst-comp-rand-3 rdf:type owl:NamedIndividual ,
+                          :TestRandomComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-comp-rand-4
+:tst-comp-rand-4 rdf:type owl:NamedIndividual ,
+                          :TestRandomComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-comp-rand-5
+:tst-comp-rand-5 rdf:type owl:NamedIndividual ,
+                          :TestRandomComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-comp-rand-6
+:tst-comp-rand-6 rdf:type owl:NamedIndividual ,
+                          :TestRandomComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tst-rand-subsystem
+:tst-rand-subsystem rdf:type owl:NamedIndividual ,
+                             :TestRandomSubsystem ;
+                    :consists_of :tst-cmp-lvl1-1 ,
+                                 :tst-comp-rand-2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tstprotection_sch
+:tstprotection_sch rdf:type owl:NamedIndividual ,
+                            :ProtectionScheme ;
+                   :protection_scheme_k 4 ;
+                   :protection_scheme_n 6 .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#8fcb7386-5a43-4fcc-b12d-010c46489fad
 <urn:absolute://local/storage-reliability-ontology#8fcb7386-5a43-4fcc-b12d-010c46489fad> rdf:type owl:NamedIndividual ,
                                                                                                   :StoragePool ;
@@ -2322,7 +2962,8 @@
                                                                                                       :scsi-35000cca03e9852b8 ,
                                                                                                       :scsi-35000cca03e98551c ,
                                                                                                       :scsi-35000cca03e98565c ,
-                                                                                                      :scsi-35000cca03e985678 .
+                                                                                                      :scsi-35000cca03e985678 ,
+                                                                                                      <urn:absolute://local/storage-reliability-ontology#8+2protection_sch> .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#8+2protection_sch
