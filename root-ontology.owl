@@ -902,15 +902,6 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#EnclosureServices -->
-
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#EnclosureServices">
-        <owl:equivalentClass rdf:resource="urn:absolute://local/storage-reliability-ontology#SASExpander"/>
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DASInterface"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute://local/storage-reliability-ontology#EndPoint -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#EndPoint">
@@ -1531,12 +1522,23 @@
     <!-- urn:absolute://local/storage-reliability-ontology#SASExpander -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SASExpander">
-        <owl:equivalentClass rdf:resource="urn:absolute://local/storage-reliability-ontology#SASSwitch"/>
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DASInterface"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"/>
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSIPHYFault"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#has_another_name"/>
+                <owl:hasValue>EnclosureServices</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#has_another_name"/>
+                <owl:hasValue>SASSwitch</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1571,14 +1573,6 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#SASSwitch -->
-
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SASSwitch">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DASInterface"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute://local/storage-reliability-ontology#SCSIDisk -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SCSIDisk">
@@ -1587,12 +1581,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"/>
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSIDiskLoss"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"/>
-                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSIDiskPartialLoss"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1721,15 +1709,6 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#SCSIDiskPartialLoss -->
-
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SCSIDiskPartialLoss">
-        <owl:equivalentClass rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSIDiskSectorUnavailable"/>
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute://local/storage-reliability-ontology#SCSIDiskSectorUnavailable -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SCSIDiskSectorUnavailable">
@@ -1744,6 +1723,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#6TotalUncorErr"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#has_another_name"/>
+                <owl:hasValue>SCSIDiskPartialLoss</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
