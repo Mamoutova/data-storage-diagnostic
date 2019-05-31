@@ -42,10 +42,6 @@
     "DiskEnclosureOffline" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DiskEnclosureOffline"
     },
-    "connects_to" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#connects_to",
-      "@type" : "@id"
-    },
     "depends_with_ecc_on" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on",
       "@type" : "@id"
@@ -148,6 +144,9 @@
     },
     "Volume" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Volume"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
     },
     "DataAddressMarkError" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#202DataAddressMarkError"
@@ -256,10 +255,6 @@
     },
     "REST" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#REST"
-    },
-    "has_info_from" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_from",
-      "@type" : "@id"
     },
     "TestComponentFailure3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure3"
@@ -469,9 +464,6 @@
     },
     "SCSIDiskSectorUnavailable" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskSectorUnavailable"
-    },
-    "Standard" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#Standard"
     },
     "IdleUsage" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#IdleUsage"
@@ -709,6 +701,9 @@
     "is_normal_above" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_above",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "StorageSystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSystem"

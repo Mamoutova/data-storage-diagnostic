@@ -12,14 +12,12 @@
 <urn:absolute://local/storage-reliability-ontology#causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#causes> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:absolute://local/storage-reliability-ontology#StorageSubsystem> .
 <urn:absolute://local/storage-reliability-ontology#causes> <http://www.w3.org/2000/01/rdf-schema#range> <urn:absolute://local/storage-reliability-ontology#Event> .
-# 
-# urn:absolute://local/storage-reliability-ontology#connects_to
-<urn:absolute://local/storage-reliability-ontology#connects_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<urn:absolute://local/storage-reliability-ontology#connects_to> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <urn:absolute://local/storage-reliability-ontology#structural> .
+<urn:absolute://local/storage-reliability-ontology#causes> <http://www.w3.org/2000/01/rdf-schema#label> "causes" .
 # 
 # urn:absolute://local/storage-reliability-ontology#consists_of
 <urn:absolute://local/storage-reliability-ontology#consists_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#consists_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <urn:absolute://local/storage-reliability-ontology#structural> .
+<urn:absolute://local/storage-reliability-ontology#consists_of> <http://www.w3.org/2000/01/rdf-schema#label> "consists_of" .
 # 
 # urn:absolute://local/storage-reliability-ontology#depends_on
 <urn:absolute://local/storage-reliability-ontology#depends_on> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -33,13 +31,12 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:absolute://local/storage-reliability-ontology#StorageSubsystem> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<urn:absolute://local/storage-reliability-ontology#depends_on> <http://www.w3.org/2000/01/rdf-schema#label> "depends_on" .
 # 
 # urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on
 <urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <urn:absolute://local/storage-reliability-ontology#depends_on> .
-# 
-# urn:absolute://local/storage-reliability-ontology#has_info_from
-<urn:absolute://local/storage-reliability-ontology#has_info_from> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on> <http://www.w3.org/2000/01/rdf-schema#label> "depends_with_ecc_on" .
 # 
 # urn:absolute://local/storage-reliability-ontology#if_failed_causes
 <urn:absolute://local/storage-reliability-ontology#if_failed_causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -54,10 +51,12 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # urn:absolute://local/storage-reliability-ontology#if_warning_causes
 <urn:absolute://local/storage-reliability-ontology#if_warning_causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#if_warning_causes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <urn:absolute://local/storage-reliability-ontology#causes> .
+<urn:absolute://local/storage-reliability-ontology#if_warning_causes> <http://www.w3.org/2000/01/rdf-schema#label> "if_warning_causes" .
 # 
 # urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in
 <urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <urn:absolute://local/storage-reliability-ontology#manifests_in> .
+<urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in> <http://www.w3.org/2000/01/rdf-schema#label> "if_warning_manifests_in" .
 # 
 # urn:absolute://local/storage-reliability-ontology#interprets_as
 <urn:absolute://local/storage-reliability-ontology#interprets_as> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -69,24 +68,29 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:absolute://local/storage-reliability-ontology#Parameter> .
 <urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold> <http://www.w3.org/2000/01/rdf-schema#range> <urn:absolute://local/storage-reliability-ontology#Parameter> .
+<urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold> <http://www.w3.org/2000/01/rdf-schema#label> "is_normal_with_threshold" .
 # 
 # urn:absolute://local/storage-reliability-ontology#majorly_depends_on
 <urn:absolute://local/storage-reliability-ontology#majorly_depends_on> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#majorly_depends_on> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <urn:absolute://local/storage-reliability-ontology#depends_on> .
+<urn:absolute://local/storage-reliability-ontology#majorly_depends_on> <http://www.w3.org/2000/01/rdf-schema#label> "majorly_depends_on" .
 # 
 # urn:absolute://local/storage-reliability-ontology#manifests_in
 <urn:absolute://local/storage-reliability-ontology#manifests_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#manifests_in> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:absolute://local/storage-reliability-ontology#Component> .
 <urn:absolute://local/storage-reliability-ontology#manifests_in> <http://www.w3.org/2000/01/rdf-schema#range> <urn:absolute://local/storage-reliability-ontology#ComponentFault> .
+<urn:absolute://local/storage-reliability-ontology#manifests_in> <http://www.w3.org/2000/01/rdf-schema#label> "manifests_in" .
 # 
 # urn:absolute://local/storage-reliability-ontology#shows_in_parameter
 <urn:absolute://local/storage-reliability-ontology#shows_in_parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#shows_in_parameter> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:absolute://local/storage-reliability-ontology#ComponentFault> .
 <urn:absolute://local/storage-reliability-ontology#shows_in_parameter> <http://www.w3.org/2000/01/rdf-schema#range> <urn:absolute://local/storage-reliability-ontology#Parameter> .
+<urn:absolute://local/storage-reliability-ontology#shows_in_parameter> <http://www.w3.org/2000/01/rdf-schema#label> "shows_in_parameter" .
 # 
 # urn:absolute://local/storage-reliability-ontology#strongly_depends_on
 <urn:absolute://local/storage-reliability-ontology#strongly_depends_on> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <urn:absolute://local/storage-reliability-ontology#strongly_depends_on> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <urn:absolute://local/storage-reliability-ontology#depends_on> .
+<urn:absolute://local/storage-reliability-ontology#strongly_depends_on> <http://www.w3.org/2000/01/rdf-schema#label> "strongly_depends_on" .
 # 
 # urn:absolute://local/storage-reliability-ontology#structural
 <urn:absolute://local/storage-reliability-ontology#structural> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -111,6 +115,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:absolute://local/storage-reliability-ontology#StorageSubsystem> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<urn:absolute://local/storage-reliability-ontology#structural> <http://www.w3.org/2000/01/rdf-schema#label> "structural" .
 # 
 # 
 # 
@@ -123,14 +128,18 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # urn:absolute://local/storage-reliability-ontology#has_another_name
 <urn:absolute://local/storage-reliability-ontology#has_another_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:absolute://local/storage-reliability-ontology#has_another_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <urn:absolute://local/storage-reliability-ontology#has_another_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:absolute://local/storage-reliability-ontology#has_another_name> <http://www.w3.org/2000/01/rdf-schema#comment> "has_another_name" .
 # 
 # urn:absolute://local/storage-reliability-ontology#has_info_at
 <urn:absolute://local/storage-reliability-ontology#has_info_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:absolute://local/storage-reliability-ontology#has_info_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <urn:absolute://local/storage-reliability-ontology#has_info_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
 # urn:absolute://local/storage-reliability-ontology#has_russian_term
 <urn:absolute://local/storage-reliability-ontology#has_russian_term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:absolute://local/storage-reliability-ontology#has_russian_term> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <urn:absolute://local/storage-reliability-ontology#has_russian_term> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
 # urn:absolute://local/storage-reliability-ontology#is_normal
@@ -1087,9 +1096,6 @@ _:genid116 <http://www.w3.org/2002/07/owl#hasValue> "15"^^<http://www.w3.org/200
 <urn:absolute://local/storage-reliability-ontology#SolidStateMediaLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <urn:absolute://local/storage-reliability-ontology#SolidStateMediaLog> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <urn:absolute://local/storage-reliability-ontology#SCSILogParameters> .
 # 
-# urn:absolute://local/storage-reliability-ontology#Standard
-<urn:absolute://local/storage-reliability-ontology#Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
 # urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog
 <urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <urn:absolute://local/storage-reliability-ontology#SCSILogParameters> .
@@ -1886,7 +1892,6 @@ _:genid194 <http://www.w3.org/2002/07/owl#hasValue> "0"^^<http://www.w3.org/2001
 # 
 # urn:absolute://local/storage-reliability-ontology#ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers
 <urn:absolute://local/storage-reliability-ontology#ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<urn:absolute://local/storage-reliability-ontology#ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:absolute://local/storage-reliability-ontology#Standard> .
 # 
 # urn:absolute://local/storage-reliability-ontology#HWMGR
 <urn:absolute://local/storage-reliability-ontology#HWMGR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1894,11 +1899,9 @@ _:genid194 <http://www.w3.org/2002/07/owl#hasValue> "0"^^<http://www.w3.org/2001
 # 
 # urn:absolute://local/storage-reliability-ontology#ISO_IEC_14776_454_2018
 <urn:absolute://local/storage-reliability-ontology#ISO_IEC_14776_454_2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<urn:absolute://local/storage-reliability-ontology#ISO_IEC_14776_454_2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:absolute://local/storage-reliability-ontology#Standard> .
 # 
 # urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification
 <urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:absolute://local/storage-reliability-ontology#Standard> .
 <urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification> <urn:absolute://local/storage-reliability-ontology#has_another_name> "SMI-S" .
 # 
 # urn:absolute://local/storage-reliability-ontology#SPM
@@ -1907,7 +1910,6 @@ _:genid194 <http://www.w3.org/2002/07/owl#hasValue> "0"^^<http://www.w3.org/2001
 # 
 # urn:absolute://local/storage-reliability-ontology#Seagate_SCSI_Commands_Reference_Manual_rev_H
 <urn:absolute://local/storage-reliability-ontology#Seagate_SCSI_Commands_Reference_Manual_rev_H> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<urn:absolute://local/storage-reliability-ontology#Seagate_SCSI_Commands_Reference_Manual_rev_H> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:absolute://local/storage-reliability-ontology#Standard> .
 # 
 # urn:absolute://local/storage-reliability-ontology#TRAID
 <urn:absolute://local/storage-reliability-ontology#TRAID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2619,7 +2621,6 @@ _:genid194 <http://www.w3.org/2002/07/owl#hasValue> "0"^^<http://www.w3.org/2001
 # 
 # urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4
 <urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:absolute://local/storage-reliability-ontology#Standard> .
 <urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4> <urn:absolute://local/storage-reliability-ontology#has_another_name> "SCP-4" .
 # 
 # urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000001

@@ -2059,7 +2059,7 @@
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#Standard" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#AdditionalSenseCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2560,7 +2560,7 @@
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ISO_IEC_14776_454_2018",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#Standard" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#IdleUsage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2996,7 +2996,7 @@
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#Standard" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "urn:absolute://local/storage-reliability-ontology#has_another_name" : [ {
     "@value" : "SMI-S"
   } ]
@@ -3011,7 +3011,7 @@
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Seagate_SCSI_Commands_Reference_Manual_rev_H",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#Standard" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Self-TestResults",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -3046,9 +3046,6 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
   } ]
-}, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#Standard",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -3132,7 +3129,7 @@
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#Standard" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "urn:absolute://local/storage-reliability-ontology#has_another_name" : [ {
     "@value" : "SCP-4"
   } ]
@@ -3617,6 +3614,9 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "causes"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Event"
   } ]
@@ -3637,14 +3637,11 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#8fcb7386-5a43-4fcc-b12d-010c46489fad"
   } ]
 }, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#connects_to",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#structural"
-  } ]
-}, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#consists_of",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "consists_of"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#structural"
   } ]
@@ -3681,12 +3678,18 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "depends_on"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid1"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "depends_with_ecc_on"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#depends_on"
   } ]
@@ -3737,21 +3740,30 @@
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "has_another_name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_from",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#has_russian_term",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
@@ -3779,12 +3791,18 @@
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "if_warning_causes"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#causes"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "if_warning_manifests_in"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#manifests_in"
   } ]
@@ -3881,6 +3899,9 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is_normal_with_threshold"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
   } ]
@@ -3975,6 +3996,9 @@
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "majorly_depends_on"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#depends_on"
   } ]
@@ -3983,6 +4007,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "manifests_in"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
@@ -4211,6 +4238,9 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "shows_in_parameter"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
   } ]
@@ -4326,6 +4356,9 @@
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "strongly_depends_on"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#depends_on"
   } ]
@@ -4334,6 +4367,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "structural"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid8"
