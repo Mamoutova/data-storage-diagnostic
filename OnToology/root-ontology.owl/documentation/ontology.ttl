@@ -15,17 +15,14 @@
 ###  urn:absolute://local/storage-reliability-ontology#causes
 :causes rdf:type owl:ObjectProperty ;
         rdfs:domain :StorageSubsystem ;
-        rdfs:range :Event .
-
-
-###  urn:absolute://local/storage-reliability-ontology#connects_to
-:connects_to rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :structural .
+        rdfs:range :Event ;
+        rdfs:label "causes" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#consists_of
 :consists_of rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :structural .
+             rdfs:subPropertyOf :structural ;
+             rdfs:label "consists_of" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#depends_on
@@ -35,16 +32,14 @@
                          owl:unionOf ( :Component
                                        :StorageSubsystem
                                      )
-                       ] .
+                       ] ;
+            rdfs:label "depends_on" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on
 :depends_with_ecc_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :depends_on .
-
-
-###  urn:absolute://local/storage-reliability-ontology#has_info_from
-:has_info_from rdf:type owl:ObjectProperty .
+                     rdfs:subPropertyOf :depends_on ;
+                     rdfs:label "depends_with_ecc_on" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#if_failed_causes
@@ -61,12 +56,14 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#if_warning_causes
 :if_warning_causes rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :causes .
+                   rdfs:subPropertyOf :causes ;
+                   rdfs:label "if_warning_causes" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in
 :if_warning_manifests_in rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :manifests_in .
+                         rdfs:subPropertyOf :manifests_in ;
+                         rdfs:label "if_warning_manifests_in" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#interprets_as
@@ -79,36 +76,40 @@
 ###  urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold
 :is_normal_with_threshold rdf:type owl:ObjectProperty ;
                           rdfs:domain :Parameter ;
-                          rdfs:range :Parameter .
+                          rdfs:range :Parameter ;
+                          rdfs:label "is_normal_with_threshold" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#majorly_depends_on
 :majorly_depends_on rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :depends_on .
+                    rdfs:subPropertyOf :depends_on ;
+                    rdfs:label "majorly_depends_on" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#manifests_in
 :manifests_in rdf:type owl:ObjectProperty ;
               rdfs:domain :Component ;
-              rdfs:range :ComponentFault .
+              rdfs:range :ComponentFault ;
+              rdfs:label "manifests_in" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#shows_in_parameter
 :shows_in_parameter rdf:type owl:ObjectProperty ;
                     rdfs:domain :ComponentFault ;
-                    rdfs:range :Parameter .
+                    rdfs:range :Parameter ;
+                    rdfs:label "shows_in_parameter" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#strongly_depends_on
 :strongly_depends_on rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :depends_on .
+                     rdfs:subPropertyOf :depends_on ;
+                     rdfs:label "strongly_depends_on" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#structural
 :structural rdf:type owl:ObjectProperty ;
             rdfs:domain [ rdf:type owl:Class ;
-                          owl:unionOf ( :Component
-                                        :StorageSubsystem
+                          owl:unionOf ( :StorageSubsystem
                                         :StorageSystem
                                       )
                         ] ;
@@ -116,7 +117,8 @@
                          owl:unionOf ( :Component
                                        :StorageSubsystem
                                      )
-                       ] .
+                       ] ;
+            rdfs:label "structural" .
 
 
 #################################################################
@@ -125,22 +127,29 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#has_another_name
 :has_another_name rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:string .
+                  rdfs:domain owl:Thing ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "has_another_name" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#has_info_at
 :has_info_at rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:string .
+             rdfs:domain owl:Thing ;
+             rdfs:range xsd:string ;
+             rdfs:label "has_info_at" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#has_russian_term
 :has_russian_term rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:string .
+                  rdfs:domain owl:Thing ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "has_russian_term" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#is_normal
 :is_normal rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Parameter .
+           rdfs:domain :Parameter ;
+           rdfs:label "is_normal" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#is_normal_above
@@ -182,7 +191,8 @@
 ###  urn:absolute://local/storage-reliability-ontology#protection_scheme_property
 :protection_scheme_property rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf owl:topDataProperty ;
-                            rdfs:domain :ProtectionScheme .
+                            rdfs:domain :ProtectionScheme ;
+                            rdfs:label "protection_scheme_property" .
 
 
 #################################################################
@@ -735,20 +745,17 @@
 ###  urn:absolute://local/storage-reliability-ontology#Link
 :Link rdf:type owl:Class ;
       rdfs:subClassOf :VirtualComponent ,
-                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                               owl:onProperty :strongly_depends_on ;
-                                               owl:someValuesFrom :NetworkDevice
-                                             ]
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty :strongly_depends_on ;
-                                               owl:someValuesFrom :NetworkInterface
-                                             ]
-                                           ) ;
-                        rdf:type owl:Class
-                      ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :if_failed_causes ;
                         owl:someValuesFrom :LinkDown
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :strongly_depends_on ;
+                        owl:someValuesFrom :NetworkDevice
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :strongly_depends_on ;
+                        owl:someValuesFrom :NetworkInterface
                       ] .
 
 
@@ -1207,10 +1214,6 @@
 ###  urn:absolute://local/storage-reliability-ontology#SolidStateMediaLog
 :SolidStateMediaLog rdf:type owl:Class ;
                     rdfs:subClassOf :SCSILogParameters .
-
-
-###  urn:absolute://local/storage-reliability-ontology#Standard
-:Standard rdf:type owl:Class .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog
@@ -2069,16 +2072,13 @@
 ###  urn:absolute://local/storage-reliability-ontology#4AccumulatedStart-StopCycles
 <urn:absolute://local/storage-reliability-ontology#4AccumulatedStart-StopCycles> rdf:type owl:Class ;
                                                                                  rdfs:subClassOf :Start-StopCycleCntLog ,
-                                                                                                 [ rdf:type owl:Class ;
-                                                                                                   owl:unionOf ( [ rdf:type owl:Restriction ;
-                                                                                                                   owl:onProperty :is_normal_with_threshold ;
-                                                                                                                   owl:allValuesFrom <urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime>
-                                                                                                                 ]
-                                                                                                                 [ rdf:type owl:Restriction ;
-                                                                                                                   owl:onProperty :is_normal_below ;
-                                                                                                                   owl:hasValue 30000
-                                                                                                                 ]
-                                                                                                               )
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty :is_normal_with_threshold ;
+                                                                                                   owl:allValuesFrom <urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime>
+                                                                                                 ] ,
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty :is_normal_below ;
+                                                                                                   owl:hasValue 30000
                                                                                                  ] .
 
 
@@ -2119,8 +2119,7 @@
 #################################################################
 
 ###  urn:absolute://local/storage-reliability-ontology#ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers
-:ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers rdf:type owl:NamedIndividual ,
-                                                                                     :Standard .
+:ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers rdf:type owl:NamedIndividual .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#HWMGR
@@ -2129,13 +2128,11 @@
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ISO_IEC_14776_454_2018
-:ISO_IEC_14776_454_2018 rdf:type owl:NamedIndividual ,
-                                 :Standard .
+:ISO_IEC_14776_454_2018 rdf:type owl:NamedIndividual .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification
-:SNIA_Storage_Management_Initiative_Specification rdf:type owl:NamedIndividual ,
-                                                           :Standard ;
+:SNIA_Storage_Management_Initiative_Specification rdf:type owl:NamedIndividual ;
                                                   :has_another_name "SMI-S" .
 
 
@@ -2145,8 +2142,7 @@
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Seagate_SCSI_Commands_Reference_Manual_rev_H
-:Seagate_SCSI_Commands_Reference_Manual_rev_H rdf:type owl:NamedIndividual ,
-                                                       :Standard .
+:Seagate_SCSI_Commands_Reference_Manual_rev_H rdf:type owl:NamedIndividual .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#TRAID
@@ -2985,8 +2981,7 @@
 
 
 ###  urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4
-<urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4> rdf:type owl:NamedIndividual ,
-                                                                                                  :Standard ;
+<urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4> rdf:type owl:NamedIndividual ;
                                                                                          :has_another_name "SCP-4" .
 
 
