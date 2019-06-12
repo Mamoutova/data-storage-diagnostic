@@ -22,28 +22,28 @@
   "@id" : "_:genid100",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Self-TestResults"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskSectorUnavailable"
   } ]
 }, {
   "@id" : "_:genid101",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#6TotalUncorErr"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskWearOut"
   } ]
 }, {
   "@id" : "_:genid102",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "SCSIDiskPartialLoss"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIStorageMediaFailure"
   } ]
 }, {
   "@id" : "_:genid103",
@@ -52,7 +52,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Non-MediumErrCnt"
   } ]
 }, {
   "@id" : "_:genid104",
@@ -61,7 +61,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#4AccumulatedStart-StopCycles"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#AdditionalSenseCode"
   } ]
 }, {
   "@id" : "_:genid105",
@@ -70,25 +70,25 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#6AccumulatedLoad-UnloadCycles"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#AdditionalSenseCodeQualifier"
   } ]
 }, {
   "@id" : "_:genid106",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "Seagate_SCSI_Commands_Reference_Manual_rev_H"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
-  } ]
-}, {
-  "@id" : "_:genid107",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SASPhyLog"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Health"
+  } ]
+}, {
+  "@id" : "_:genid107",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "SCSIDiskOffline"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
   } ]
 }, {
   "@id" : "_:genid108",
@@ -106,10 +106,127 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Self-TestResults"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#MaxTemperature"
   } ]
 }, {
   "@id" : "_:genid110",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator"
+  } ]
+}, {
+  "@id" : "_:genid111",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel"
+  } ]
+}, {
+  "@id" : "_:genid112",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc"
+  } ]
+}, {
+  "@id" : "_:genid113",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Self-TestResults"
+  } ]
+}, {
+  "@id" : "_:genid114",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#6TotalUncorErr"
+  } ]
+}, {
+  "@id" : "_:genid115",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "SCSIDiskPartialLoss"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid116",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator"
+  } ]
+}, {
+  "@id" : "_:genid117",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#4AccumulatedStart-StopCycles"
+  } ]
+}, {
+  "@id" : "_:genid118",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#6AccumulatedLoad-UnloadCycles"
+  } ]
+}, {
+  "@id" : "_:genid119",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Seagate_SCSI_Commands_Reference_Manual_rev_H"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
+  } ]
+}, {
+  "@id" : "_:genid120",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SASPhyLog"
+  } ]
+}, {
+  "@id" : "_:genid121",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#BackgroundScanStatus"
+  } ]
+}, {
+  "@id" : "_:genid122",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Self-TestResults"
+  } ]
+}, {
+  "@id" : "_:genid123",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "https://www.ixbt.com/storage/hdd-smart-testing.shtml"
@@ -118,7 +235,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
   } ]
 }, {
-  "@id" : "_:genid111",
+  "@id" : "_:genid124",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -128,7 +245,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_below"
   } ]
 }, {
-  "@id" : "_:genid112",
+  "@id" : "_:genid125",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -138,7 +255,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
   } ]
 }, {
-  "@id" : "_:genid113",
+  "@id" : "_:genid126",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "https://www.computerweekly.com/tip/Mean-time-between-failure-vs-load-unload-cycles"
@@ -147,7 +264,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid127",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on"
@@ -156,7 +273,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDisk"
   } ]
 }, {
-  "@id" : "_:genid115",
+  "@id" : "_:genid128",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
@@ -165,7 +282,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#DataLoss"
   } ]
 }, {
-  "@id" : "_:genid116",
+  "@id" : "_:genid129",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
@@ -174,7 +291,16 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#DataVulnurability"
   } ]
 }, {
-  "@id" : "_:genid117",
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "True"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+  } ]
+}, {
+  "@id" : "_:genid130",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
@@ -183,7 +309,16 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#HardwareRAIDArray"
   } ]
 }, {
-  "@id" : "_:genid118",
+  "@id" : "_:genid131",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Storage controller"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid132",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "Контроллер хранения"
@@ -192,7 +327,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_russian_term"
   } ]
 }, {
-  "@id" : "_:genid119",
+  "@id" : "_:genid133",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
@@ -201,7 +336,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Vulnurable"
   } ]
 }, {
-  "@id" : "_:genid120",
+  "@id" : "_:genid134",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
@@ -210,7 +345,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessorConnectionCutoff"
   } ]
 }, {
-  "@id" : "_:genid121",
+  "@id" : "_:genid135",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -219,7 +354,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#EndPoint"
   } ]
 }, {
-  "@id" : "_:genid122",
+  "@id" : "_:genid136",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -228,7 +363,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem2-level1"
   } ]
 }, {
-  "@id" : "_:genid123",
+  "@id" : "_:genid137",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
@@ -237,7 +372,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemAggrFail"
   } ]
 }, {
-  "@id" : "_:genid124",
+  "@id" : "_:genid138",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
@@ -246,7 +381,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemAggrError-level2"
   } ]
 }, {
-  "@id" : "_:genid125",
+  "@id" : "_:genid139",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
@@ -255,43 +390,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure1"
   } ]
 }, {
-  "@id" : "_:genid126",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError1"
-  } ]
-}, {
-  "@id" : "_:genid127",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure2"
-  } ]
-}, {
-  "@id" : "_:genid128",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError2"
-  } ]
-}, {
-  "@id" : "_:genid129",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure3"
-  } ]
-}, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers"
@@ -300,7 +399,43 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
   } ]
 }, {
-  "@id" : "_:genid130",
+  "@id" : "_:genid140",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError1"
+  } ]
+}, {
+  "@id" : "_:genid141",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure2"
+  } ]
+}, {
+  "@id" : "_:genid142",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError2"
+  } ]
+}, {
+  "@id" : "_:genid143",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure3"
+  } ]
+}, {
+  "@id" : "_:genid144",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
@@ -309,7 +444,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError3"
   } ]
 }, {
-  "@id" : "_:genid131",
+  "@id" : "_:genid145",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
@@ -318,7 +453,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level1"
   } ]
 }, {
-  "@id" : "_:genid132",
+  "@id" : "_:genid146",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
@@ -327,7 +462,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level2"
   } ]
 }, {
-  "@id" : "_:genid133",
+  "@id" : "_:genid147",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
@@ -336,7 +471,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level3"
   } ]
 }, {
-  "@id" : "_:genid134",
+  "@id" : "_:genid148",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
@@ -345,7 +480,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter22-level3"
   } ]
 }, {
-  "@id" : "_:genid135",
+  "@id" : "_:genid149",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
@@ -354,44 +489,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level1"
   } ]
 }, {
-  "@id" : "_:genid136",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level2"
-  } ]
-}, {
-  "@id" : "_:genid137",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level3"
-  } ]
-}, {
-  "@id" : "_:genid138",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter11-level3"
-  } ]
-}, {
-  "@id" : "_:genid139",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
-  } ]
-}, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -401,7 +499,44 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_below"
   } ]
 }, {
-  "@id" : "_:genid140",
+  "@id" : "_:genid150",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level2"
+  } ]
+}, {
+  "@id" : "_:genid151",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level3"
+  } ]
+}, {
+  "@id" : "_:genid152",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter11-level3"
+  } ]
+}, {
+  "@id" : "_:genid153",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+  } ]
+}, {
+  "@id" : "_:genid154",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -411,7 +546,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_below"
   } ]
 }, {
-  "@id" : "_:genid141",
+  "@id" : "_:genid155",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -421,7 +556,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_above"
   } ]
 }, {
-  "@id" : "_:genid142",
+  "@id" : "_:genid156",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
@@ -430,7 +565,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-threshold"
   } ]
 }, {
-  "@id" : "_:genid143",
+  "@id" : "_:genid157",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -440,7 +575,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
   } ]
 }, {
-  "@id" : "_:genid144",
+  "@id" : "_:genid158",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -450,7 +585,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_below"
   } ]
 }, {
-  "@id" : "_:genid145",
+  "@id" : "_:genid159",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -460,43 +595,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_above"
   } ]
 }, {
-  "@id" : "_:genid146",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-threshold"
-  } ]
-}, {
-  "@id" : "_:genid147",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestRandomComponent"
-  } ]
-}, {
-  "@id" : "_:genid148",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail1"
-  } ]
-}, {
-  "@id" : "_:genid149",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError1"
-  } ]
-}, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -506,7 +605,43 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_above"
   } ]
 }, {
-  "@id" : "_:genid150",
+  "@id" : "_:genid160",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-threshold"
+  } ]
+}, {
+  "@id" : "_:genid161",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestRandomComponent"
+  } ]
+}, {
+  "@id" : "_:genid162",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail1"
+  } ]
+}, {
+  "@id" : "_:genid163",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError1"
+  } ]
+}, {
+  "@id" : "_:genid164",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -515,7 +650,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestAnotherComponent"
   } ]
 }, {
-  "@id" : "_:genid151",
+  "@id" : "_:genid165",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
@@ -524,7 +659,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level1"
   } ]
 }, {
-  "@id" : "_:genid152",
+  "@id" : "_:genid166",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
@@ -533,7 +668,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail2"
   } ]
 }, {
-  "@id" : "_:genid153",
+  "@id" : "_:genid167",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
@@ -542,7 +677,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError2"
   } ]
 }, {
-  "@id" : "_:genid154",
+  "@id" : "_:genid168",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -551,7 +686,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level2"
   } ]
 }, {
-  "@id" : "_:genid155",
+  "@id" : "_:genid169",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on"
@@ -560,43 +695,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level3"
   } ]
 }, {
-  "@id" : "_:genid156",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail3"
-  } ]
-}, {
-  "@id" : "_:genid157",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError3"
-  } ]
-}, {
-  "@id" : "_:genid158",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Error"
-  } ]
-}, {
-  "@id" : "_:genid159",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
-  } ]
-}, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -606,7 +705,25 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_below"
   } ]
 }, {
-  "@id" : "_:genid160",
+  "@id" : "_:genid170",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail3"
+  } ]
+}, {
+  "@id" : "_:genid171",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError3"
+  } ]
+}, {
+  "@id" : "_:genid172",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
@@ -615,25 +732,16 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Error"
   } ]
 }, {
-  "@id" : "_:genid161",
+  "@id" : "_:genid173",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Vulnurable"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
   } ]
 }, {
-  "@id" : "_:genid162",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Vulnurable"
-  } ]
-}, {
-  "@id" : "_:genid163",
+  "@id" : "_:genid174",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
@@ -642,7 +750,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Error"
   } ]
 }, {
-  "@id" : "_:genid164",
+  "@id" : "_:genid175",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
@@ -651,25 +759,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Vulnurable"
   } ]
 }, {
-  "@id" : "_:genid165",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
-  } ]
-}, {
-  "@id" : "_:genid166",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
-  } ]
-}, {
-  "@id" : "_:genid167",
+  "@id" : "_:genid176",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
@@ -678,26 +768,34 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Vulnurable"
   } ]
 }, {
-  "@id" : "_:genid168",
+  "@id" : "_:genid177",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Error"
   } ]
 }, {
-  "@id" : "_:genid169",
+  "@id" : "_:genid178",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#1ReferenceTemperature"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Vulnurable"
   } ]
 }, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid179",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
+  } ]
+}, {
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
@@ -706,123 +804,22 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Health"
   } ]
 }, {
-  "@id" : "_:genid170",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "Start/StopCount"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid171",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "Power-onTime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid172",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
-  } ]
-}, {
-  "@id" : "_:genid173",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "Recalibration Retries"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid174",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "UNC Error"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid175",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "Mechanical Shock"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid176",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "Emergency Retry Count"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid177",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "HDA Temperature"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid178",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "HDD Temperature"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid179",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "Uncorrectable Sector Count"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#UserAppCutoff"
-  } ]
-}, {
   "@id" : "_:genid180",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
   } ]
 }, {
   "@id" : "_:genid181",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "MultiZone Error Rate"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Vulnurable"
   } ]
 }, {
   "@id" : "_:genid182",
@@ -838,13 +835,151 @@
   "@id" : "_:genid183",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#1ReferenceTemperature"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
   } ]
 }, {
   "@id" : "_:genid184",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Start/StopCount"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid185",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Power-onTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid186",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+  } ]
+}, {
+  "@id" : "_:genid187",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Recalibration Retries"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid188",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "UNC Error"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid189",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Mechanical Shock"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#UserAppCutoff"
+  } ]
+}, {
+  "@id" : "_:genid190",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Emergency Retry Count"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid191",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "HDA Temperature"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid192",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "HDD Temperature"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid193",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Uncorrectable Sector Count"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid194",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+  } ]
+}, {
+  "@id" : "_:genid195",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "MultiZone Error Rate"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid196",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+  } ]
+}, {
+  "@id" : "_:genid197",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
+  } ]
+}, {
+  "@id" : "_:genid198",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -854,7 +989,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_below"
   } ]
 }, {
-  "@id" : "_:genid185",
+  "@id" : "_:genid199",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -864,26 +999,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
   } ]
 }, {
-  "@id" : "_:genid186",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
-  } ]
-}, {
-  "@id" : "_:genid187",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
-  } ]
-}, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
@@ -892,7 +1008,26 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#UserConnectionLost"
   } ]
 }, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid200",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
+  } ]
+}, {
+  "@id" : "_:genid201",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+  } ]
+}, {
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -901,31 +1036,22 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#EndPoint"
   } ]
 }, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFailure"
-  } ]
-}, {
   "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterQuorumLoss"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
   } ]
 }, {
   "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessor"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Vulnurable"
   } ]
 }, {
   "@id" : "_:genid24",
@@ -949,31 +1075,13 @@
   "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
-  } ]
-}, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Vulnurable"
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#BadHealth"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
@@ -982,7 +1090,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#ControlPathService"
   } ]
 }, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
@@ -991,7 +1099,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#DataPathNetwork"
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
@@ -1000,7 +1108,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1009,7 +1117,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessor"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
@@ -1018,7 +1126,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#DiskEnclosure"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
@@ -1027,7 +1135,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#InternalManagementNetwork"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
@@ -1036,7 +1144,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#SoftwareRAID"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
@@ -1045,7 +1153,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#StoragePool"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1054,7 +1162,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#EthernetController"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1063,13 +1171,31 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#EthernetSwitch"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Link"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#PCIeFabric"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "DAS"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -1084,23 +1210,32 @@
 }, {
   "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Disk"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#PCIeFabric"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
   } ]
 }, {
   "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "DAS"
+    "@value" : "Disk Drive"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
   } ]
 }, {
   "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "Storage Drive"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
+  } ]
+}, {
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
@@ -1109,7 +1244,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#DiskEnclosureOffline"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1118,7 +1253,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#DASInterface"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1127,7 +1262,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Fan"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1136,7 +1271,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#PowerSupplyUnit"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1145,7 +1280,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Redriver"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "shelf"
@@ -1154,7 +1289,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
   } ]
 }, {
-  "@id" : "_:genid48",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "Дисковая полка"
@@ -1163,7 +1298,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_russian_term"
   } ]
 }, {
-  "@id" : "_:genid49",
+  "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as"
@@ -1172,7 +1307,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
   } ]
 }, {
-  "@id" : "_:genid50",
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
@@ -1181,7 +1316,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFailure"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid52",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
@@ -1190,7 +1325,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterQuorumLoss"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1199,7 +1334,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#DataPathNetwork"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1208,7 +1343,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessor"
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "https://www.tech-coffee.net/understand-failover-cluster-quorum/"
@@ -1217,7 +1352,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
@@ -1226,7 +1361,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#LinkDown"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
@@ -1235,7 +1370,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#FanFailure"
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
@@ -1244,7 +1379,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#FanSpeed"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1254,7 +1389,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_above"
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "https://www.dell.com/community/PowerEdge-HDD-SCSI-RAID/IMPORTANT-You-may-have-bad-hardware-SCSI-DISK-RELATED/td-p/452234"
@@ -1263,7 +1398,34 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Disk"
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#DiskEnclosure"
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#RAIDController"
+  } ]
+}, {
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "OK"
@@ -1272,7 +1434,16 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#DeadmanTimer"
+  } ]
+}, {
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
@@ -1281,7 +1452,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterManagementFailure"
   } ]
 }, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes"
@@ -1290,7 +1461,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterManagementConnectionLoss"
   } ]
 }, {
-  "@id" : "_:genid63",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on"
@@ -1299,56 +1470,11 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Link"
   } ]
 }, {
-  "@id" : "_:genid64",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
-  } ]
-}, {
-  "@id" : "_:genid65",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#LinkDown"
-  } ]
-}, {
-  "@id" : "_:genid66",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDevice"
-  } ]
-}, {
-  "@id" : "_:genid67",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterface"
-  } ]
-}, {
-  "@id" : "_:genid68",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#LinkIsUp"
-  } ]
-}, {
-  "@id" : "_:genid69",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "true"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
@@ -1366,25 +1492,70 @@
 }, {
   "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "0"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Disk"
   } ]
 }, {
   "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#DiskEnclosure"
   } ]
 }, {
   "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDevice"
+  } ]
+}, {
+  "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterface"
+  } ]
+}, {
+  "@id" : "_:genid74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#LinkIsUp"
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+  } ]
+}, {
+  "@id" : "_:genid76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+  } ]
+}, {
+  "@id" : "_:genid77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint"
   } ],
@@ -1392,7 +1563,43 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid78",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"
+  } ]
+}, {
+  "@id" : "_:genid79",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDown"
+  } ]
+}, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDeviceDegradation"
+  } ]
+}, {
+  "@id" : "_:genid81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#RateOfPackageLoss"
+  } ]
+}, {
+  "@id" : "_:genid82",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1402,7 +1609,16 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid83",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#AckReceived"
+  } ]
+}, {
+  "@id" : "_:genid84",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1412,7 +1628,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
   } ]
 }, {
-  "@id" : "_:genid75",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "Диагностический параметр"
@@ -1421,7 +1637,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_russian_term"
   } ]
 }, {
-  "@id" : "_:genid76",
+  "@id" : "_:genid86",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1431,7 +1647,25 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_below"
   } ]
 }, {
-  "@id" : "_:genid77",
+  "@id" : "_:genid87",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#HeartbeatSignalLoss"
+  } ]
+}, {
+  "@id" : "_:genid88",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Non-RespondingState"
+  } ]
+}, {
+  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1441,7 +1675,16 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_below"
   } ]
 }, {
-  "@id" : "_:genid78",
+  "@id" : "_:genid90",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "https://kb.paessler.com/en/topic/653-how-do-snmp-mibs-and-oids-work"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
+  } ]
+}, {
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -1451,7 +1694,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
   } ]
 }, {
-  "@id" : "_:genid79",
+  "@id" : "_:genid92",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
@@ -1460,7 +1703,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIPHYFault"
   } ]
 }, {
-  "@id" : "_:genid80",
+  "@id" : "_:genid93",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "EnclosureServices"
@@ -1469,7 +1712,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
   } ]
 }, {
-  "@id" : "_:genid81",
+  "@id" : "_:genid94",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "SASSwitch"
@@ -1478,7 +1721,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
   } ]
 }, {
-  "@id" : "_:genid82",
+  "@id" : "_:genid95",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "https://www.seagate.com/staticfiles/support/disc/manuals/Interface%20manuals/100293071c.pdf"
@@ -1487,7 +1730,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
   } ]
 }, {
-  "@id" : "_:genid83",
+  "@id" : "_:genid96",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "https://www.seagate.com/staticfiles/support/disc/manuals/Interface%20manuals/100293071c.pdf"
@@ -1496,7 +1739,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at"
   } ]
 }, {
-  "@id" : "_:genid84",
+  "@id" : "_:genid97",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"
@@ -1505,7 +1748,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskLoss"
   } ]
 }, {
-  "@id" : "_:genid85",
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
@@ -1514,7 +1757,7 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskControlError"
   } ]
 }, {
-  "@id" : "_:genid86",
+  "@id" : "_:genid99",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
@@ -1523,129 +1766,14 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskMediaExpectedDegradation"
   } ]
 }, {
-  "@id" : "_:genid87",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskSectorUnavailable"
-  } ]
-}, {
-  "@id" : "_:genid88",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskWearOut"
-  } ]
-}, {
-  "@id" : "_:genid89",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIStorageMediaFailure"
-  } ]
-}, {
-  "@id" : "_:genid90",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Non-MediumErrCnt"
-  } ]
-}, {
-  "@id" : "_:genid91",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#AdditionalSenseCode"
-  } ]
-}, {
-  "@id" : "_:genid92",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#AdditionalSenseCodeQualifier"
-  } ]
-}, {
-  "@id" : "_:genid93",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Health"
-  } ]
-}, {
-  "@id" : "_:genid94",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "SCSIDiskOffline"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name"
-  } ]
-}, {
-  "@id" : "_:genid95",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#BackgroundScanStatus"
-  } ]
-}, {
-  "@id" : "_:genid96",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#MaxTemperature"
-  } ]
-}, {
-  "@id" : "_:genid97",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator"
-  } ]
-}, {
-  "@id" : "_:genid98",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel"
-  } ]
-}, {
-  "@id" : "_:genid99",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc"
-  } ]
-}, {
   "@id" : "urn:absolute://local/storage-reliability-ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#01RawReadErrorRate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"
+  }, {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   } ]
 }, {
@@ -1666,7 +1794,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   }, {
-    "@id" : "_:genid170"
+    "@id" : "_:genid184"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#05ReallocatedSectorCount",
@@ -1692,7 +1820,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   }, {
-    "@id" : "_:genid171"
+    "@id" : "_:genid185"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#0ErrCorwoSubstDel",
@@ -1700,7 +1828,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#R_W_V_ErrCnt"
   }, {
-    "@id" : "_:genid168"
+    "@id" : "_:genid182"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#0Temperature",
@@ -1708,7 +1836,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TemperatureLog"
   }, {
-    "@id" : "_:genid169"
+    "@id" : "_:genid183"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#10SpinRetryCount",
@@ -1722,7 +1850,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   }, {
-    "@id" : "_:genid173"
+    "@id" : "_:genid187"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#12PowerCycleCount",
@@ -1748,7 +1876,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   }, {
-    "@id" : "_:genid174"
+    "@id" : "_:genid188"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#188CommandTimeout",
@@ -1774,7 +1902,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   }, {
-    "@id" : "_:genid175"
+    "@id" : "_:genid189"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#192PowerOffRetractCount",
@@ -1782,7 +1910,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   }, {
-    "@id" : "_:genid176"
+    "@id" : "_:genid190"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#193Load/UnloadCycleCount",
@@ -1796,9 +1924,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   }, {
-    "@id" : "_:genid177"
+    "@id" : "_:genid191"
   }, {
-    "@id" : "_:genid178"
+    "@id" : "_:genid192"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#195HardwareECCRecovered",
@@ -1824,7 +1952,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   }, {
-    "@id" : "_:genid179"
+    "@id" : "_:genid193"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#199UltraDMACRCErrorCount",
@@ -1838,7 +1966,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#R_W_V_ErrCnt"
   }, {
-    "@id" : "_:genid172"
+    "@id" : "_:genid186"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#1ReferenceTemperature",
@@ -1852,7 +1980,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
   }, {
-    "@id" : "_:genid181"
+    "@id" : "_:genid195"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#201SoftReadErrorRate",
@@ -1896,7 +2024,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#R_W_V_ErrCnt"
   }, {
-    "@id" : "_:genid180"
+    "@id" : "_:genid194"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime",
@@ -1910,7 +2038,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#R_W_V_ErrCnt"
   }, {
-    "@id" : "_:genid182"
+    "@id" : "_:genid196"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#4AccumulatedStart-StopCycles",
@@ -1918,9 +2046,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog"
   }, {
-    "@id" : "_:genid183"
+    "@id" : "_:genid197"
   }, {
-    "@id" : "_:genid184"
+    "@id" : "_:genid198"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc",
@@ -1928,7 +2056,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#R_W_V_ErrCnt"
   }, {
-    "@id" : "_:genid185"
+    "@id" : "_:genid199"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime",
@@ -1942,7 +2070,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog"
   }, {
-    "@id" : "_:genid186"
+    "@id" : "_:genid200"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#6TotalUncorErr",
@@ -1950,7 +2078,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#R_W_V_ErrCnt"
   }, {
-    "@id" : "_:genid187"
+    "@id" : "_:genid201"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#8+2protection_sch",
@@ -2041,6 +2169,14 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#AckReceived",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"
+  }, {
+    "@id" : "_:genid13"
+  } ]
+}, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#AdditionalSenseCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -2070,7 +2206,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
   }, {
-    "@id" : "_:genid13"
+    "@id" : "_:genid14"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#AtmosphericPressure",
@@ -2084,7 +2220,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SASPhyLog"
   }, {
-    "@id" : "_:genid14"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#AverageQueueSize",
@@ -2102,11 +2238,11 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#BackgroundScanStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
-  }, {
-    "@id" : "_:genid15"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
   }, {
     "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#BadHealth",
@@ -2114,13 +2250,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
   }, {
-    "@id" : "_:genid17"
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#CPUSpecific",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#REST"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TatlinREST"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#CPUTemperature",
@@ -2138,7 +2274,7 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#CacheComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageDevice"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ClientAppNetwork",
@@ -2146,11 +2282,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClientConnections"
   }, {
-    "@id" : "_:genid18"
-  }, {
     "@id" : "_:genid19"
   }, {
     "@id" : "_:genid20"
+  }, {
+    "@id" : "_:genid21"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ClientConnections",
@@ -2159,22 +2295,10 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#Network"
   } ]
 }, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#Cluster",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#MacroComponent"
-  }, {
-    "@id" : "_:genid21"
-  }, {
-    "@id" : "_:genid22"
-  }, {
-    "@id" : "_:genid23"
-  } ]
-}, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFailure",
@@ -2182,7 +2306,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFault"
   }, {
-    "@id" : "_:genid24"
+    "@id" : "_:genid22"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFault",
@@ -2196,7 +2320,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFault"
   }, {
-    "@id" : "_:genid25"
+    "@id" : "_:genid23"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterManagementFailure",
@@ -2204,7 +2328,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFault"
   }, {
-    "@id" : "_:genid26"
+    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterQuorumLoss",
@@ -2212,34 +2336,62 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFault"
   }, {
-    "@id" : "_:genid27"
+    "@id" : "_:genid25"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterSpecific",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#REST"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TatlinREST"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#CommunicationSWStackFailure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid28"
+    "@id" : "_:genid26"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Event"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
+  }, {
     "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSystem"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Fault"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#ConfigurationParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#PerformanceParameter"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ControlPath",
@@ -2247,9 +2399,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
   }, {
-    "@id" : "_:genid29"
+    "@id" : "_:genid27"
   }, {
-    "@id" : "_:genid30"
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ControlPathService",
@@ -2284,7 +2436,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault"
   }, {
-    "@id" : "_:genid31"
+    "@id" : "_:genid29"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#DataPath",
@@ -2292,15 +2444,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
   }, {
+    "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid31"
+  }, {
     "@id" : "_:genid32"
   }, {
     "@id" : "_:genid33"
   }, {
     "@id" : "_:genid34"
-  }, {
-    "@id" : "_:genid35"
-  }, {
-    "@id" : "_:genid36"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#DataPathNetwork",
@@ -2308,13 +2460,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Network"
   }, {
+    "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid36"
+  }, {
     "@id" : "_:genid37"
   }, {
     "@id" : "_:genid38"
-  }, {
-    "@id" : "_:genid39"
-  }, {
-    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#DataPathService",
@@ -2329,32 +2481,36 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault"
   } ]
 }, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#Device",
+  "@id" : "urn:absolute://local/storage-reliability-ontology#DeadmanTimer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#DirectAttachedStorage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageMacroComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#MacroComponent"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Disk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageDevice"
+  }, {
+    "@id" : "_:genid40"
+  }, {
+    "@id" : "_:genid41"
+  }, {
+    "@id" : "_:genid42"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#DiskEnclosure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#DirectAttachedStorage"
-  }, {
-    "@id" : "_:genid42"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageMacroComponent"
   }, {
     "@id" : "_:genid43"
   }, {
@@ -2367,6 +2523,8 @@
     "@id" : "_:genid47"
   }, {
     "@id" : "_:genid48"
+  }, {
+    "@id" : "_:genid49"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#DiskEnclosureOffline",
@@ -2374,15 +2532,19 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault"
   }, {
-    "@id" : "_:genid49"
+    "@id" : "_:genid50"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#DiskSubsystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#DirectAttachedStorage"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#DynamicQuorum",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterEntity"
-  }, {
-    "@id" : "_:genid50"
   }, {
     "@id" : "_:genid51"
   }, {
@@ -2391,6 +2553,8 @@
     "@id" : "_:genid53"
   }, {
     "@id" : "_:genid54"
+  }, {
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#EXAMPLE_pool_8+2",
@@ -2422,9 +2586,9 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#EndPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDevice"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterface"
   }, {
-    "@id" : "_:genid55"
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#EnterpriseStorageSystem",
@@ -2452,30 +2616,39 @@
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Event",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSystem"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"
+  } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Fan",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Device"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
   }, {
-    "@id" : "_:genid56"
+    "@id" : "_:genid57"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#FanFailure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"
   }, {
-    "@id" : "_:genid57"
+    "@id" : "_:genid58"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#FanSpeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#REST"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TatlinREST"
   }, {
-    "@id" : "_:genid58"
+    "@id" : "_:genid59"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal",
@@ -2501,7 +2674,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Custom"
   }, {
-    "@id" : "_:genid59"
+    "@id" : "_:genid60"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#HBA",
@@ -2522,15 +2695,29 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#HardwareRAIDArray",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#IntelligentDiskSubsystem"
+  }, {
+    "@id" : "_:genid61"
+  }, {
+    "@id" : "_:genid62"
+  }, {
+    "@id" : "_:genid63"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Health",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#REST"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TatlinREST"
   }, {
-    "@id" : "_:genid60"
+    "@id" : "_:genid64"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#HeartbeatSignalLoss",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
+  }, {
+    "@id" : "_:genid65"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Humidity",
@@ -2551,7 +2738,13 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#InformationalExceptionsLog",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#IntelligentDiskSubsystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#DiskSubsystem"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#InternalManagementNetwork",
@@ -2559,11 +2752,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Network"
   }, {
-    "@id" : "_:genid61"
+    "@id" : "_:genid66"
   }, {
-    "@id" : "_:genid62"
+    "@id" : "_:genid67"
   }, {
-    "@id" : "_:genid63"
+    "@id" : "_:genid68"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#InvalidDWORDCnt",
@@ -2571,33 +2764,35 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SASPhyLog"
   }, {
-    "@id" : "_:genid64"
+    "@id" : "_:genid69"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#JBod",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageMacroComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#DiskSubsystem"
+  }, {
+    "@id" : "_:genid70"
+  }, {
+    "@id" : "_:genid71"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Link",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Network"
   }, {
-    "@id" : "_:genid65"
+    "@id" : "_:genid72"
   }, {
-    "@id" : "_:genid66"
-  }, {
-    "@id" : "_:genid67"
+    "@id" : "_:genid73"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#LinkDown",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"
   }, {
-    "@id" : "_:genid68"
+    "@id" : "_:genid74"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#LinkIsUp",
@@ -2605,7 +2800,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkEndPointSpecific"
   }, {
-    "@id" : "_:genid69"
+    "@id" : "_:genid75"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#LossOfDWORDSyncCnt",
@@ -2613,7 +2808,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SASPhyLog"
   }, {
-    "@id" : "_:genid70"
+    "@id" : "_:genid76"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#MacroComponent",
@@ -2629,7 +2824,7 @@
   }, {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Temperature"
   }, {
-    "@id" : "_:genid71"
+    "@id" : "_:genid77"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#MemoryFree",
@@ -2657,7 +2852,7 @@
   }, {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Temperature"
   }, {
-    "@id" : "_:genid72"
+    "@id" : "_:genid78"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#NVMeDisk",
@@ -2682,18 +2877,36 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#MacroComponent"
+  }, {
+    "@id" : "_:genid79"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDevice",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Device"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
+  }, {
+    "@id" : "_:genid80"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDeviceDegradation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
+  }, {
+    "@id" : "_:genid81"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDown",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkEndPointSpecific",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#REST"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TatlinREST"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterface",
@@ -2711,9 +2924,17 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#Non-MediumErrCnt",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
   }, {
-    "@id" : "_:genid73"
+    "@id" : "_:genid82"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#Non-RespondingState",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
+  }, {
+    "@id" : "_:genid83"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#OK",
@@ -2733,13 +2954,20 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SASPhyLog"
   }, {
-    "@id" : "_:genid74"
+    "@id" : "_:genid84"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid75"
+    "@id" : "_:genid85"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSystem"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator",
@@ -2747,19 +2975,38 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SolidStateMediaLog"
   }, {
-    "@id" : "_:genid76"
+    "@id" : "_:genid86"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#PerformanceParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#PowerSupplyUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Device"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#PowerUnitFailure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#ProcessingDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
+  }, {
+    "@id" : "_:genid87"
+  }, {
+    "@id" : "_:genid88"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ProtectionScheme",
@@ -2771,16 +3018,13 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#Protocol-SpecificPort",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
   } ]
 }, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#REST",
+  "@id" : "urn:absolute://local/storage-reliability-ontology#RAIDController",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "REST"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ProcessingDevice"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#R_W_V_ErrCnt",
@@ -2789,13 +3033,21 @@
     "@value" : "R-W-V-ErrCnt"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
   }, {
-    "@id" : "_:genid77"
+    "@id" : "_:genid89"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#RandomTestClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#RateOfPackageLoss",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"
+  }, {
+    "@id" : "_:genid90"
+  } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#ReadOperationsRate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -2806,13 +3058,21 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#ReadRequestMeanTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#PerformanceParameter"
+  }, {
     "@id" : "urn:absolute://local/storage-reliability-ontology#VolumeSpecific"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Redriver",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDevice"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterface"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#ReliabilityFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#RunningDisparityErrCnt",
@@ -2820,7 +3080,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SASPhyLog"
   }, {
-    "@id" : "_:genid78"
+    "@id" : "_:genid91"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#RxKB",
@@ -2834,13 +3094,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#DASInterface"
   }, {
-    "@id" : "_:genid79"
+    "@id" : "_:genid92"
   }, {
-    "@id" : "_:genid80"
+    "@id" : "_:genid93"
   }, {
-    "@id" : "_:genid81"
+    "@id" : "_:genid94"
   }, {
-    "@id" : "_:genid82"
+    "@id" : "_:genid95"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#SASHBA",
@@ -2854,7 +3114,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Protocol-SpecificPort"
   }, {
-    "@id" : "_:genid83"
+    "@id" : "_:genid96"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDisk",
@@ -2862,67 +3122,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Disk"
   }, {
-    "@id" : "_:genid84"
-  }, {
-    "@id" : "_:genid85"
-  }, {
-    "@id" : "_:genid86"
-  }, {
-    "@id" : "_:genid87"
-  }, {
-    "@id" : "_:genid88"
-  }, {
-    "@id" : "_:genid89"
-  } ]
-}, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskControlError",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
-  }, {
-    "@id" : "_:genid90"
-  } ]
-}, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
-  }, {
-    "@id" : "_:genid91"
-  }, {
-    "@id" : "_:genid92"
-  } ]
-}, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskLoss",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
-  }, {
-    "@id" : "_:genid93"
-  }, {
-    "@id" : "_:genid94"
-  } ]
-}, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskMediaExpectedDegradation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
-  }, {
-    "@id" : "_:genid95"
-  }, {
-    "@id" : "_:genid96"
-  }, {
     "@id" : "_:genid97"
   }, {
     "@id" : "_:genid98"
   }, {
     "@id" : "_:genid99"
-  } ]
-}, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskSectorUnavailable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
   }, {
     "@id" : "_:genid100"
   }, {
@@ -2931,35 +3135,35 @@
     "@id" : "_:genid102"
   } ]
 }, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskWearOut",
+  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskControlError",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
   }, {
     "@id" : "_:genid103"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"
   }, {
     "@id" : "_:genid104"
   }, {
     "@id" : "_:genid105"
   } ]
 }, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
-  }, {
-    "@id" : "_:genid106"
-  } ]
-}, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIPHYFault",
+  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskLoss",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
   }, {
+    "@id" : "_:genid106"
+  }, {
     "@id" : "_:genid107"
   } ]
 }, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIStorageMediaFailure",
+  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskMediaExpectedDegradation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
@@ -2967,6 +3171,65 @@
     "@id" : "_:genid108"
   }, {
     "@id" : "_:genid109"
+  }, {
+    "@id" : "_:genid110"
+  }, {
+    "@id" : "_:genid111"
+  }, {
+    "@id" : "_:genid112"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskSectorUnavailable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
+  }, {
+    "@id" : "_:genid113"
+  }, {
+    "@id" : "_:genid114"
+  }, {
+    "@id" : "_:genid115"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskWearOut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
+  }, {
+    "@id" : "_:genid116"
+  }, {
+    "@id" : "_:genid117"
+  }, {
+    "@id" : "_:genid118"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
+  }, {
+    "@id" : "_:genid119"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SMART"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIPHYFault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
+  }, {
+    "@id" : "_:genid120"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIStorageMediaFailure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
+  }, {
+    "@id" : "_:genid121"
+  }, {
+    "@id" : "_:genid122"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#SMART",
@@ -2974,7 +3237,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
   }, {
-    "@id" : "_:genid110"
+    "@id" : "_:genid123"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification",
@@ -2998,23 +3261,23 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#Self-TestResults",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
   }, {
-    "@id" : "_:genid111"
+    "@id" : "_:genid124"
   }, {
-    "@id" : "_:genid112"
+    "@id" : "_:genid125"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Service",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualComponent"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Software",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#SoftwareRAID",
@@ -3026,18 +3289,18 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#SolidStateMediaLog",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
   }, {
-    "@id" : "_:genid113"
+    "@id" : "_:genid126"
   } ]
 }, {
-  "@id" : "urn:absolute://local/storage-reliability-ontology#StorageComponent",
+  "@id" : "urn:absolute://local/storage-reliability-ontology#StorageDevice",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
@@ -3046,29 +3309,31 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#StorageMacroComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#MacroComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#DirectAttachedStorage"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#StoragePool",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageMacroComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"
   }, {
-    "@id" : "_:genid114"
+    "@id" : "_:genid127"
   }, {
-    "@id" : "_:genid115"
+    "@id" : "_:genid128"
   }, {
-    "@id" : "_:genid116"
+    "@id" : "_:genid129"
   }, {
-    "@id" : "_:genid117"
+    "@id" : "_:genid130"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Device"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#ProcessingDevice"
   }, {
-    "@id" : "_:genid118"
+    "@id" : "_:genid131"
+  }, {
+    "@id" : "_:genid132"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessorConnectionCutoff",
@@ -3076,7 +3341,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault"
   }, {
-    "@id" : "_:genid119"
+    "@id" : "_:genid133"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessorDataConnection",
@@ -3084,16 +3349,24 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#Network"
   }, {
-    "@id" : "_:genid120"
+    "@id" : "_:genid134"
   }, {
-    "@id" : "_:genid121"
+    "@id" : "_:genid135"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSystem"
+  }, {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"
+  } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"
+  } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -3131,10 +3404,19 @@
     "@id" : "urn:absolute://local/storage-reliability-ontology#InternalManagementNetwork"
   } ]
 }, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#TatlinREST",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TatlinREST"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
+  } ]
+}, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Temperature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TemperatureLog",
@@ -3148,7 +3430,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem"
   }, {
-    "@id" : "_:genid122"
+    "@id" : "_:genid136"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestAggregateSubsystem-level2",
@@ -3156,9 +3438,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestAggregateSubsystem-level1"
   }, {
-    "@id" : "_:genid123"
+    "@id" : "_:genid137"
   }, {
-    "@id" : "_:genid124"
+    "@id" : "_:genid138"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestAnotherComponent",
@@ -3178,9 +3460,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent"
   }, {
-    "@id" : "_:genid125"
+    "@id" : "_:genid139"
   }, {
-    "@id" : "_:genid126"
+    "@id" : "_:genid140"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level2",
@@ -3188,9 +3470,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level1"
   }, {
-    "@id" : "_:genid127"
+    "@id" : "_:genid141"
   }, {
-    "@id" : "_:genid128"
+    "@id" : "_:genid142"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level3",
@@ -3198,9 +3480,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level2"
   }, {
-    "@id" : "_:genid129"
+    "@id" : "_:genid143"
   }, {
-    "@id" : "_:genid130"
+    "@id" : "_:genid144"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError1",
@@ -3208,7 +3490,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFault"
   }, {
-    "@id" : "_:genid131"
+    "@id" : "_:genid145"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError2",
@@ -3216,7 +3498,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFault"
   }, {
-    "@id" : "_:genid132"
+    "@id" : "_:genid146"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError3",
@@ -3224,9 +3506,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFault"
   }, {
-    "@id" : "_:genid133"
+    "@id" : "_:genid147"
   }, {
-    "@id" : "_:genid134"
+    "@id" : "_:genid148"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure1",
@@ -3234,7 +3516,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFault"
   }, {
-    "@id" : "_:genid135"
+    "@id" : "_:genid149"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure2",
@@ -3242,7 +3524,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFault"
   }, {
-    "@id" : "_:genid136"
+    "@id" : "_:genid150"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure3",
@@ -3250,9 +3532,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFault"
   }, {
-    "@id" : "_:genid137"
+    "@id" : "_:genid151"
   }, {
-    "@id" : "_:genid138"
+    "@id" : "_:genid152"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFault",
@@ -3272,7 +3554,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter"
   }, {
-    "@id" : "_:genid139"
+    "@id" : "_:genid153"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level2",
@@ -3280,7 +3562,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level1"
   }, {
-    "@id" : "_:genid140"
+    "@id" : "_:genid154"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level3",
@@ -3288,7 +3570,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level2"
   }, {
-    "@id" : "_:genid141"
+    "@id" : "_:genid155"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-threshold",
@@ -3302,7 +3584,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level2"
   }, {
-    "@id" : "_:genid142"
+    "@id" : "_:genid156"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level1",
@@ -3310,7 +3592,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter"
   }, {
-    "@id" : "_:genid143"
+    "@id" : "_:genid157"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level2",
@@ -3318,7 +3600,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level1"
   }, {
-    "@id" : "_:genid144"
+    "@id" : "_:genid158"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level3",
@@ -3326,7 +3608,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level2"
   }, {
-    "@id" : "_:genid145"
+    "@id" : "_:genid159"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-threshold",
@@ -3340,7 +3622,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level2"
   }, {
-    "@id" : "_:genid146"
+    "@id" : "_:genid160"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestRandomComponent",
@@ -3354,7 +3636,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem"
   }, {
-    "@id" : "_:genid147"
+    "@id" : "_:genid161"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem",
@@ -3368,13 +3650,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem"
   }, {
-    "@id" : "_:genid148"
+    "@id" : "_:genid162"
   }, {
-    "@id" : "_:genid149"
+    "@id" : "_:genid163"
   }, {
-    "@id" : "_:genid150"
+    "@id" : "_:genid164"
   }, {
-    "@id" : "_:genid151"
+    "@id" : "_:genid165"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem2-level1",
@@ -3382,11 +3664,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem"
   }, {
-    "@id" : "_:genid152"
+    "@id" : "_:genid166"
   }, {
-    "@id" : "_:genid153"
+    "@id" : "_:genid167"
   }, {
-    "@id" : "_:genid154"
+    "@id" : "_:genid168"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem2-level2",
@@ -3394,11 +3676,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem2-level1"
   }, {
-    "@id" : "_:genid155"
+    "@id" : "_:genid169"
   }, {
-    "@id" : "_:genid156"
+    "@id" : "_:genid170"
   }, {
-    "@id" : "_:genid157"
+    "@id" : "_:genid171"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemAggrError",
@@ -3406,7 +3688,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault"
   }, {
-    "@id" : "_:genid158"
+    "@id" : "_:genid172"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemAggrError-level2",
@@ -3420,7 +3702,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault"
   }, {
-    "@id" : "_:genid159"
+    "@id" : "_:genid173"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError1",
@@ -3428,7 +3710,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault"
   }, {
-    "@id" : "_:genid160"
+    "@id" : "_:genid174"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError2",
@@ -3436,7 +3718,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault"
   }, {
-    "@id" : "_:genid161"
+    "@id" : "_:genid175"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError3",
@@ -3444,7 +3726,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault"
   }, {
-    "@id" : "_:genid162"
+    "@id" : "_:genid176"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail1",
@@ -3452,7 +3734,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault"
   }, {
-    "@id" : "_:genid163"
+    "@id" : "_:genid177"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail2",
@@ -3460,7 +3742,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault"
   }, {
-    "@id" : "_:genid164"
+    "@id" : "_:genid178"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail3",
@@ -3468,7 +3750,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault"
   }, {
-    "@id" : "_:genid165"
+    "@id" : "_:genid179"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault",
@@ -3500,7 +3782,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault"
   }, {
-    "@id" : "_:genid166"
+    "@id" : "_:genid180"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#UserConnectionLost",
@@ -3508,7 +3790,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault"
   }, {
-    "@id" : "_:genid167"
+    "@id" : "_:genid181"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#UserLengthMB",
@@ -3540,19 +3822,25 @@
   "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
+  } ]
+}, {
+  "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualSubsystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#Volume",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualComponent"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#VolumeSpecific",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#REST"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#TatlinREST"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#VolumeState",
@@ -3600,7 +3888,7 @@
     "@value" : "causes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#Event"
+    "@id" : "urn:absolute://local/storage-reliability-ontology#SystemFault"
   } ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#cluster",
@@ -4243,110 +4531,46 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#RandomTestClass" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#StorageProcessor" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec1"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec2"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec3"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec4"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec5"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec6"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#StorageProcessor" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-1-1"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-1-2"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-1-3"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-1-4"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-1-5"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-1-ec6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-1-6"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#StorageProcessor" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#pty-vol-1251e55d-ee33-417e-82d6-573a931ebc5a"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000001"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000005"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000006"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci0000000f"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000010"
-  }, {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000011"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#StorageProcessor" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000001",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-2-a6d052732ab3"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000005",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-2-52540034ebc7"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000006",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-2-525400a60478"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci0000000f",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-2-a6d052732ab4"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000010",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-2-42054c31268c"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000011",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ],
-  "urn:absolute://local/storage-reliability-ontology#consists_of" : [ {
-    "@id" : "urn:absolute://local/storage-reliability-ontology#ip-sp-0-2-42054c31268d"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "urn:absolute://local/storage-reliability-ontology#EthernetController" ]
 }, {
   "@id" : "urn:absolute://local/storage-reliability-ontology#strongly_depends_on",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
