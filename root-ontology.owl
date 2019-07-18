@@ -527,7 +527,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#ClusterEntity -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ClusterEntity">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#MacroComponent"/>
     </owl:Class>
     
 
@@ -1133,6 +1133,14 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#FileSystem -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#FileSystem">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#GLISTGrowthRate -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#GLISTGrowthRate">
@@ -1233,6 +1241,14 @@
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#DeadmanTimer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
     </owl:Class>
     
 
@@ -1821,7 +1837,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#RedundandStorageController -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#RedundandStorageController">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#MacroComponent"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ClusterEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#majorly_depends_on"/>
@@ -1873,6 +1889,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#has_info_at"/>
                 <owl:hasValue>https://books.google.com.ua/books?id=Z0xRCgAAQBAJ</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#has_info_at"/>
+                <owl:hasValue>isbn 978-0-470-74143-6</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2331,7 +2353,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#StoragePool -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#StoragePool">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on"/>
@@ -2356,6 +2378,13 @@
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#HardwareRAIDArray"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#StoragePool"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>https://www.ibm.com/support/knowledgecenter/en/STXKQY_4.2.3/com.ibm.spectrum.scale.v4r23.doc/bl1adv_storagepool.htm</rdfs:comment>
     </owl:Class>
     
 
@@ -2427,6 +2456,20 @@
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#StorageSystem">
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#StorageVolume -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#StorageVolume">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#StoragePool"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3195,18 +3238,18 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#VirtualSubsystem -->
+    <!-- urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem -->
 
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"/>
     </owl:Class>
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#Volume -->
+    <!-- urn:absolute://local/storage-reliability-ontology#VirtualSubsystem -->
 
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#Volume">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"/>
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
     </owl:Class>
     
 
@@ -3778,7 +3821,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#CO_fire -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#CO_fire">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -3786,7 +3829,8 @@
     <!-- urn:absolute://local/storage-reliability-ontology#HVAC_failure -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#HVAC_failure">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdfs:comment>Heating, Ventilation, &amp; Air Conditioning</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3816,7 +3860,8 @@
     <!-- urn:absolute://local/storage-reliability-ontology#PCB_contamination -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#PCB_contamination">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdfs:comment>https://en.wikipedia.org/wiki/Polychlorinated_biphenyl</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3848,7 +3893,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#SW_ransom -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#SW_ransom">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -3980,7 +4025,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#cooling_tower_leak -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#cooling_tower_leak">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -4068,14 +4113,6 @@
     <!-- urn:absolute://local/storage-reliability-ontology#diesel_generator -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#diesel_generator">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute://local/storage-reliability-ontology#discharge -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#discharge">
         <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
     </owl:NamedIndividual>
     
@@ -4199,7 +4236,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#fraud -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#fraud">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -4215,7 +4252,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#hacker -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#hacker">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -4263,7 +4300,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#ice_storm -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#ice_storm">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#NaturalCatastrophy"/>
     </owl:NamedIndividual>
     
 
@@ -4457,7 +4494,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#logic_bomb -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#logic_bomb">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -4601,7 +4638,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#pty-vol-1251e55d-ee33-417e-82d6-573a931ebc5a -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#pty-vol-1251e55d-ee33-417e-82d6-573a931ebc5a">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#Volume"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageVolume"/>
     </owl:NamedIndividual>
     
 
@@ -4609,7 +4646,8 @@
     <!-- urn:absolute://local/storage-reliability-ontology#raw_sewage -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#raw_sewage">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <has_russian_term>сточные воды</has_russian_term>
     </owl:NamedIndividual>
     
 
@@ -4667,7 +4705,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#roof_cave_in -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#roof_cave_in">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -4675,7 +4713,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#sabotage -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#sabotage">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -4964,7 +5002,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#shredded_data -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#shredded_data">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanError"/>
     </owl:NamedIndividual>
     
 
@@ -5065,9 +5103,9 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#sprinkler -->
+    <!-- urn:absolute://local/storage-reliability-ontology#sprinkler_discharge -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#sprinkler">
+    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#sprinkler_discharge">
         <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
     </owl:NamedIndividual>
     
@@ -5084,7 +5122,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#strike_action -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#strike_action">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -5133,7 +5171,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#terrorism -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#terrorism">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -5151,7 +5189,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#theft -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#theft">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -5197,6 +5235,7 @@
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#tst-Subsystem2-lvl1-2"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#tst-Subsystem2-lvl2"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#tst-comp-rand-1"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#tst-rand-subsystem"/>
     </owl:NamedIndividual>
     
 
@@ -5499,7 +5538,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#vandalism -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#vandalism">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
@@ -5515,7 +5554,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#virus -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#virus">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"/>
     </owl:NamedIndividual>
     
 
