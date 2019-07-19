@@ -461,7 +461,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#CPUSpecific -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CPUSpecific">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TatlinREST"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ProprietaryREST"/>
     </owl:Class>
     
 
@@ -599,7 +599,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#ClusterSpecific -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ClusterSpecific">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TatlinREST"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ProprietaryREST"/>
     </owl:Class>
     
 
@@ -1090,7 +1090,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#FanSpeed -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#FanSpeed">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TatlinREST"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ProprietaryREST"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_above"/>
@@ -1220,7 +1220,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#Health -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#Health">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TatlinREST"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ProprietaryREST"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_when"/>
@@ -1580,7 +1580,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#NetworkEndPointSpecific -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#NetworkEndPointSpecific">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TatlinREST"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ProprietaryREST"/>
     </owl:Class>
     
 
@@ -1746,6 +1746,31 @@
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#Non-RespondingState"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#ProprietaryPrivateNetwork -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ProprietaryPrivateNetwork">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DataPathNetwork"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#ProprietaryRDMANetwork -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ProprietaryRDMANetwork">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#InternalManagementNetwork"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#ProprietaryREST -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ProprietaryREST">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Parameter"/>
+        <rdfs:label>ProprietaryREST</rdfs:label>
     </owl:Class>
     
 
@@ -2512,31 +2537,6 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#TatlinPrivateNetwork -->
-
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#TatlinPrivateNetwork">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DataPathNetwork"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute://local/storage-reliability-ontology#TatlinRDMANetwork -->
-
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#TatlinRDMANetwork">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#InternalManagementNetwork"/>
-    </owl:Class>
-    
-
-
-    <!-- urn:absolute://local/storage-reliability-ontology#TatlinREST -->
-
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#TatlinREST">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Parameter"/>
-        <rdfs:label>TatlinREST</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute://local/storage-reliability-ontology#TemperatureLog -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#TemperatureLog">
@@ -3257,7 +3257,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#VolumeSpecific -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#VolumeSpecific">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TatlinREST"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ProprietaryREST"/>
     </owl:Class>
     
 
@@ -3901,14 +3901,6 @@
     <!-- urn:absolute://local/storage-reliability-ontology#Seagate_SCSI_Commands_Reference_Manual_rev_H -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#Seagate_SCSI_Commands_Reference_Manual_rev_H"/>
-    
-
-
-    <!-- urn:absolute://local/storage-reliability-ontology#TRAID -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#TRAID">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#SoftwareRAID"/>
-    </owl:NamedIndividual>
     
 
 
@@ -4606,7 +4598,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#priv_l -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#priv_l">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#TatlinPrivateNetwork"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#ProprietaryPrivateNetwork"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#ip-sp-0-1-5"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#ip-sp-0-2-52540034ebc7"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#sp-0-1-ec5"/>
@@ -4618,7 +4610,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#priv_r -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#priv_r">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#TatlinPrivateNetwork"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#ProprietaryPrivateNetwork"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#ip-sp-0-1-6"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#ip-sp-0-2-525400a60478"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#sp-0-1-ec6"/>
@@ -4631,6 +4623,47 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#programmer_error">
         <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultInComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#proprietary-storage-system -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#proprietary-storage-system">
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#EnterpriseStorageSystem"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#cluster"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#proprietary_network_infrastructure"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#proprietary_software"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#sp-0-1"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#sp-0-2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#proprietary_network_infrastructure -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#proprietary_network_infrastructure">
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#Network"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#p01"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#p02"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#priv_l"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#priv_r"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#rdma_network"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#proprietary_software -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#proprietary_software">
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#Software"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#HWMGR"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#SPM"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#corosync"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#etcd"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#failpred"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#health"/>
+        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#pacemaker"/>
     </owl:NamedIndividual>
     
 
@@ -4679,7 +4712,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#rdma_network -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#rdma_network">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#TatlinRDMANetwork"/>
+        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#ProprietaryRDMANetwork"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#rdma0"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#rdma1"/>
     </owl:NamedIndividual>
@@ -5127,47 +5160,6 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#tatlin -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#tatlin">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#EnterpriseStorageSystem"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#cluster"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#sp-0-1"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#sp-0-2"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#tatlin_network_infrastructure"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#tatlin_software"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute://local/storage-reliability-ontology#tatlin_network_infrastructure -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#tatlin_network_infrastructure">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#Network"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#p01"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#p02"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#priv_l"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#priv_r"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#rdma_network"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute://local/storage-reliability-ontology#tatlin_software -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#tatlin_software">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#Software"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#HWMGR"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#SPM"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#corosync"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#etcd"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#failpred"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#health"/>
-        <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#pacemaker"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute://local/storage-reliability-ontology#terrorism -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#terrorism">
@@ -5176,9 +5168,9 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#test-tatlin -->
+    <!-- urn:absolute://local/storage-reliability-ontology#test-proprietary-storage-system -->
 
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#test-tatlin">
+    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#test-proprietary-storage-system">
         <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#EnterpriseStorageSystem"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#tst-AggregateSubsystem"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#tst-Subsystem1"/>
