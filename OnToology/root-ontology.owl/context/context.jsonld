@@ -17,15 +17,27 @@
     "NetworkEndPointSpecific" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkEndPointSpecific"
     },
+    "SCSILogParameter" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
+    },
+    "DiskSubsystem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DiskSubsystem"
+    },
     "PercentageUsedEnduranceIndicator" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator"
     },
     "ClusterFault" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFault"
     },
+    "AdministratorError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AdministratorError"
+    },
     "is_normal_with_threshold" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold",
       "@type" : "@id"
+    },
+    "Battery" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Battery"
     },
     "SASHBA" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SASHBA"
@@ -58,11 +70,11 @@
     "TestSubsystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem"
     },
-    "TatlinRDMANetwork" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#TatlinRDMANetwork"
-    },
     "MemoryFree" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MemoryFree"
+    },
+    "DeadmanTimer" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DeadmanTimer"
     },
     "WriteRequestMeanTime" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#WriteRequestMeanTime"
@@ -124,11 +136,17 @@
     "TestComponentError1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError1"
     },
+    "ProprietaryREST" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ProprietaryREST"
+    },
     "SpinRetryCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#10SpinRetryCount"
     },
     "Health" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Health"
+    },
+    "SpindleVibrationFrequency" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SpindleVibrationFrequency"
     },
     "AttachedReason" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#AttachedReason"
@@ -142,8 +160,8 @@
     "ReferenceTemperature" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#1ReferenceTemperature"
     },
-    "Volume" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#Volume"
+    "RiskFactor" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RiskFactor"
     },
     "Thing" : {
       "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -163,11 +181,17 @@
     "Fatal" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
     },
+    "Tape" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Tape"
+    },
     "FreeFallEventCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#254FreeFallEventCount"
     },
     "RandomTestClass" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RandomTestClass"
+    },
+    "NaturalCatastrophy" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NaturalCatastrophy"
     },
     "NetworkInterfaceCard" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterfaceCard"
@@ -184,8 +208,14 @@
     "AirTemperature" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#AirTemperature"
     },
+    "VirtualSubsystem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"
+    },
     "EthernetController" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#EthernetController"
+    },
+    "SCSILogTemperature" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogTemperature"
     },
     "ClientAppNetwork" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClientAppNetwork"
@@ -205,14 +235,8 @@
     "SoftwareRAID" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SoftwareRAID"
     },
-    "TatlinPrivateNetwork" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#TatlinPrivateNetwork"
-    },
     "ReadOperationsRate" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ReadOperationsRate"
-    },
-    "SCSILogParameters" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameters"
     },
     "TestComponent-level2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level2"
@@ -235,6 +259,9 @@
     "CurrentPendingSectorCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#197CurrentPendingSectorCount"
     },
+    "SCSIHDD" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIHDD"
+    },
     "MacroComponent" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MacroComponent"
     },
@@ -250,23 +277,32 @@
     "SCSIDisk" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDisk"
     },
+    "DiskParameter" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DiskParameter"
+    },
     "ReportedUncorrectedSectorCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#187ReportedUncorrectedSectorCount"
-    },
-    "REST" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#REST"
     },
     "TestComponentFailure3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure3"
     },
+    "NetworkDeviceDegradation" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDeviceDegradation"
+    },
     "ClusterQuorumLoss" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterQuorumLoss"
+    },
+    "HeartbeatSignalLoss" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HeartbeatSignalLoss"
     },
     "HBA" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#HBA"
     },
     "ProtectionScheme" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ProtectionScheme"
+    },
+    "UserError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#UserError"
     },
     "TestRandomSubsystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestRandomSubsystem"
@@ -292,6 +328,9 @@
     "Temperature" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#194Temperature"
     },
+    "StorageDevice" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#StorageDevice"
+    },
     "Event" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Event"
     },
@@ -306,6 +345,12 @@
     },
     "ClusterManagementFailure" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterManagementFailure"
+    },
+    "SCSISSD" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SCSISSD"
+    },
+    "FileSystem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FileSystem"
     },
     "DynamicQuorum" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DynamicQuorum"
@@ -325,17 +370,20 @@
     "HDD" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#HDD"
     },
+    "VirtualStorageSubsystem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem"
+    },
     "TestSystemFail1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail1"
+    },
+    "RateOfPackageLoss" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RateOfPackageLoss"
     },
     "OfflineUncorrectableSectorCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#198OfflineUncorrectableSectorCount"
     },
     "UnloadCycleCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#193Load/UnloadCycleCount"
-    },
-    "StorageComponent" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#StorageComponent"
     },
     "TestParameter1-level2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level2"
@@ -413,9 +461,15 @@
     "Protocol-SpecificPort" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Protocol-SpecificPort"
     },
+    "RemoteMirroringDiskSubsystem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RemoteMirroringDiskSubsystem"
+    },
     "consists_of" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#consists_of",
       "@type" : "@id"
+    },
+    "ComponentSpecificFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"
     },
     "TestAnotherComponent" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestAnotherComponent"
@@ -423,14 +477,14 @@
     "RxKB" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RxKB"
     },
+    "ConfigurationParameter" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ConfigurationParameter"
+    },
     "TestSystemFault" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFault"
     },
     "Warning" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Warning"
-    },
-    "Cluster" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#Cluster"
     },
     "AverageQueueSize" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#AverageQueueSize"
@@ -447,8 +501,14 @@
     "DataPathService" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DataPathService"
     },
+    "ProcessingDevice" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ProcessingDevice"
+    },
     "AtmosphericPressure" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#AtmosphericPressure"
+    },
+    "ProprietaryPrivateNetwork" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ProprietaryPrivateNetwork"
     },
     "MemoryUsage" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MemoryUsage"
@@ -474,11 +534,26 @@
     "Fan" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Fan"
     },
+    "FaultInComponent" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FaultInComponent"
+    },
+    "RedundandStorageController" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RedundandStorageController"
+    },
     "TestComponentFailure2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure2"
     },
+    "HumanError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HumanError"
+    },
+    "HumanActionEnvironment" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"
+    },
     "CommandTimeout" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#188CommandTimeout"
+    },
+    "PerformanceParameter" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PerformanceParameter"
     },
     "NumberOfSpin-UpTimes" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#04NumberOfSpin-UpTimes"
@@ -494,6 +569,9 @@
     },
     "VolumeSpecific" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#VolumeSpecific"
+    },
+    "HDDWearout" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HDDWearout"
     },
     "ThroughputPerformance" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#02ThroughputPerformance"
@@ -552,6 +630,9 @@
       "@id" : "urn:absolute://local/storage-reliability-ontology#if_warning_causes",
       "@type" : "@id"
     },
+    "OperationalEnvironment" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"
+    },
     "MostRecentTempReading" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MostRecentTempReading"
     },
@@ -587,8 +668,14 @@
     "InformationalExceptionsLog" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#InformationalExceptionsLog"
     },
+    "RAIDController" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RAIDController"
+    },
     "PowerOnHoursCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#09PowerOnHoursCount"
+    },
+    "IntelligentDiskSubsystem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#IntelligentDiskSubsystem"
     },
     "JBod" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#JBod"
@@ -609,11 +696,17 @@
     "TestParameter1-threshold" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-threshold"
     },
+    "TapeLibrary" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#TapeLibrary"
+    },
     "TestSystemAggrError-level2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemAggrError-level2"
     },
     "SCSIStorageMediaFailure" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIStorageMediaFailure"
+    },
+    "AckReceived" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AckReceived"
     },
     "ControlPath" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ControlPath"
@@ -626,6 +719,18 @@
     },
     "Component" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
+    },
+    "ProprietaryRDMANetwork" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ProprietaryRDMANetwork"
+    },
+    "StorageVolume" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#StorageVolume"
+    },
+    "PhysicalDiskParameter" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PhysicalDiskParameter"
+    },
+    "EnvironmentFactor" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#EnvironmentFactor"
     },
     "ClusterManagementConnectionLoss" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterManagementConnectionLoss"
@@ -665,9 +770,6 @@
     "TestSystemFail2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail2"
     },
-    "SSD" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#SSD"
-    },
     "CPUUsage" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#CPUUsage"
     },
@@ -702,11 +804,17 @@
       "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_above",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
     "StorageSystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSystem"
     },
     "Service" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Service"
+    },
+    "Non-RespondingState" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Non-RespondingState"
     },
     "TestSubsystem2-level2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem2-level2"
@@ -754,11 +862,11 @@
     "CPUTemperature" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#CPUTemperature"
     },
-    "Device" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#Device"
-    },
     "NVMeSCM" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NVMeSCM"
+    },
+    "NetworkDown" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDown"
     },
     "PowerCycleCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#12PowerCycleCount"
@@ -828,6 +936,9 @@
     },
     "TestComponentError3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError3"
+    },
+    "ReliabilityFactor" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"
     }
   }
 }
