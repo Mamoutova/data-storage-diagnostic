@@ -15,7 +15,7 @@
 ###  urn:absolute://local/storage-reliability-ontology#causes
 :causes rdf:type owl:ObjectProperty ;
         rdfs:domain :StorageSubsystem ;
-        rdfs:range :Event ;
+        rdfs:range :SystemFault ;
         rdfs:label "causes" .
 
 
@@ -199,6 +199,15 @@
 #    Classes
 #################################################################
 
+###  urn:absolute://local/storage-reliability-ontology#AckReceived
+:AckReceived rdf:type owl:Class ;
+             rdfs:subClassOf :ReliabilityFactor ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :is_normal_when ;
+                               owl:hasValue "True"
+                             ] .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#AdditionalSenseCode
 :AdditionalSenseCode rdf:type owl:Class ;
                      rdfs:subClassOf :InformationalExceptionsLog .
@@ -207,6 +216,11 @@
 ###  urn:absolute://local/storage-reliability-ontology#AdditionalSenseCodeQualifier
 :AdditionalSenseCodeQualifier rdf:type owl:Class ;
                               rdfs:subClassOf :InformationalExceptionsLog .
+
+
+###  urn:absolute://local/storage-reliability-ontology#AdministratorError
+:AdministratorError rdf:type owl:Class ;
+                    rdfs:subClassOf :HumanError .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#AirTemperature
@@ -254,7 +268,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#BackgroundScanStatus
 :BackgroundScanStatus rdf:type owl:Class ;
-                      rdfs:subClassOf :SCSILogParameters ,
+                      rdfs:subClassOf :SCSILogParameter ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :is_normal_above ;
                                         owl:hasValue 7
@@ -274,9 +288,14 @@
                            ] .
 
 
+###  urn:absolute://local/storage-reliability-ontology#Battery
+:Battery rdf:type owl:Class ;
+         rdfs:subClassOf :Component .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#CPUSpecific
 :CPUSpecific rdf:type owl:Class ;
-             rdfs:subClassOf :REST .
+             rdfs:subClassOf :ProprietaryREST .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#CPUTemperature
@@ -291,7 +310,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#CacheComponent
 :CacheComponent rdf:type owl:Class ;
-                rdfs:subClassOf :StorageComponent .
+                rdfs:subClassOf :StorageDevice .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ClientAppNetwork
@@ -316,26 +335,9 @@
                    rdfs:subClassOf :Network .
 
 
-###  urn:absolute://local/storage-reliability-ontology#Cluster
-:Cluster rdf:type owl:Class ;
-         rdfs:subClassOf :MacroComponent ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :if_failed_causes ;
-                           owl:someValuesFrom :ClusterFailure
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :if_warning_causes ;
-                           owl:someValuesFrom :ClusterQuorumLoss
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :majorly_depends_on ;
-                           owl:someValuesFrom :StorageProcessor
-                         ] .
-
-
 ###  urn:absolute://local/storage-reliability-ontology#ClusterEntity
 :ClusterEntity rdf:type owl:Class ;
-               rdfs:subClassOf :VirtualComponent .
+               rdfs:subClassOf :MacroComponent .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ClusterFailure
@@ -381,12 +383,12 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#ClusterSpecific
 :ClusterSpecific rdf:type owl:Class ;
-                 rdfs:subClassOf :REST .
+                 rdfs:subClassOf :ProprietaryREST .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#CommunicationSWStackFailure
 :CommunicationSWStackFailure rdf:type owl:Class ;
-                             rdfs:subClassOf :ComponentFault .
+                             rdfs:subClassOf :ComponentSpecificFault .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Component
@@ -395,12 +397,29 @@
                              owl:onProperty :if_fatal_manifests_in ;
                              owl:someValuesFrom :BadHealth
                            ] ;
-           owl:disjointWith :StorageSubsystem .
+           owl:disjointWith :Event ,
+                            :Parameter ,
+                            :StorageSubsystem ,
+                            :StorageSystem ,
+                            :SystemHealthStatus .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ComponentFault
 :ComponentFault rdf:type owl:Class ;
-                rdfs:subClassOf :Fault .
+                rdfs:subClassOf :Fault ;
+                owl:disjointWith :SystemFault .
+
+
+###  urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault
+:ComponentSpecificFault rdf:type owl:Class ;
+                        rdfs:subClassOf :ComponentFault .
+
+
+###  urn:absolute://local/storage-reliability-ontology#ConfigurationParameter
+:ConfigurationParameter rdf:type owl:Class ;
+                        rdfs:subClassOf :Parameter ;
+                        owl:disjointWith :PerformanceParameter ,
+                                         :ReliabilityFactor .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ControlPath
@@ -502,14 +521,14 @@
                    rdfs:subClassOf :SystemFault .
 
 
-###  urn:absolute://local/storage-reliability-ontology#Device
-:Device rdf:type owl:Class ;
-        rdfs:subClassOf :Component .
+###  urn:absolute://local/storage-reliability-ontology#DeadmanTimer
+:DeadmanTimer rdf:type owl:Class ;
+              rdfs:subClassOf :ReliabilityFactor .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#DirectAttachedStorage
 :DirectAttachedStorage rdf:type owl:Class ;
-                       rdfs:subClassOf :StorageMacroComponent ,
+                       rdfs:subClassOf :MacroComponent ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :has_another_name ;
                                          owl:hasValue "DAS"
@@ -518,12 +537,24 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#Disk
 :Disk rdf:type owl:Class ;
-      rdfs:subClassOf :StorageComponent .
+      rdfs:subClassOf :StorageDevice ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :has_another_name ;
+                        owl:hasValue "Disk"
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :has_another_name ;
+                        owl:hasValue "Disk Drive"
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :has_another_name ;
+                        owl:hasValue "Storage Drive"
+                      ] .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#DiskEnclosure
 :DiskEnclosure rdf:type owl:Class ;
-               rdfs:subClassOf :DirectAttachedStorage ,
+               rdfs:subClassOf :StorageMacroComponent ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :if_failed_causes ;
                                  owl:someValuesFrom :DiskEnclosureOffline
@@ -563,6 +594,28 @@
                                       ] .
 
 
+###  urn:absolute://local/storage-reliability-ontology#DiskParameter
+:DiskParameter rdf:type owl:Class ;
+               rdfs:subClassOf :Parameter .
+
+
+###  urn:absolute://local/storage-reliability-ontology#DiskSubsystem
+:DiskSubsystem rdf:type owl:Class ;
+               rdfs:subClassOf :DirectAttachedStorage ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :majorly_depends_on ;
+                                 owl:someValuesFrom :Battery
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :majorly_depends_on ;
+                                 owl:someValuesFrom :Fan
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :majorly_depends_on ;
+                                 owl:someValuesFrom :PowerSupplyUnit
+                               ] .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#DynamicQuorum
 :DynamicQuorum rdf:type owl:Class ;
                rdfs:subClassOf :ClusterEntity ,
@@ -590,7 +643,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#EndPoint
 :EndPoint rdf:type owl:Class ;
-          rdfs:subClassOf :NetworkDevice ,
+          rdfs:subClassOf :NetworkInterface ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :if_fatal_manifests_in ;
                             owl:someValuesFrom :LinkDown
@@ -600,6 +653,11 @@
 ###  urn:absolute://local/storage-reliability-ontology#EnterpriseStorageSystem
 :EnterpriseStorageSystem rdf:type owl:Class ;
                          rdfs:subClassOf :StorageSystem .
+
+
+###  urn:absolute://local/storage-reliability-ontology#EnvironmentFactor
+:EnvironmentFactor rdf:type owl:Class ;
+                   rdfs:subClassOf :RiskFactor .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Error
@@ -618,12 +676,16 @@
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Event
-:Event rdf:type owl:Class .
+:Event rdf:type owl:Class ;
+       owl:disjointWith :Parameter ,
+                        :StorageSubsystem ,
+                        :StorageSystem ,
+                        :SystemHealthStatus .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Fan
 :Fan rdf:type owl:Class ;
-     rdfs:subClassOf :Device ,
+     rdfs:subClassOf :Component ,
                      [ rdf:type owl:Restriction ;
                        owl:onProperty :if_fatal_manifests_in ;
                        owl:someValuesFrom :FanFailure
@@ -632,7 +694,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#FanFailure
 :FanFailure rdf:type owl:Class ;
-            rdfs:subClassOf :ComponentFault ,
+            rdfs:subClassOf :ComponentSpecificFault ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :shows_in_parameter ;
                               owl:someValuesFrom :FanSpeed
@@ -641,7 +703,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#FanSpeed
 :FanSpeed rdf:type owl:Class ;
-          rdfs:subClassOf :REST ,
+          rdfs:subClassOf :ProprietaryREST ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :is_normal_above ;
                             owl:hasValue 0
@@ -658,9 +720,19 @@
        rdfs:subClassOf :Event .
 
 
+###  urn:absolute://local/storage-reliability-ontology#FaultInComponent
+:FaultInComponent rdf:type owl:Class ;
+                  rdfs:subClassOf :RiskFactor .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#FibreChannelController
 :FibreChannelController rdf:type owl:Class ;
                         rdfs:subClassOf :NetworkInterfaceCard .
+
+
+###  urn:absolute://local/storage-reliability-ontology#FileSystem
+:FileSystem rdf:type owl:Class ;
+            rdfs:subClassOf :VirtualStorageSubsystem .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#GLISTGrowthRate
@@ -679,21 +751,65 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#HDD
 :HDD rdf:type owl:Class ;
-     rdfs:subClassOf :SCSIDisk .
+     rdfs:subClassOf :Disk ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :if_warning_manifests_in ;
+                       owl:someValuesFrom :HDDWearout
+                     ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#HDDWearout
+:HDDWearout rdf:type owl:Class ;
+            rdfs:subClassOf :ComponentSpecificFault ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :shows_in_parameter ;
+                              owl:someValuesFrom :SpindleVibrationFrequency
+                            ] .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#HardwareRAIDArray
 :HardwareRAIDArray rdf:type owl:Class ;
-                   rdfs:subClassOf :StorageComponent .
+                   rdfs:subClassOf :DiskSubsystem ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :depends_with_ecc_on ;
+                                     owl:someValuesFrom :Disk
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :strongly_depends_on ;
+                                     owl:someValuesFrom :DiskEnclosure
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :strongly_depends_on ;
+                                     owl:someValuesFrom :RAIDController
+                                   ] .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Health
 :Health rdf:type owl:Class ;
-        rdfs:subClassOf :REST ,
+        rdfs:subClassOf :ProprietaryREST ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :is_normal_when ;
                           owl:hasValue "OK"
                         ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#HeartbeatSignalLoss
+:HeartbeatSignalLoss rdf:type owl:Class ;
+                     rdfs:subClassOf :ComponentFault ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :shows_in_parameter ;
+                                       owl:someValuesFrom :DeadmanTimer
+                                     ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment
+:HumanActionEnvironment rdf:type owl:Class ;
+                        rdfs:subClassOf :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#HumanError
+:HumanError rdf:type owl:Class ;
+            rdfs:subClassOf :RiskFactor .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Humidity
@@ -708,7 +824,24 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#InformationalExceptionsLog
 :InformationalExceptionsLog rdf:type owl:Class ;
-                            rdfs:subClassOf :SCSILogParameters .
+                            rdfs:subClassOf :SCSILogParameter .
+
+
+###  urn:absolute://local/storage-reliability-ontology#IntelligentDiskSubsystem
+:IntelligentDiskSubsystem rdf:type owl:Class ;
+                          rdfs:subClassOf :DiskSubsystem ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :strongly_depends_on ;
+                                            owl:someValuesFrom :CacheComponent
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :strongly_depends_on ;
+                                            owl:someValuesFrom :ProcessingDevice
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :strongly_depends_on ;
+                                            owl:someValuesFrom :RedundandStorageController
+                                          ] .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#InternalManagementNetwork
@@ -739,16 +872,20 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#JBod
 :JBod rdf:type owl:Class ;
-      rdfs:subClassOf :StorageMacroComponent .
+      rdfs:subClassOf :DiskSubsystem ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :strongly_depends_on ;
+                        owl:someValuesFrom :Disk
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :strongly_depends_on ;
+                        owl:someValuesFrom :DiskEnclosure
+                      ] .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Link
 :Link rdf:type owl:Class ;
-      rdfs:subClassOf :VirtualComponent ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :if_failed_causes ;
-                        owl:someValuesFrom :LinkDown
-                      ] ,
+      rdfs:subClassOf :Network ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :strongly_depends_on ;
                         owl:someValuesFrom :NetworkDevice
@@ -761,7 +898,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#LinkDown
 :LinkDown rdf:type owl:Class ;
-          rdfs:subClassOf :ComponentFault ,
+          rdfs:subClassOf :ComponentSpecificFault ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :shows_in_parameter ;
                             owl:someValuesFrom :LinkIsUp
@@ -794,7 +931,7 @@
 ###  urn:absolute://local/storage-reliability-ontology#MaxTemperature
 :MaxTemperature rdf:type owl:Class ;
                 rdfs:subClassOf :InformationalExceptionsLog ,
-                                :Temperature ,
+                                :SCSILogTemperature ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :is_normal_with_threshold ;
                                   owl:allValuesFrom :VendorHDATmpTripPoint
@@ -819,7 +956,7 @@
 ###  urn:absolute://local/storage-reliability-ontology#MostRecentTempReading
 :MostRecentTempReading rdf:type owl:Class ;
                        rdfs:subClassOf :InformationalExceptionsLog ,
-                                       :Temperature ,
+                                       :SCSILogTemperature ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :is_normal_with_threshold ;
                                          owl:allValuesFrom :VendorHDATmpTripPoint
@@ -841,19 +978,46 @@
          rdfs:subClassOf :CacheComponent .
 
 
+###  urn:absolute://local/storage-reliability-ontology#NaturalCatastrophy
+:NaturalCatastrophy rdf:type owl:Class ;
+                    rdfs:subClassOf :EnvironmentFactor .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#Network
 :Network rdf:type owl:Class ;
-         rdfs:subClassOf :MacroComponent .
+         rdfs:subClassOf :MacroComponent ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :if_failed_causes ;
+                           owl:someValuesFrom :NetworkDown
+                         ] .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#NetworkDevice
 :NetworkDevice rdf:type owl:Class ;
-               rdfs:subClassOf :Device .
+               rdfs:subClassOf :Component ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :if_warning_manifests_in ;
+                                 owl:someValuesFrom :NetworkDeviceDegradation
+                               ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#NetworkDeviceDegradation
+:NetworkDeviceDegradation rdf:type owl:Class ;
+                          rdfs:subClassOf :ComponentFault ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :shows_in_parameter ;
+                                            owl:someValuesFrom :RateOfPackageLoss
+                                          ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#NetworkDown
+:NetworkDown rdf:type owl:Class ;
+             rdfs:subClassOf :SystemFault .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#NetworkEndPointSpecific
 :NetworkEndPointSpecific rdf:type owl:Class ;
-                         rdfs:subClassOf :REST .
+                         rdfs:subClassOf :ProprietaryREST .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#NetworkInterface
@@ -868,16 +1032,30 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#Non-MediumErrCnt
 :Non-MediumErrCnt rdf:type owl:Class ;
-                  rdfs:subClassOf :SCSILogParameters ,
+                  rdfs:subClassOf :SCSILogParameter ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :is_normal_when ;
                                     owl:hasValue 0
                                   ] .
 
 
+###  urn:absolute://local/storage-reliability-ontology#Non-RespondingState
+:Non-RespondingState rdf:type owl:Class ;
+                     rdfs:subClassOf :ComponentFault ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :shows_in_parameter ;
+                                       owl:someValuesFrom :AckReceived
+                                     ] .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#OK
 :OK rdf:type owl:Class ;
     rdfs:subClassOf :SystemHealthStatus .
+
+
+###  urn:absolute://local/storage-reliability-ontology#OperationalEnvironment
+:OperationalEnvironment rdf:type owl:Class ;
+                        rdfs:subClassOf :EnvironmentFactor .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#PCIeFabric
@@ -899,7 +1077,10 @@
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :has_russian_term ;
                              owl:hasValue "Диагностический параметр"
-                           ] .
+                           ] ;
+           owl:disjointWith :StorageSubsystem ,
+                            :StorageSystem ,
+                            :SystemHealthStatus .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator
@@ -911,14 +1092,54 @@
                                                   ] .
 
 
+###  urn:absolute://local/storage-reliability-ontology#PerformanceParameter
+:PerformanceParameter rdf:type owl:Class ;
+                      rdfs:subClassOf :Parameter ;
+                      owl:disjointWith :ReliabilityFactor .
+
+
+###  urn:absolute://local/storage-reliability-ontology#PhysicalDiskParameter
+:PhysicalDiskParameter rdf:type owl:Class ;
+                       rdfs:subClassOf :DiskParameter .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#PowerSupplyUnit
 :PowerSupplyUnit rdf:type owl:Class ;
-                 rdfs:subClassOf :Device .
+                 rdfs:subClassOf :Component .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#PowerUnitFailure
 :PowerUnitFailure rdf:type owl:Class ;
-                  rdfs:subClassOf :ComponentFault .
+                  rdfs:subClassOf :ComponentSpecificFault .
+
+
+###  urn:absolute://local/storage-reliability-ontology#ProcessingDevice
+:ProcessingDevice rdf:type owl:Class ;
+                  rdfs:subClassOf :Component ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :if_fatal_manifests_in ;
+                                    owl:someValuesFrom :HeartbeatSignalLoss
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :if_fatal_manifests_in ;
+                                    owl:someValuesFrom :Non-RespondingState
+                                  ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#ProprietaryPrivateNetwork
+:ProprietaryPrivateNetwork rdf:type owl:Class ;
+                           rdfs:subClassOf :DataPathNetwork .
+
+
+###  urn:absolute://local/storage-reliability-ontology#ProprietaryRDMANetwork
+:ProprietaryRDMANetwork rdf:type owl:Class ;
+                        rdfs:subClassOf :InternalManagementNetwork .
+
+
+###  urn:absolute://local/storage-reliability-ontology#ProprietaryREST
+:ProprietaryREST rdf:type owl:Class ;
+                 rdfs:subClassOf :Parameter ;
+                 rdfs:label "ProprietaryREST" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ProtectionScheme
@@ -928,18 +1149,17 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#Protocol-SpecificPort
 :Protocol-SpecificPort rdf:type owl:Class ;
-                       rdfs:subClassOf :SCSILogParameters .
+                       rdfs:subClassOf :SCSILogParameter .
 
 
-###  urn:absolute://local/storage-reliability-ontology#REST
-:REST rdf:type owl:Class ;
-      rdfs:subClassOf :Parameter ;
-      rdfs:label "REST" .
+###  urn:absolute://local/storage-reliability-ontology#RAIDController
+:RAIDController rdf:type owl:Class ;
+                rdfs:subClassOf :ProcessingDevice .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#R_W_V_ErrCnt
 :R_W_V_ErrCnt rdf:type owl:Class ;
-              rdfs:subClassOf :SCSILogParameters ,
+              rdfs:subClassOf :SCSILogParameter ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :is_normal_below ;
                                 owl:hasValue 2
@@ -951,6 +1171,15 @@
 :RandomTestClass rdf:type owl:Class .
 
 
+###  urn:absolute://local/storage-reliability-ontology#RateOfPackageLoss
+:RateOfPackageLoss rdf:type owl:Class ;
+                   rdfs:subClassOf :ReliabilityFactor ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :has_info_at ;
+                                     owl:hasValue "https://kb.paessler.com/en/topic/653-how-do-snmp-mibs-and-oids-work"
+                                   ] .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#ReadOperationsRate
 :ReadOperationsRate rdf:type owl:Class ;
                     rdfs:subClassOf :VolumeSpecific .
@@ -958,12 +1187,60 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#ReadRequestMeanTime
 :ReadRequestMeanTime rdf:type owl:Class ;
-                     rdfs:subClassOf :VolumeSpecific .
+                     rdfs:subClassOf :PerformanceParameter ,
+                                     :VolumeSpecific .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Redriver
 :Redriver rdf:type owl:Class ;
-          rdfs:subClassOf :NetworkDevice .
+          rdfs:subClassOf :NetworkInterface .
+
+
+###  urn:absolute://local/storage-reliability-ontology#RedundandStorageController
+:RedundandStorageController rdf:type owl:Class ;
+                            rdfs:subClassOf :ClusterEntity ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :majorly_depends_on ;
+                                              owl:someValuesFrom :ProcessingDevice
+                                            ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#ReliabilityFactor
+:ReliabilityFactor rdf:type owl:Class ;
+                   rdfs:subClassOf :Parameter .
+
+
+###  urn:absolute://local/storage-reliability-ontology#RemoteMirroringDiskSubsystem
+:RemoteMirroringDiskSubsystem rdf:type owl:Class ;
+                              rdfs:subClassOf :IntelligentDiskSubsystem ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :majorly_depends_on ;
+                                                owl:someValuesFrom :DiskSubsystem
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :strongly_depends_on ;
+                                                owl:someValuesFrom :Network
+                                              ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#RiskFactor
+:RiskFactor rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_another_name ;
+                              owl:hasValue "Eventuality"
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_info_at ;
+                              owl:hasValue "https://books.google.com.ua/books?id=Z0xRCgAAQBAJ"
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_info_at ;
+                              owl:hasValue "isbn 978-0-470-74143-6"
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_russian_term ;
+                              owl:hasValue "непредвиденное обстоятельство"
+                            ] .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#RunningDisparityErrCnt
@@ -1055,7 +1332,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#SCSIDiskFault
 :SCSIDiskFault rdf:type owl:Class ;
-               rdfs:subClassOf :ComponentFault ,
+               rdfs:subClassOf :ComponentSpecificFault ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :shows_in_parameter ;
                                  owl:someValuesFrom :AdditionalSenseCode
@@ -1138,13 +1415,26 @@
                                  ] .
 
 
-###  urn:absolute://local/storage-reliability-ontology#SCSILogParameters
-:SCSILogParameters rdf:type owl:Class ;
-                   rdfs:subClassOf :Parameter ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :has_info_at ;
-                                     owl:hasValue "Seagate_SCSI_Commands_Reference_Manual_rev_H"
-                                   ] .
+###  urn:absolute://local/storage-reliability-ontology#SCSIHDD
+:SCSIHDD rdf:type owl:Class ;
+         rdfs:subClassOf :HDD ,
+                         :SCSIDisk .
+
+
+###  urn:absolute://local/storage-reliability-ontology#SCSILogParameter
+:SCSILogParameter rdf:type owl:Class ;
+                  rdfs:subClassOf :DiskParameter ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_info_at ;
+                                    owl:hasValue "Seagate_SCSI_Commands_Reference_Manual_rev_H"
+                                  ] ;
+                  owl:disjointWith :SMART .
+
+
+###  urn:absolute://local/storage-reliability-ontology#SCSILogTemperature
+:SCSILogTemperature rdf:type owl:Class ;
+                    rdfs:subClassOf :PhysicalDiskParameter ,
+                                    :SCSILogParameter .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SCSIPHYFault
@@ -1154,6 +1444,11 @@
                                 owl:onProperty :shows_in_parameter ;
                                 owl:someValuesFrom :SASPhyLog
                               ] .
+
+
+###  urn:absolute://local/storage-reliability-ontology#SCSISSD
+:SCSISSD rdf:type owl:Class ;
+         rdfs:subClassOf :SCSIDisk .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SCSIStorageMediaFailure
@@ -1171,21 +1466,16 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#SMART
 :SMART rdf:type owl:Class ;
-       rdfs:subClassOf :Parameter ,
+       rdfs:subClassOf :DiskParameter ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :has_info_at ;
                          owl:hasValue "https://www.ixbt.com/storage/hdd-smart-testing.shtml"
                        ] .
 
 
-###  urn:absolute://local/storage-reliability-ontology#SSD
-:SSD rdf:type owl:Class ;
-     rdfs:subClassOf :SCSIDisk .
-
-
 ###  urn:absolute://local/storage-reliability-ontology#Self-TestResults
 :Self-TestResults rdf:type owl:Class ;
-                  rdfs:subClassOf :SCSILogParameters ,
+                  rdfs:subClassOf :SCSILogParameter ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :is_normal_below ;
                                     owl:hasValue 3
@@ -1198,12 +1488,12 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#Service
 :Service rdf:type owl:Class ;
-         rdfs:subClassOf :Component .
+         rdfs:subClassOf :VirtualComponent .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Software
 :Software rdf:type owl:Class ;
-          rdfs:subClassOf :VirtualComponent .
+          rdfs:subClassOf :VirtualSubsystem .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SoftwareRAID
@@ -1213,31 +1503,36 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#SolidStateMediaLog
 :SolidStateMediaLog rdf:type owl:Class ;
-                    rdfs:subClassOf :SCSILogParameters .
+                    rdfs:subClassOf :SCSILogParameter .
+
+
+###  urn:absolute://local/storage-reliability-ontology#SpindleVibrationFrequency
+:SpindleVibrationFrequency rdf:type owl:Class ;
+                           rdfs:subClassOf :PhysicalDiskParameter .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog
 :Start-StopCycleCntLog rdf:type owl:Class ;
-                       rdfs:subClassOf :SCSILogParameters ,
+                       rdfs:subClassOf :SCSILogParameter ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :has_info_at ;
                                          owl:hasValue "https://www.computerweekly.com/tip/Mean-time-between-failure-vs-load-unload-cycles"
                                        ] .
 
 
-###  urn:absolute://local/storage-reliability-ontology#StorageComponent
-:StorageComponent rdf:type owl:Class ;
-                  rdfs:subClassOf :Component .
+###  urn:absolute://local/storage-reliability-ontology#StorageDevice
+:StorageDevice rdf:type owl:Class ;
+               rdfs:subClassOf :Component .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#StorageMacroComponent
 :StorageMacroComponent rdf:type owl:Class ;
-                       rdfs:subClassOf :MacroComponent .
+                       rdfs:subClassOf :DirectAttachedStorage .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#StoragePool
 :StoragePool rdf:type owl:Class ;
-             rdfs:subClassOf :StorageMacroComponent ,
+             rdfs:subClassOf :VirtualStorageSubsystem ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :depends_with_ecc_on ;
                                owl:someValuesFrom :SCSIDisk
@@ -1253,12 +1548,21 @@
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :strongly_depends_on ;
                                owl:someValuesFrom :HardwareRAIDArray
-                             ] .
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :strongly_depends_on ;
+                               owl:someValuesFrom :StoragePool
+                             ] ;
+             rdfs:comment "https://www.ibm.com/support/knowledgecenter/en/STXKQY_4.2.3/com.ibm.spectrum.scale.v4r23.doc/bl1adv_storagepool.htm" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#StorageProcessor
 :StorageProcessor rdf:type owl:Class ;
-                  rdfs:subClassOf :Device ,
+                  rdfs:subClassOf :ProcessingDevice ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_another_name ;
+                                    owl:hasValue "Storage controller"
+                                  ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :has_russian_term ;
                                     owl:hasValue "Контроллер хранения"
@@ -1288,11 +1592,23 @@
 
 
 ###  urn:absolute://local/storage-reliability-ontology#StorageSubsystem
-:StorageSubsystem rdf:type owl:Class .
+:StorageSubsystem rdf:type owl:Class ;
+                  owl:disjointWith :StorageSystem ,
+                                   :SystemHealthStatus .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#StorageSystem
-:StorageSystem rdf:type owl:Class .
+:StorageSystem rdf:type owl:Class ;
+               owl:disjointWith :SystemHealthStatus .
+
+
+###  urn:absolute://local/storage-reliability-ontology#StorageVolume
+:StorageVolume rdf:type owl:Class ;
+               rdfs:subClassOf :VirtualStorageSubsystem ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :strongly_depends_on ;
+                                 owl:someValuesFrom :StoragePool
+                               ] .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SystemFault
@@ -1309,24 +1625,19 @@
              rdfs:subClassOf :CPUUsage .
 
 
-###  urn:absolute://local/storage-reliability-ontology#TatlinPrivateNetwork
-:TatlinPrivateNetwork rdf:type owl:Class ;
-                      rdfs:subClassOf :DataPathNetwork .
+###  urn:absolute://local/storage-reliability-ontology#Tape
+:Tape rdf:type owl:Class ;
+      rdfs:subClassOf :StorageDevice .
 
 
-###  urn:absolute://local/storage-reliability-ontology#TatlinRDMANetwork
-:TatlinRDMANetwork rdf:type owl:Class ;
-                   rdfs:subClassOf :InternalManagementNetwork .
-
-
-###  urn:absolute://local/storage-reliability-ontology#Temperature
-:Temperature rdf:type owl:Class ;
-             rdfs:subClassOf :SCSILogParameters .
+###  urn:absolute://local/storage-reliability-ontology#TapeLibrary
+:TapeLibrary rdf:type owl:Class ;
+             rdfs:subClassOf :DirectAttachedStorage .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#TemperatureLog
 :TemperatureLog rdf:type owl:Class ;
-                rdfs:subClassOf :Temperature .
+                rdfs:subClassOf :SCSILogTemperature .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#TestAggregateSubsystem-level1
@@ -1743,6 +2054,11 @@
                                     ] .
 
 
+###  urn:absolute://local/storage-reliability-ontology#UserError
+:UserError rdf:type owl:Class ;
+           rdfs:subClassOf :HumanError .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#UserLengthMB
 :UserLengthMB rdf:type owl:Class ;
               rdfs:subClassOf :ClusterSpecific .
@@ -1756,7 +2072,7 @@
 ###  urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint
 :VendorHDATmpTripPoint rdf:type owl:Class ;
                        rdfs:subClassOf :InformationalExceptionsLog ,
-                                       :Temperature .
+                                       :SCSILogTemperature .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Vibration
@@ -1766,17 +2082,22 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#VirtualComponent
 :VirtualComponent rdf:type owl:Class ;
+                  rdfs:subClassOf :Component .
+
+
+###  urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem
+:VirtualStorageSubsystem rdf:type owl:Class ;
+                         rdfs:subClassOf :VirtualSubsystem .
+
+
+###  urn:absolute://local/storage-reliability-ontology#VirtualSubsystem
+:VirtualSubsystem rdf:type owl:Class ;
                   rdfs:subClassOf :StorageSubsystem .
-
-
-###  urn:absolute://local/storage-reliability-ontology#Volume
-:Volume rdf:type owl:Class ;
-        rdfs:subClassOf :VirtualComponent .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#VolumeSpecific
 :VolumeSpecific rdf:type owl:Class ;
-                rdfs:subClassOf :REST .
+                rdfs:subClassOf :ProprietaryREST .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#VolumeState
@@ -1829,7 +2150,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#01RawReadErrorRate
 <urn:absolute://local/storage-reliability-ontology#01RawReadErrorRate> rdf:type owl:Class ;
-                                                                       rdfs:subClassOf :SMART .
+                                                                       rdfs:subClassOf :ReliabilityFactor ,
+                                                                                       :SMART .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#02ThroughputPerformance
@@ -1939,7 +2261,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#190AirflowTemperature
 <urn:absolute://local/storage-reliability-ontology#190AirflowTemperature> rdf:type owl:Class ;
-                                                                          rdfs:subClassOf :SMART .
+                                                                          rdfs:subClassOf :PhysicalDiskParameter ,
+                                                                                          :SMART .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#191G-SensorShockCount
@@ -1967,7 +2290,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#194Temperature
 <urn:absolute://local/storage-reliability-ontology#194Temperature> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf :SMART ,
+                                                                   rdfs:subClassOf :PhysicalDiskParameter ,
+                                                                                   :SMART ,
                                                                                    [ rdf:type owl:Restriction ;
                                                                                      owl:onProperty :has_another_name ;
                                                                                      owl:hasValue "HDA Temperature"
@@ -2118,8 +2442,24 @@
 #    Individuals
 #################################################################
 
+###  urn:absolute://local/storage-reliability-ontology#AC_failure
+:AC_failure rdf:type owl:NamedIndividual ,
+                     :FaultInComponent .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers
 :ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers rdf:type owl:NamedIndividual .
+
+
+###  urn:absolute://local/storage-reliability-ontology#CO_fire
+:CO_fire rdf:type owl:NamedIndividual ,
+                  :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#HVAC_failure
+:HVAC_failure rdf:type owl:NamedIndividual ,
+                       :OperationalEnvironment ;
+              rdfs:comment "Heating, Ventilation, & Air Conditioning" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#HWMGR
@@ -2127,8 +2467,19 @@
                 :ControlPathService .
 
 
+###  urn:absolute://local/storage-reliability-ontology#HW_error
+:HW_error rdf:type owl:NamedIndividual ,
+                   :FaultInComponent .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#ISO_IEC_14776_454_2018
 :ISO_IEC_14776_454_2018 rdf:type owl:NamedIndividual .
+
+
+###  urn:absolute://local/storage-reliability-ontology#PCB_contamination
+:PCB_contamination rdf:type owl:NamedIndividual ,
+                            :OperationalEnvironment ;
+                   rdfs:comment "https://en.wikipedia.org/wiki/Polychlorinated_biphenyl" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification
@@ -2141,13 +2492,63 @@
               :ControlPathService .
 
 
+###  urn:absolute://local/storage-reliability-ontology#SW_error
+:SW_error rdf:type owl:NamedIndividual ,
+                   :FaultInComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#SW_ransom
+:SW_ransom rdf:type owl:NamedIndividual ,
+                    :HumanActionEnvironment .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#Seagate_SCSI_Commands_Reference_Manual_rev_H
 :Seagate_SCSI_Commands_Reference_Manual_rev_H rdf:type owl:NamedIndividual .
 
 
-###  urn:absolute://local/storage-reliability-ontology#TRAID
-:TRAID rdf:type owl:NamedIndividual ,
-                :SoftwareRAID .
+###  urn:absolute://local/storage-reliability-ontology#UPS_failure
+:UPS_failure rdf:type owl:NamedIndividual ,
+                      :FaultInComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#acid_leak
+:acid_leak rdf:type owl:NamedIndividual ,
+                    :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#asbestos
+:asbestos rdf:type owl:NamedIndividual ,
+                   :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#bomb_blast
+:bomb_blast rdf:type owl:NamedIndividual ,
+                     :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#bomb_threat
+:bomb_threat rdf:type owl:NamedIndividual ,
+                      :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#brown_out
+:brown_out rdf:type owl:NamedIndividual ,
+                    :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#burst_pipe
+:burst_pipe rdf:type owl:NamedIndividual ,
+                     :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#cable_cut
+:cable_cut rdf:type owl:NamedIndividual ,
+                    :FaultInComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#chemical_spill
+:chemical_spill rdf:type owl:NamedIndividual ,
+                         :OperationalEnvironment .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#cluster
@@ -2161,9 +2562,34 @@
                       <urn:absolute://local/storage-reliability-ontology#8fcb7386-5a43-4fcc-b12d-010c46489fad> .
 
 
+###  urn:absolute://local/storage-reliability-ontology#condensation
+:condensation rdf:type owl:NamedIndividual ,
+                       :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#construction
+:construction rdf:type owl:NamedIndividual ,
+                       :RiskFactor .
+
+
+###  urn:absolute://local/storage-reliability-ontology#coolant_leak
+:coolant_leak rdf:type owl:NamedIndividual ,
+                       :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#cooling_tower_leak
+:cooling_tower_leak rdf:type owl:NamedIndividual ,
+                             :OperationalEnvironment .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#corosync
 :corosync rdf:type owl:NamedIndividual ,
                    :ControlPathService .
+
+
+###  urn:absolute://local/storage-reliability-ontology#corrupted_data
+:corrupted_data rdf:type owl:NamedIndividual ,
+                         :RiskFactor .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#de_expander_1
@@ -2206,6 +2632,11 @@
                    :PowerSupplyUnit .
 
 
+###  urn:absolute://local/storage-reliability-ontology#diesel_generator
+:diesel_generator rdf:type owl:NamedIndividual ,
+                           :RiskFactor .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#disk_enclosure_1
 :disk_enclosure_1 rdf:type owl:NamedIndividual ,
                            :DiskEnclosure ;
@@ -2217,6 +2648,21 @@
                                :de_fan_4 ,
                                :de_psu_1 ,
                                :de_psu_2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#earthquake
+:earthquake rdf:type owl:NamedIndividual ,
+                     :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#electrical_short
+:electrical_short rdf:type owl:NamedIndividual ,
+                           :RiskFactor .
+
+
+###  urn:absolute://local/storage-reliability-ontology#epidemic
+:epidemic rdf:type owl:NamedIndividual ,
+                   :NaturalCatastrophy .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#etcd
@@ -2236,6 +2682,16 @@
                   rdfs:label "ethernetswitch_2" .
 
 
+###  urn:absolute://local/storage-reliability-ontology#evacuation
+:evacuation rdf:type owl:NamedIndividual ,
+                     :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#explosion
+:explosion rdf:type owl:NamedIndividual ,
+                    :OperationalEnvironment .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#fabric_1
 :fabric_1 rdf:type owl:NamedIndividual ,
                    :PCIeFabric ;
@@ -2247,9 +2703,64 @@
                    :ControlPathService .
 
 
+###  urn:absolute://local/storage-reliability-ontology#fire
+:fire rdf:type owl:NamedIndividual ,
+               :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#flood
+:flood rdf:type owl:NamedIndividual ,
+                :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#fraud
+:fraud rdf:type owl:NamedIndividual ,
+                :HumanActionEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#frozen_pipes
+:frozen_pipes rdf:type owl:NamedIndividual ,
+                       :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#hacker
+:hacker rdf:type owl:NamedIndividual ,
+                 :HumanActionEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#hail_storm
+:hail_storm rdf:type owl:NamedIndividual ,
+                     :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#halon_discharge
+:halon_discharge rdf:type owl:NamedIndividual ,
+                          :OperationalEnvironment .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#health
 :health rdf:type owl:NamedIndividual ,
                  :ControlPathService .
+
+
+###  urn:absolute://local/storage-reliability-ontology#humidity
+:humidity rdf:type owl:NamedIndividual ,
+                   :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#hurricane
+:hurricane rdf:type owl:NamedIndividual ,
+                    :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#ice_storm
+:ice_storm rdf:type owl:NamedIndividual ,
+                    :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#insects
+:insects rdf:type owl:NamedIndividual ,
+                  :OperationalEnvironment .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ip-sp-0-1-1
@@ -2371,6 +2882,41 @@
                              :scsi-35000cca03e983d24 .
 
 
+###  urn:absolute://local/storage-reliability-ontology#lightening
+:lightening rdf:type owl:NamedIndividual ,
+                     :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#logic_bomb
+:logic_bomb rdf:type owl:NamedIndividual ,
+                     :HumanActionEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#lost_data
+:lost_data rdf:type owl:NamedIndividual ,
+                    :RiskFactor .
+
+
+###  urn:absolute://local/storage-reliability-ontology#low_voltage
+:low_voltage rdf:type owl:NamedIndividual ,
+                      :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#microwave_fade
+:microwave_fade rdf:type owl:NamedIndividual ,
+                         :RiskFactor .
+
+
+###  urn:absolute://local/storage-reliability-ontology#network_failure
+:network_failure rdf:type owl:NamedIndividual ,
+                          :FaultInComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#nuclear_threat
+:nuclear_threat rdf:type owl:NamedIndividual ,
+                         :OperationalEnvironment .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#p01
 :p01 rdf:type owl:NamedIndividual ,
               :ClientAppNetwork ;
@@ -2394,9 +2940,29 @@
                     :ControlPathService .
 
 
+###  urn:absolute://local/storage-reliability-ontology#plane_crash
+:plane_crash rdf:type owl:NamedIndividual ,
+                      :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#power_outage
+:power_outage rdf:type owl:NamedIndividual ,
+                       :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#power_spike
+:power_spike rdf:type owl:NamedIndividual ,
+                      :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#power_surge
+:power_surge rdf:type owl:NamedIndividual ,
+                      :OperationalEnvironment .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#priv_l
 :priv_l rdf:type owl:NamedIndividual ,
-                 :TatlinPrivateNetwork ;
+                 :ProprietaryPrivateNetwork ;
         :consists_of :ip-sp-0-1-5 ,
                      :ip-sp-0-2-52540034ebc7 ,
                      :sp-0-1-ec5 ,
@@ -2405,16 +2971,59 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#priv_r
 :priv_r rdf:type owl:NamedIndividual ,
-                 :TatlinPrivateNetwork ;
+                 :ProprietaryPrivateNetwork ;
         :consists_of :ip-sp-0-1-6 ,
                      :ip-sp-0-2-525400a60478 ,
                      :sp-0-1-ec6 ,
                      <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000006> .
 
 
+###  urn:absolute://local/storage-reliability-ontology#programmer_error
+:programmer_error rdf:type owl:NamedIndividual ,
+                           :FaultInComponent .
+
+
+###  urn:absolute://local/storage-reliability-ontology#proprietary-storage-system
+:proprietary-storage-system rdf:type owl:NamedIndividual ,
+                                     :EnterpriseStorageSystem ;
+                            :consists_of :cluster ,
+                                         :proprietary_network_infrastructure ,
+                                         :proprietary_software ,
+                                         :sp-0-1 ,
+                                         :sp-0-2 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#proprietary_network_infrastructure
+:proprietary_network_infrastructure rdf:type owl:NamedIndividual ,
+                                             :Network ;
+                                    :consists_of :p01 ,
+                                                 :p02 ,
+                                                 :priv_l ,
+                                                 :priv_r ,
+                                                 :rdma_network .
+
+
+###  urn:absolute://local/storage-reliability-ontology#proprietary_software
+:proprietary_software rdf:type owl:NamedIndividual ,
+                               :Software ;
+                      :consists_of :HWMGR ,
+                                   :SPM ,
+                                   :corosync ,
+                                   :etcd ,
+                                   :failpred ,
+                                   :health ,
+                                   :pacemaker .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#pty-vol-1251e55d-ee33-417e-82d6-573a931ebc5a
 :pty-vol-1251e55d-ee33-417e-82d6-573a931ebc5a rdf:type owl:NamedIndividual ,
-                                                       :Volume .
+                                                       :StorageVolume .
+
+
+###  urn:absolute://local/storage-reliability-ontology#raw_sewage
+:raw_sewage rdf:type owl:NamedIndividual ,
+                     :OperationalEnvironment ;
+            :has_russian_term "сточные воды" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#rdma0
@@ -2437,180 +3046,220 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#rdma_network
 :rdma_network rdf:type owl:NamedIndividual ,
-                       :TatlinRDMANetwork ;
+                       :ProprietaryRDMANetwork ;
               :consists_of :rdma0 ,
                            :rdma1 .
 
 
+###  urn:absolute://local/storage-reliability-ontology#relocation_delay
+:relocation_delay rdf:type owl:NamedIndividual ,
+                           :RiskFactor .
+
+
+###  urn:absolute://local/storage-reliability-ontology#rodents
+:rodents rdf:type owl:NamedIndividual ,
+                  :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#roof_cave_in
+:roof_cave_in rdf:type owl:NamedIndividual ,
+                       :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#sabotage
+:sabotage rdf:type owl:NamedIndividual ,
+                   :HumanActionEnvironment .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e900860
 :scsi-35000cca03e900860 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e925b94
 :scsi-35000cca03e925b94 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e938d00
 :scsi-35000cca03e938d00 rdf:type owl:NamedIndividual ,
-                                 :HDD ;
+                                 :SCSIHDD ;
                         rdfs:label "scsi-35000cca03e938d00" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e94a4f0
 :scsi-35000cca03e94a4f0 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e94a5d0
 :scsi-35000cca03e94a5d0 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e94a5d8
 :scsi-35000cca03e94a5d8 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e94ae60
 :scsi-35000cca03e94ae60 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e94af5c
 :scsi-35000cca03e94af5c rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e959ef4
 :scsi-35000cca03e959ef4 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e95bb54
 :scsi-35000cca03e95bb54 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e96692c
 :scsi-35000cca03e96692c rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e966940
 :scsi-35000cca03e966940 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e966aec
 :scsi-35000cca03e966aec rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e966c48
 :scsi-35000cca03e966c48 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e96c6e0
 :scsi-35000cca03e96c6e0 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e973164
 :scsi-35000cca03e973164 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e973350
 :scsi-35000cca03e973350 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e975c28
 :scsi-35000cca03e975c28 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e975c30
 :scsi-35000cca03e975c30 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e975ff4
 :scsi-35000cca03e975ff4 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e977678
 :scsi-35000cca03e977678 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e9776e0
 :scsi-35000cca03e9776e0 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e9776fc
 :scsi-35000cca03e9776fc rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e977730
 :scsi-35000cca03e977730 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e978228
 :scsi-35000cca03e978228 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e981a20
 :scsi-35000cca03e981a20 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e983a18
 :scsi-35000cca03e983a18 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e983abc
 :scsi-35000cca03e983abc rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e983d24
 :scsi-35000cca03e983d24 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e985284
 :scsi-35000cca03e985284 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e9852b8
 :scsi-35000cca03e9852b8 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e98551c
 :scsi-35000cca03e98551c rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e98565c
 :scsi-35000cca03e98565c rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#scsi-35000cca03e985678
 :scsi-35000cca03e985678 rdf:type owl:NamedIndividual ,
-                                 :HDD .
+                                 :SCSIHDD .
+
+
+###  urn:absolute://local/storage-reliability-ontology#shotgun_blast
+:shotgun_blast rdf:type owl:NamedIndividual ,
+                        :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#shredded_data
+:shredded_data rdf:type owl:NamedIndividual ,
+                        :HumanError .
+
+
+###  urn:absolute://local/storage-reliability-ontology#sick_building
+:sick_building rdf:type owl:NamedIndividual ,
+                        :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#smoke_damage
+:smoke_damage rdf:type owl:NamedIndividual ,
+                       :OperationalEnvironment .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#smth-random
@@ -2618,102 +3267,101 @@
                       :RandomTestClass .
 
 
+###  urn:absolute://local/storage-reliability-ontology#snow_storm
+:snow_storm rdf:type owl:NamedIndividual ,
+                     :NaturalCatastrophy .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-1
 :sp-0-1 rdf:type owl:NamedIndividual ,
-                 :StorageProcessor ;
-        :consists_of :sp-0-1-ec1 ,
-                     :sp-0-1-ec2 ,
-                     :sp-0-1-ec3 ,
-                     :sp-0-1-ec4 ,
-                     :sp-0-1-ec5 ,
-                     :sp-0-1-ec6 .
+                 :StorageProcessor .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-1-ec1
 :sp-0-1-ec1 rdf:type owl:NamedIndividual ,
-                     :EthernetController ;
-            :consists_of :ip-sp-0-1-1 .
+                     :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-1-ec2
 :sp-0-1-ec2 rdf:type owl:NamedIndividual ,
-                     :EthernetController ;
-            :consists_of :ip-sp-0-1-2 .
+                     :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-1-ec3
 :sp-0-1-ec3 rdf:type owl:NamedIndividual ,
-                     :EthernetController ;
-            :consists_of :ip-sp-0-1-3 .
+                     :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-1-ec4
 :sp-0-1-ec4 rdf:type owl:NamedIndividual ,
-                     :EthernetController ;
-            :consists_of :ip-sp-0-1-4 .
+                     :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-1-ec5
 :sp-0-1-ec5 rdf:type owl:NamedIndividual ,
-                     :EthernetController ;
-            :consists_of :ip-sp-0-1-5 .
+                     :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-1-ec6
 :sp-0-1-ec6 rdf:type owl:NamedIndividual ,
-                     :EthernetController ;
-            :consists_of :ip-sp-0-1-6 .
+                     :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-2
 :sp-0-2 rdf:type owl:NamedIndividual ,
-                 :StorageProcessor ;
-        :consists_of :pty-vol-1251e55d-ee33-417e-82d6-573a931ebc5a ,
-                     <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000001> ,
-                     <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000005> ,
-                     <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000006> ,
-                     <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci0000000f> ,
-                     <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000010> ,
-                     <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000011> .
+                 :StorageProcessor .
 
 
-###  urn:absolute://local/storage-reliability-ontology#tatlin
-:tatlin rdf:type owl:NamedIndividual ,
-                 :EnterpriseStorageSystem ;
-        :consists_of :cluster ,
-                     :sp-0-1 ,
-                     :sp-0-2 ,
-                     :tatlin_network_infrastructure ,
-                     :tatlin_software .
+###  urn:absolute://local/storage-reliability-ontology#sprinkler_discharge
+:sprinkler_discharge rdf:type owl:NamedIndividual ,
+                              :OperationalEnvironment .
 
 
-###  urn:absolute://local/storage-reliability-ontology#tatlin_network_infrastructure
-:tatlin_network_infrastructure rdf:type owl:NamedIndividual ,
-                                        :Network ;
-                               :consists_of :p01 ,
-                                            :p02 ,
-                                            :priv_l ,
-                                            :priv_r ,
-                                            :rdma_network .
+###  urn:absolute://local/storage-reliability-ontology#static_electricity
+:static_electricity rdf:type owl:NamedIndividual ,
+                             :OperationalEnvironment .
 
 
-###  urn:absolute://local/storage-reliability-ontology#tatlin_software
-:tatlin_software rdf:type owl:NamedIndividual ,
-                          :Software ;
-                 :consists_of :HWMGR ,
-                              :SPM ,
-                              :corosync ,
-                              :etcd ,
-                              :failpred ,
-                              :health ,
-                              :pacemaker .
+###  urn:absolute://local/storage-reliability-ontology#strike_action
+:strike_action rdf:type owl:NamedIndividual ,
+                        :HumanActionEnvironment .
 
 
-###  urn:absolute://local/storage-reliability-ontology#test-tatlin
-:test-tatlin rdf:type owl:NamedIndividual ,
-                      :EnterpriseStorageSystem ;
-             :consists_of :tst-AggregateSubsystem ,
-                          :tst-Subsystem1 .
+###  urn:absolute://local/storage-reliability-ontology#terrorism
+:terrorism rdf:type owl:NamedIndividual ,
+                    :HumanActionEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#test-proprietary-storage-system
+:test-proprietary-storage-system rdf:type owl:NamedIndividual ,
+                                          :EnterpriseStorageSystem ;
+                                 :consists_of :tst-AggregateSubsystem ,
+                                              :tst-Subsystem1 .
+
+
+###  urn:absolute://local/storage-reliability-ontology#theft
+:theft rdf:type owl:NamedIndividual ,
+                :HumanActionEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#toilet_overflow
+:toilet_overflow rdf:type owl:NamedIndividual ,
+                          :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#tornado
+:tornado rdf:type owl:NamedIndividual ,
+                  :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#train_derailment
+:train_derailment rdf:type owl:NamedIndividual ,
+                           :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#transformer_file
+:transformer_file rdf:type owl:NamedIndividual ,
+                           :RiskFactor .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#tst-AggregateSubsystem
@@ -2723,7 +3371,8 @@
                                      :tst-Subsystem2-lvl1-1 ,
                                      :tst-Subsystem2-lvl1-2 ,
                                      :tst-Subsystem2-lvl2 ,
-                                     :tst-comp-rand-1 .
+                                     :tst-comp-rand-1 ,
+                                     :tst-rand-subsystem .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#tst-Subsystem1
@@ -2917,6 +3566,41 @@
                    :protection_scheme_n 6 .
 
 
+###  urn:absolute://local/storage-reliability-ontology#tsunami
+:tsunami rdf:type owl:NamedIndividual ,
+                  :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#vandalism
+:vandalism rdf:type owl:NamedIndividual ,
+                    :HumanActionEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#vehicle_crash
+:vehicle_crash rdf:type owl:NamedIndividual ,
+                        :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#virus
+:virus rdf:type owl:NamedIndividual ,
+                :HumanActionEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#volcano
+:volcano rdf:type owl:NamedIndividual ,
+                  :NaturalCatastrophy .
+
+
+###  urn:absolute://local/storage-reliability-ontology#water
+:water rdf:type owl:NamedIndividual ,
+                :OperationalEnvironment .
+
+
+###  urn:absolute://local/storage-reliability-ontology#wind_storm
+:wind_storm rdf:type owl:NamedIndividual ,
+                     :NaturalCatastrophy .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#8fcb7386-5a43-4fcc-b12d-010c46489fad
 <urn:absolute://local/storage-reliability-ontology#8fcb7386-5a43-4fcc-b12d-010c46489fad> rdf:type owl:NamedIndividual ,
                                                                                                   :StoragePool ;
@@ -2987,38 +3671,32 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000001
 <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000001> rdf:type owl:NamedIndividual ,
-                                                                                                :EthernetController ;
-                                                                                       :consists_of :ip-sp-0-2-a6d052732ab3 .
+                                                                                                :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000005
 <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000005> rdf:type owl:NamedIndividual ,
-                                                                                                :EthernetController ;
-                                                                                       :consists_of :ip-sp-0-2-52540034ebc7 .
+                                                                                                :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000006
 <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000006> rdf:type owl:NamedIndividual ,
-                                                                                                :EthernetController ;
-                                                                                       :consists_of :ip-sp-0-2-525400a60478 .
+                                                                                                :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci0000000f
 <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci0000000f> rdf:type owl:NamedIndividual ,
-                                                                                                :EthernetController ;
-                                                                                       :consists_of :ip-sp-0-2-a6d052732ab4 .
+                                                                                                :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000010
 <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000010> rdf:type owl:NamedIndividual ,
-                                                                                                :EthernetController ;
-                                                                                       :consists_of :ip-sp-0-2-42054c31268c .
+                                                                                                :EthernetController .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000011
 <urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000011> rdf:type owl:NamedIndividual ,
-                                                                                                :EthernetController ;
-                                                                                       :consists_of :ip-sp-0-2-42054c31268d .
+                                                                                                :EthernetController .
 
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
