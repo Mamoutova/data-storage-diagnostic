@@ -9,6 +9,18 @@
 <urn:absolute://local/storage-reliability-ontology> rdf:type owl:Ontology .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  urn:absolute://local/storage-reliability-ontology#russianTerm
+:russianTerm rdf:type owl:AnnotationProperty .
+
+
+###  urn:absolute://local/storage-reliability-ontology#synonym
+:synonym rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -125,27 +137,6 @@
 #    Data properties
 #################################################################
 
-###  urn:absolute://local/storage-reliability-ontology#has_another_name
-:has_another_name rdf:type owl:DatatypeProperty ;
-                  rdfs:domain owl:Thing ;
-                  rdfs:range xsd:string ;
-                  rdfs:label "has_another_name" .
-
-
-###  urn:absolute://local/storage-reliability-ontology#has_info_at
-:has_info_at rdf:type owl:DatatypeProperty ;
-             rdfs:domain owl:Thing ;
-             rdfs:range xsd:string ;
-             rdfs:label "has_info_at" .
-
-
-###  urn:absolute://local/storage-reliability-ontology#has_russian_term
-:has_russian_term rdf:type owl:DatatypeProperty ;
-                  rdfs:domain owl:Thing ;
-                  rdfs:range xsd:string ;
-                  rdfs:label "has_russian_term" .
-
-
 ###  urn:absolute://local/storage-reliability-ontology#is_normal
 :is_normal rdf:type owl:DatatypeProperty ;
            rdfs:domain :Parameter ;
@@ -235,11 +226,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#Ambience
 :Ambience rdf:type owl:Class ;
-          rdfs:subClassOf :Parameter ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :has_info_at ;
-                            owl:hasValue "ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers"
-                          ] .
+          rdfs:subClassOf :Parameter ;
+          rdfs:seeAlso "ANSI_TIA-942-A_Telecommunications_Infrastructure_Standard_for_Data_Centers" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#AtmosphericPressure
@@ -315,7 +303,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#ClientAppNetwork
 :ClientAppNetwork rdf:type owl:Class ;
-                  rdfs:subClassOf :ClientConnections ,
+                  rdfs:subClassOf :ClientConnection ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :if_failed_causes ;
                                     owl:someValuesFrom :UserAppCutoff
@@ -330,9 +318,9 @@
                                   ] .
 
 
-###  urn:absolute://local/storage-reliability-ontology#ClientConnections
-:ClientConnections rdf:type owl:Class ;
-                   rdfs:subClassOf :Network .
+###  urn:absolute://local/storage-reliability-ontology#ClientConnection
+:ClientConnection rdf:type owl:Class ;
+                  rdfs:subClassOf :Network .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ClusterEntity
@@ -518,7 +506,11 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#DataVulnurability
 :DataVulnurability rdf:type owl:Class ;
-                   rdfs:subClassOf :SystemFault .
+                   rdfs:subClassOf :SystemFault ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :interprets_as ;
+                                     owl:someValuesFrom :Vulnurable
+                                   ] .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#DeadmanTimer
@@ -528,28 +520,16 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#DirectAttachedStorage
 :DirectAttachedStorage rdf:type owl:Class ;
-                       rdfs:subClassOf :MacroComponent ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :has_another_name ;
-                                         owl:hasValue "DAS"
-                                       ] .
+                       rdfs:subClassOf :MacroComponent ;
+                       :synonym "DAS" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Disk
 :Disk rdf:type owl:Class ;
-      rdfs:subClassOf :StorageDevice ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :has_another_name ;
-                        owl:hasValue "Disk"
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :has_another_name ;
-                        owl:hasValue "Disk Drive"
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :has_another_name ;
-                        owl:hasValue "Storage Drive"
-                      ] .
+      rdfs:subClassOf :StorageDevice ;
+      :synonym "Disk" ,
+               "Disk Drive" ,
+               "Storage Drive" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#DiskEnclosure
@@ -574,15 +554,9 @@
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :majorly_depends_on ;
                                  owl:someValuesFrom :Redriver
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :has_another_name ;
-                                 owl:hasValue "shelf"
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :has_russian_term ;
-                                 owl:hasValue "Дисковая полка"
-                               ] .
+                               ] ;
+               :russianTerm "дисковая полка" ;
+               :synonym "shelf" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#DiskEnclosureOffline
@@ -616,6 +590,16 @@
                                ] .
 
 
+###  urn:absolute://local/storage-reliability-ontology#DualStorageNetwork
+:DualStorageNetwork rdf:type owl:Class ;
+                    rdfs:subClassOf :Network ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :majorly_depends_on ;
+                                      owl:someValuesFrom :Network
+                                    ] ;
+                    rdfs:comment "dual SAN" .
+
+
 ###  urn:absolute://local/storage-reliability-ontology#DynamicQuorum
 :DynamicQuorum rdf:type owl:Class ;
                rdfs:subClassOf :ClusterEntity ,
@@ -634,11 +618,8 @@
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :majorly_depends_on ;
                                  owl:someValuesFrom :StorageProcessor
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :has_info_at ;
-                                 owl:hasValue "https://www.tech-coffee.net/understand-failover-cluster-quorum/"
-                               ] .
+                               ] ;
+               rdfs:seeAlso <https://www.tech-coffee.net/understand-failover-cluster-quorum> .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#EndPoint
@@ -737,11 +718,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#GLISTGrowthRate
 :GLISTGrowthRate rdf:type owl:Class ;
-                 rdfs:subClassOf :Custom ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :has_info_at ;
-                                   owl:hasValue "https://www.dell.com/community/PowerEdge-HDD-SCSI-RAID/IMPORTANT-You-may-have-bad-hardware-SCSI-DISK-RELATED/td-p/452234"
-                                 ] .
+                 rdfs:subClassOf :Custom ;
+                 rdfs:seeAlso <https://www.dell.com/community/PowerEdge-HDD-SCSI-RAID/IMPORTANT-You-may-have-bad-hardware-SCSI-DISK-RELATED/td-p/452234> .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#HBA
@@ -1074,13 +1052,10 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#Parameter
 :Parameter rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :has_russian_term ;
-                             owl:hasValue "Диагностический параметр"
-                           ] ;
            owl:disjointWith :StorageSubsystem ,
                             :StorageSystem ,
-                            :SystemHealthStatus .
+                            :SystemHealthStatus ;
+           :russianTerm "Диагностический параметр" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator
@@ -1173,11 +1148,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#RateOfPackageLoss
 :RateOfPackageLoss rdf:type owl:Class ;
-                   rdfs:subClassOf :ReliabilityFactor ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :has_info_at ;
-                                     owl:hasValue "https://kb.paessler.com/en/topic/653-how-do-snmp-mibs-and-oids-work"
-                                   ] .
+                   rdfs:subClassOf :ReliabilityFactor ;
+                   rdfs:seeAlso <https://kb.paessler.com/en/topic/653-how-do-snmp-mibs-and-oids-work> .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#ReadOperationsRate
@@ -1225,22 +1197,10 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#RiskFactor
 :RiskFactor rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty :has_another_name ;
-                              owl:hasValue "Eventuality"
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :has_info_at ;
-                              owl:hasValue "https://books.google.com.ua/books?id=Z0xRCgAAQBAJ"
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :has_info_at ;
-                              owl:hasValue "isbn 978-0-470-74143-6"
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :has_russian_term ;
-                              owl:hasValue "непредвиденное обстоятельство"
-                            ] .
+            rdfs:seeAlso <https://books.google.com.ua/books?id=Z0xRCgAAQBAJ> ,
+                         "isbn 978-0-470-74143-6" ;
+            :russianTerm "непредвиденное обстоятельство" ;
+            :synonym "Eventuality" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#RunningDisparityErrCnt
@@ -1263,19 +1223,10 @@
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :if_warning_manifests_in ;
                                owl:someValuesFrom :SCSIPHYFault
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :has_another_name ;
-                               owl:hasValue "EnclosureServices"
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :has_another_name ;
-                               owl:hasValue "SASSwitch"
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :has_info_at ;
-                               owl:hasValue "https://www.seagate.com/staticfiles/support/disc/manuals/Interface%20manuals/100293071c.pdf"
-                             ] .
+                             ] ;
+             rdfs:seeAlso <https://www.seagate.com/staticfiles/support/disc/manuals/Interface%20manuals/100293071c.pdf> ;
+             :synonym "Enclosure Services" ,
+                      "SASSwitch" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SASHBA
@@ -1285,11 +1236,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#SASPhyLog
 :SASPhyLog rdf:type owl:Class ;
-           rdfs:subClassOf :Protocol-SpecificPort ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :has_info_at ;
-                             owl:hasValue "https://www.seagate.com/staticfiles/support/disc/manuals/Interface%20manuals/100293071c.pdf"
-                           ] .
+           rdfs:subClassOf :Protocol-SpecificPort ;
+           rdfs:seeAlso <https://www.seagate.com/staticfiles/support/disc/manuals/Interface%20manuals/100293071c.pdf> .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SCSIDisk
@@ -1349,11 +1297,8 @@
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :shows_in_parameter ;
                                 owl:someValuesFrom :Health
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :has_another_name ;
-                                owl:hasValue "SCSIDiskOffline"
-                              ] .
+                              ] ;
+              :synonym "SCSI Disk Offline" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SCSIDiskMediaExpectedDegradation
@@ -1391,11 +1336,8 @@
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :shows_in_parameter ;
                                              owl:someValuesFrom <urn:absolute://local/storage-reliability-ontology#6TotalUncorErr>
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty :has_another_name ;
-                                             owl:hasValue "SCSIDiskPartialLoss"
-                                           ] .
+                                           ] ;
+                           :synonym "SCSI Disk Partial Loss" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SCSIDiskWearOut
@@ -1423,12 +1365,9 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#SCSILogParameter
 :SCSILogParameter rdf:type owl:Class ;
-                  rdfs:subClassOf :DiskParameter ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :has_info_at ;
-                                    owl:hasValue "Seagate_SCSI_Commands_Reference_Manual_rev_H"
-                                  ] ;
-                  owl:disjointWith :SMART .
+                  rdfs:subClassOf :DiskParameter ;
+                  owl:disjointWith :SMART ;
+                  rdfs:seeAlso "Seagate_SCSI_Commands_Reference_Manual_rev_H" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SCSILogTemperature
@@ -1466,11 +1405,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#SMART
 :SMART rdf:type owl:Class ;
-       rdfs:subClassOf :DiskParameter ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :has_info_at ;
-                         owl:hasValue "https://www.ixbt.com/storage/hdd-smart-testing.shtml"
-                       ] .
+       rdfs:subClassOf :DiskParameter ;
+       rdfs:seeAlso <https://www.ixbt.com/storage/hdd-smart-testing.shtml> .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#Self-TestResults
@@ -1513,11 +1449,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog
 :Start-StopCycleCntLog rdf:type owl:Class ;
-                       rdfs:subClassOf :SCSILogParameter ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :has_info_at ;
-                                         owl:hasValue "https://www.computerweekly.com/tip/Mean-time-between-failure-vs-load-unload-cycles"
-                                       ] .
+                       rdfs:subClassOf :SCSILogParameter ;
+                       rdfs:seeAlso <https://www.computerweekly.com/tip/Mean-time-between-failure-vs-load-unload-cycles> .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#StorageDevice
@@ -1558,15 +1491,9 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#StorageProcessor
 :StorageProcessor rdf:type owl:Class ;
-                  rdfs:subClassOf :ProcessingDevice ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :has_another_name ;
-                                    owl:hasValue "Storage controller"
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :has_russian_term ;
-                                    owl:hasValue "Контроллер хранения"
-                                  ] .
+                  rdfs:subClassOf :ProcessingDevice ;
+                  :russianTerm "Контроллер хранения" ;
+                  :synonym "storage controller" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#StorageProcessorConnectionCutoff
@@ -2166,11 +2093,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#04NumberOfSpin-UpTimes
 <urn:absolute://local/storage-reliability-ontology#04NumberOfSpin-UpTimes> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf :SMART ,
-                                                                                           [ rdf:type owl:Restriction ;
-                                                                                             owl:onProperty :has_another_name ;
-                                                                                             owl:hasValue "Start/StopCount"
-                                                                                           ] .
+                                                                           rdfs:subClassOf :SMART ;
+                                                                           :synonym "Start/StopCount" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#05ReallocatedSectorCount
@@ -2190,11 +2114,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#09PowerOnHoursCount
 <urn:absolute://local/storage-reliability-ontology#09PowerOnHoursCount> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf :SMART ,
-                                                                                        [ rdf:type owl:Restriction ;
-                                                                                          owl:onProperty :has_another_name ;
-                                                                                          owl:hasValue "Power-onTime"
-                                                                                        ] .
+                                                                        rdfs:subClassOf :SMART ;
+                                                                        :synonym "Power-on time" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel
@@ -2218,11 +2139,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#11CalibrationRetryCount
 <urn:absolute://local/storage-reliability-ontology#11CalibrationRetryCount> rdf:type owl:Class ;
-                                                                            rdfs:subClassOf :SMART ,
-                                                                                            [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty :has_another_name ;
-                                                                                              owl:hasValue "Recalibration Retries"
-                                                                                            ] .
+                                                                            rdfs:subClassOf :SMART ;
+                                                                            :synonym "recalibration retries" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#12PowerCycleCount
@@ -2242,11 +2160,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#187ReportedUncorrectedSectorCount
 <urn:absolute://local/storage-reliability-ontology#187ReportedUncorrectedSectorCount> rdf:type owl:Class ;
-                                                                                      rdfs:subClassOf :SMART ,
-                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                        owl:onProperty :has_another_name ;
-                                                                                                        owl:hasValue "UNC Error"
-                                                                                                      ] .
+                                                                                      rdfs:subClassOf :SMART ;
+                                                                                      :synonym "UNC error" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#188CommandTimeout
@@ -2267,20 +2182,14 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#191G-SensorShockCount
 <urn:absolute://local/storage-reliability-ontology#191G-SensorShockCount> rdf:type owl:Class ;
-                                                                          rdfs:subClassOf :SMART ,
-                                                                                          [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty :has_another_name ;
-                                                                                            owl:hasValue "Mechanical Shock"
-                                                                                          ] .
+                                                                          rdfs:subClassOf :SMART ;
+                                                                          :synonym "mechanical shock" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#192PowerOffRetractCount
 <urn:absolute://local/storage-reliability-ontology#192PowerOffRetractCount> rdf:type owl:Class ;
-                                                                            rdfs:subClassOf :SMART ,
-                                                                                            [ rdf:type owl:Restriction ;
-                                                                                              owl:onProperty :has_another_name ;
-                                                                                              owl:hasValue "Emergency Retry Count"
-                                                                                            ] .
+                                                                            rdfs:subClassOf :SMART ;
+                                                                            :synonym "emergency retry count" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#193Load/UnloadCycleCount
@@ -2291,15 +2200,9 @@
 ###  urn:absolute://local/storage-reliability-ontology#194Temperature
 <urn:absolute://local/storage-reliability-ontology#194Temperature> rdf:type owl:Class ;
                                                                    rdfs:subClassOf :PhysicalDiskParameter ,
-                                                                                   :SMART ,
-                                                                                   [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty :has_another_name ;
-                                                                                     owl:hasValue "HDA Temperature"
-                                                                                   ] ,
-                                                                                   [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty :has_another_name ;
-                                                                                     owl:hasValue "HDD Temperature"
-                                                                                   ] .
+                                                                                   :SMART ;
+                                                                   :synonym "HDA temperature" ,
+                                                                            "HDD temperature" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#195HardwareECCRecovered
@@ -2319,11 +2222,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#198OfflineUncorrectableSectorCount
 <urn:absolute://local/storage-reliability-ontology#198OfflineUncorrectableSectorCount> rdf:type owl:Class ;
-                                                                                       rdfs:subClassOf :SMART ,
-                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                         owl:onProperty :has_another_name ;
-                                                                                                         owl:hasValue "Uncorrectable Sector Count"
-                                                                                                       ] .
+                                                                                       rdfs:subClassOf :SMART ;
+                                                                                       :synonym "uncorrectable sector count" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#199UltraDMACRCErrorCount
@@ -2342,11 +2242,8 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#200WriteErrorRate
 <urn:absolute://local/storage-reliability-ontology#200WriteErrorRate> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf :SMART ,
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty :has_another_name ;
-                                                                                        owl:hasValue "MultiZone Error Rate"
-                                                                                      ] .
+                                                                      rdfs:subClassOf :SMART ;
+                                                                      :synonym "multi-zone error rate" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#201SoftReadErrorRate
@@ -2484,7 +2381,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#SNIA_Storage_Management_Initiative_Specification
 :SNIA_Storage_Management_Initiative_Specification rdf:type owl:NamedIndividual ;
-                                                  :has_another_name "SMI-S" .
+                                                  :synonym "SMI-S" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#SPM
@@ -3023,7 +2920,7 @@
 ###  urn:absolute://local/storage-reliability-ontology#raw_sewage
 :raw_sewage rdf:type owl:NamedIndividual ,
                      :OperationalEnvironment ;
-            :has_russian_term "сточные воды" .
+            :russianTerm "сточные воды" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#rdma0
@@ -3666,7 +3563,7 @@
 
 ###  urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4
 <urn:absolute://local/storage-reliability-ontology#T10/1731-D_SCSI_Primary_Commands_-_4> rdf:type owl:NamedIndividual ;
-                                                                                         :has_another_name "SCP-4" .
+                                                                                         :synonym "SCP-4" .
 
 
 ###  urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000001

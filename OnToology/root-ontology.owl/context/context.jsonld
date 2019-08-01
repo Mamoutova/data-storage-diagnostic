@@ -39,6 +39,9 @@
     "Battery" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Battery"
     },
+    "synonym" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#synonym"
+    },
     "SASHBA" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SASHBA"
     },
@@ -162,9 +165,6 @@
     },
     "RiskFactor" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RiskFactor"
-    },
-    "Thing" : {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
     },
     "DataAddressMarkError" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#202DataAddressMarkError"
@@ -364,6 +364,9 @@
     "End-to-EndError" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#184End-to-EndError"
     },
+    "ClientConnection" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ClientConnection"
+    },
     "InvalidDWORDCnt" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#InvalidDWORDCnt"
     },
@@ -375,6 +378,9 @@
     },
     "TestSystemFail1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail1"
+    },
+    "russianTerm" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#russianTerm"
     },
     "RateOfPackageLoss" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RateOfPackageLoss"
@@ -645,16 +651,8 @@
     "FanSpeed" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#FanSpeed"
     },
-    "has_info_at" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "AccumulatedLoad-UnloadCycles" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#6AccumulatedLoad-UnloadCycles"
-    },
-    "has_russian_term" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#has_russian_term",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "TxKB" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TxKB"
@@ -714,6 +712,9 @@
     "TestParameter1-level1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level1"
     },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
     "StorageSubsystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
     },
@@ -754,24 +755,20 @@
     "Fault" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Fault"
     },
-    "has_another_name" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "TestSubsystem2-level1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem2-level1"
     },
     "Load-UnloadCountOverDeviceLifetime" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime"
     },
-    "ClientConnections" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#ClientConnections"
-    },
     "TestSystemFail2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail2"
     },
     "CPUUsage" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#CPUUsage"
+    },
+    "DualStorageNetwork" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DualStorageNetwork"
     },
     "RawReadErrorRate" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#01RawReadErrorRate"

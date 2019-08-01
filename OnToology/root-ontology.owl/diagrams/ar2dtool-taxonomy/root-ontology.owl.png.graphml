@@ -5,7 +5,7 @@
    <key for="edge" id="d2" yfiles.type="edgegraphics" />
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
-   <graph edgedefault="directed" id="G" parse.edges="279" parse.nodes="277" parse.order="free">
+   <graph edgedefault="directed" id="G" parse.edges="280" parse.nodes="278" parse.order="free">
       <node id="nid_storage-reliability-ontology:TestSubsystem2-level1">
          <data key="d0">
             <y:ShapeNode>
@@ -1283,19 +1283,19 @@
          </data>
          <data key="d1" />
       </node>
-      <node id="nid_storage-reliability-ontology:ClientConnections">
+      <node id="nid_storage-reliability-ontology:ClientConnection">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="460.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="450.0" x="0.0" y="0.0" />
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">storage-reliability-ontology:ClientConnections</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">storage-reliability-ontology:ClientConnection</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf43" source="nid_storage-reliability-ontology:ClientAppNetwork" target="nid_storage-reliability-ontology:ClientConnections">
+    <edge id="eid_rdfs:subClassOf43" source="nid_storage-reliability-ontology:ClientAppNetwork" target="nid_storage-reliability-ontology:ClientConnection">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2415,17 +2415,6 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf87" source="nid_storage-reliability-ontology:ClientConnections" target="nid_storage-reliability-ontology:Network">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
       <node id="nid_storage-reliability-ontology:SoftwareRAID">
          <data key="d0">
             <y:ShapeNode>
@@ -2438,7 +2427,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf88" source="nid_storage-reliability-ontology:SoftwareRAID" target="nid_storage-reliability-ontology:DataPathService">
+    <edge id="eid_rdfs:subClassOf87" source="nid_storage-reliability-ontology:SoftwareRAID" target="nid_storage-reliability-ontology:DataPathService">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2461,7 +2450,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf89" source="nid_storage-reliability-ontology:TestAggregateSubsystem-level1" target="nid_storage-reliability-ontology:TestSubsystem">
+    <edge id="eid_rdfs:subClassOf88" source="nid_storage-reliability-ontology:TestAggregateSubsystem-level1" target="nid_storage-reliability-ontology:TestSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2484,7 +2473,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf90" source="nid_storage-reliability-ontology:TestSystemError2" target="nid_storage-reliability-ontology:TestSystemFault">
+    <edge id="eid_rdfs:subClassOf89" source="nid_storage-reliability-ontology:TestSystemError2" target="nid_storage-reliability-ontology:TestSystemFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2507,7 +2496,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf91" source="nid_storage-reliability-ontology:TxKB" target="nid_storage-reliability-ontology:NetworkEndPointSpecific">
+    <edge id="eid_rdfs:subClassOf90" source="nid_storage-reliability-ontology:TxKB" target="nid_storage-reliability-ontology:NetworkEndPointSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2530,7 +2519,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf92" source="nid_storage-reliability-ontology:Humidity" target="nid_storage-reliability-ontology:Ambience">
+    <edge id="eid_rdfs:subClassOf91" source="nid_storage-reliability-ontology:Humidity" target="nid_storage-reliability-ontology:Ambience">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2565,7 +2554,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf93" source="nid_storage-reliability-ontology:TestParameter1-level3" target="nid_storage-reliability-ontology:TestParameter1-level2">
+    <edge id="eid_rdfs:subClassOf92" source="nid_storage-reliability-ontology:TestParameter1-level3" target="nid_storage-reliability-ontology:TestParameter1-level2">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2588,7 +2577,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf94" source="nid_urn:absolute://local/storage-reliability-ontology#199UltraDMACRCErrorCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf93" source="nid_urn:absolute://local/storage-reliability-ontology#199UltraDMACRCErrorCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2623,7 +2612,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf95" source="nid_storage-reliability-ontology:AdministratorError" target="nid_storage-reliability-ontology:HumanError">
+    <edge id="eid_rdfs:subClassOf94" source="nid_storage-reliability-ontology:AdministratorError" target="nid_storage-reliability-ontology:HumanError">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2646,7 +2635,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf96" source="nid_storage-reliability-ontology:EnvironmentFactor" target="nid_storage-reliability-ontology:RiskFactor">
+    <edge id="eid_rdfs:subClassOf95" source="nid_storage-reliability-ontology:EnvironmentFactor" target="nid_storage-reliability-ontology:RiskFactor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2669,7 +2658,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf97" source="nid_storage-reliability-ontology:DynamicQuorum" target="nid_storage-reliability-ontology:ClusterEntity">
+    <edge id="eid_rdfs:subClassOf96" source="nid_storage-reliability-ontology:DynamicQuorum" target="nid_storage-reliability-ontology:ClusterEntity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2704,7 +2693,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf98" source="nid_urn:absolute://local/storage-reliability-ontology#3TotalErrCor" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
+    <edge id="eid_rdfs:subClassOf97" source="nid_urn:absolute://local/storage-reliability-ontology#3TotalErrCor" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2727,7 +2716,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf99" source="nid_storage-reliability-ontology:TestSubsystem2-level2" target="nid_storage-reliability-ontology:TestSubsystem2-level1">
+    <edge id="eid_rdfs:subClassOf98" source="nid_storage-reliability-ontology:TestSubsystem2-level2" target="nid_storage-reliability-ontology:TestSubsystem2-level1">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2750,7 +2739,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf100" source="nid_urn:absolute://local/storage-reliability-ontology#188CommandTimeout" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf99" source="nid_urn:absolute://local/storage-reliability-ontology#188CommandTimeout" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2761,7 +2750,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf101" source="nid_storage-reliability-ontology:DataPathNetwork" target="nid_storage-reliability-ontology:Network">
+    <edge id="eid_rdfs:subClassOf100" source="nid_storage-reliability-ontology:DataPathNetwork" target="nid_storage-reliability-ontology:Network">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2784,7 +2773,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf102" source="nid_storage-reliability-ontology:SpindleVibrationFrequency" target="nid_storage-reliability-ontology:PhysicalDiskParameter">
+    <edge id="eid_rdfs:subClassOf101" source="nid_storage-reliability-ontology:SpindleVibrationFrequency" target="nid_storage-reliability-ontology:PhysicalDiskParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2807,7 +2796,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf103" source="nid_storage-reliability-ontology:CommunicationSWStackFailure" target="nid_storage-reliability-ontology:ComponentSpecificFault">
+    <edge id="eid_rdfs:subClassOf102" source="nid_storage-reliability-ontology:CommunicationSWStackFailure" target="nid_storage-reliability-ontology:ComponentSpecificFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2842,7 +2831,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf104" source="nid_storage-reliability-ontology:Error" target="nid_storage-reliability-ontology:SystemHealthStatus">
+    <edge id="eid_rdfs:subClassOf103" source="nid_storage-reliability-ontology:Error" target="nid_storage-reliability-ontology:SystemHealthStatus">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2865,7 +2854,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf105" source="nid_storage-reliability-ontology:Fault" target="nid_storage-reliability-ontology:Event">
+    <edge id="eid_rdfs:subClassOf104" source="nid_storage-reliability-ontology:Fault" target="nid_storage-reliability-ontology:Event">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2900,7 +2889,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf106" source="nid_storage-reliability-ontology:TestParameter2-level1" target="nid_storage-reliability-ontology:TestParameter">
+    <edge id="eid_rdfs:subClassOf105" source="nid_storage-reliability-ontology:TestParameter2-level1" target="nid_storage-reliability-ontology:TestParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2923,7 +2912,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf107" source="nid_storage-reliability-ontology:RAIDController" target="nid_storage-reliability-ontology:ProcessingDevice">
+    <edge id="eid_rdfs:subClassOf106" source="nid_storage-reliability-ontology:RAIDController" target="nid_storage-reliability-ontology:ProcessingDevice">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2946,7 +2935,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf108" source="nid_storage-reliability-ontology:ConfigurationParameter" target="nid_storage-reliability-ontology:Parameter">
+    <edge id="eid_rdfs:subClassOf107" source="nid_storage-reliability-ontology:ConfigurationParameter" target="nid_storage-reliability-ontology:Parameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2969,7 +2958,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf109" source="nid_storage-reliability-ontology:TestSystemFail1" target="nid_storage-reliability-ontology:TestSystemFault">
+    <edge id="eid_rdfs:subClassOf108" source="nid_storage-reliability-ontology:TestSystemFail1" target="nid_storage-reliability-ontology:TestSystemFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2992,7 +2981,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf110" source="nid_storage-reliability-ontology:Battery" target="nid_storage-reliability-ontology:Component">
+    <edge id="eid_rdfs:subClassOf109" source="nid_storage-reliability-ontology:Battery" target="nid_storage-reliability-ontology:Component">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3015,7 +3004,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf111" source="nid_urn:absolute://local/storage-reliability-ontology#01RawReadErrorRate" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf110" source="nid_urn:absolute://local/storage-reliability-ontology#01RawReadErrorRate" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3026,7 +3015,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf112" source="nid_urn:absolute://local/storage-reliability-ontology#01RawReadErrorRate" target="nid_storage-reliability-ontology:ReliabilityFactor">
+    <edge id="eid_rdfs:subClassOf111" source="nid_urn:absolute://local/storage-reliability-ontology#01RawReadErrorRate" target="nid_storage-reliability-ontology:ReliabilityFactor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3037,7 +3026,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf113" source="nid_storage-reliability-ontology:SolidStateMediaLog" target="nid_storage-reliability-ontology:SCSILogParameter">
+    <edge id="eid_rdfs:subClassOf112" source="nid_storage-reliability-ontology:SolidStateMediaLog" target="nid_storage-reliability-ontology:SCSILogParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3060,7 +3049,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf114" source="nid_storage-reliability-ontology:DirectAttachedStorage" target="nid_storage-reliability-ontology:MacroComponent">
+    <edge id="eid_rdfs:subClassOf113" source="nid_storage-reliability-ontology:DirectAttachedStorage" target="nid_storage-reliability-ontology:MacroComponent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3083,7 +3072,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf115" source="nid_storage-reliability-ontology:Fatal" target="nid_storage-reliability-ontology:SystemHealthStatus">
+    <edge id="eid_rdfs:subClassOf114" source="nid_storage-reliability-ontology:Fatal" target="nid_storage-reliability-ontology:SystemHealthStatus">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3118,7 +3107,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf116" source="nid_storage-reliability-ontology:EthernetController" target="nid_storage-reliability-ontology:NetworkInterfaceCard">
+    <edge id="eid_rdfs:subClassOf115" source="nid_storage-reliability-ontology:EthernetController" target="nid_storage-reliability-ontology:NetworkInterfaceCard">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3141,7 +3130,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf117" source="nid_storage-reliability-ontology:SCSIDiskWearOut" target="nid_storage-reliability-ontology:SCSIDiskFault">
+    <edge id="eid_rdfs:subClassOf116" source="nid_storage-reliability-ontology:SCSIDiskWearOut" target="nid_storage-reliability-ontology:SCSIDiskFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3164,7 +3153,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf118" source="nid_storage-reliability-ontology:MaxTemperature" target="nid_storage-reliability-ontology:SCSILogTemperature">
+    <edge id="eid_rdfs:subClassOf117" source="nid_storage-reliability-ontology:MaxTemperature" target="nid_storage-reliability-ontology:SCSILogTemperature">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3175,7 +3164,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf119" source="nid_storage-reliability-ontology:MaxTemperature" target="nid_storage-reliability-ontology:InformationalExceptionsLog">
+    <edge id="eid_rdfs:subClassOf118" source="nid_storage-reliability-ontology:MaxTemperature" target="nid_storage-reliability-ontology:InformationalExceptionsLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3210,7 +3199,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf120" source="nid_storage-reliability-ontology:SASHBA" target="nid_storage-reliability-ontology:HBA">
+    <edge id="eid_rdfs:subClassOf119" source="nid_storage-reliability-ontology:SASHBA" target="nid_storage-reliability-ontology:HBA">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3245,7 +3234,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf121" source="nid_storage-reliability-ontology:SASExpander" target="nid_storage-reliability-ontology:DASInterface">
+    <edge id="eid_rdfs:subClassOf120" source="nid_storage-reliability-ontology:SASExpander" target="nid_storage-reliability-ontology:DASInterface">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3268,7 +3257,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf122" source="nid_urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime" target="nid_storage-reliability-ontology:Start-StopCycleCntLog">
+    <edge id="eid_rdfs:subClassOf121" source="nid_urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime" target="nid_storage-reliability-ontology:Start-StopCycleCntLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3291,7 +3280,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf123" source="nid_urn:absolute://local/storage-reliability-ontology#11CalibrationRetryCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf122" source="nid_urn:absolute://local/storage-reliability-ontology#11CalibrationRetryCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3314,7 +3303,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf124" source="nid_storage-reliability-ontology:AverageRequestSize" target="nid_storage-reliability-ontology:VolumeSpecific">
+    <edge id="eid_rdfs:subClassOf123" source="nid_storage-reliability-ontology:AverageRequestSize" target="nid_storage-reliability-ontology:VolumeSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3337,7 +3326,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf125" source="nid_urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime" target="nid_storage-reliability-ontology:Start-StopCycleCntLog">
+    <edge id="eid_rdfs:subClassOf124" source="nid_urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime" target="nid_storage-reliability-ontology:Start-StopCycleCntLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3360,7 +3349,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf126" source="nid_storage-reliability-ontology:MemoryUsed" target="nid_storage-reliability-ontology:MemoryUsage">
+    <edge id="eid_rdfs:subClassOf125" source="nid_storage-reliability-ontology:MemoryUsed" target="nid_storage-reliability-ontology:MemoryUsage">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3383,7 +3372,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf127" source="nid_storage-reliability-ontology:SCSIHDD" target="nid_storage-reliability-ontology:SCSIDisk">
+    <edge id="eid_rdfs:subClassOf126" source="nid_storage-reliability-ontology:SCSIHDD" target="nid_storage-reliability-ontology:SCSIDisk">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3406,7 +3395,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf128" source="nid_storage-reliability-ontology:SCSIHDD" target="nid_storage-reliability-ontology:HDD">
+    <edge id="eid_rdfs:subClassOf127" source="nid_storage-reliability-ontology:SCSIHDD" target="nid_storage-reliability-ontology:HDD">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3429,7 +3418,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf129" source="nid_urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
+    <edge id="eid_rdfs:subClassOf128" source="nid_urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3440,7 +3429,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf130" source="nid_storage-reliability-ontology:InformationalExceptionsLog" target="nid_storage-reliability-ontology:SCSILogParameter">
+    <edge id="eid_rdfs:subClassOf129" source="nid_storage-reliability-ontology:InformationalExceptionsLog" target="nid_storage-reliability-ontology:SCSILogParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3463,7 +3452,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf131" source="nid_storage-reliability-ontology:SCSIDiskMediaExpectedDegradation" target="nid_storage-reliability-ontology:SCSIDiskFault">
+    <edge id="eid_rdfs:subClassOf130" source="nid_storage-reliability-ontology:SCSIDiskMediaExpectedDegradation" target="nid_storage-reliability-ontology:SCSIDiskFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3486,7 +3475,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf132" source="nid_storage-reliability-ontology:TotalVolumeCapacityMB" target="nid_storage-reliability-ontology:ClusterSpecific">
+    <edge id="eid_rdfs:subClassOf131" source="nid_storage-reliability-ontology:TotalVolumeCapacityMB" target="nid_storage-reliability-ontology:ClusterSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3497,7 +3486,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf133" source="nid_storage-reliability-ontology:TemperatureLog" target="nid_storage-reliability-ontology:SCSILogTemperature">
+    <edge id="eid_rdfs:subClassOf132" source="nid_storage-reliability-ontology:TemperatureLog" target="nid_storage-reliability-ontology:SCSILogTemperature">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3520,7 +3509,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf134" source="nid_storage-reliability-ontology:TestParameter11-level3" target="nid_storage-reliability-ontology:TestParameter1-level2">
+    <edge id="eid_rdfs:subClassOf133" source="nid_storage-reliability-ontology:TestParameter11-level3" target="nid_storage-reliability-ontology:TestParameter1-level2">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3543,7 +3532,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf135" source="nid_storage-reliability-ontology:NVMeSCM" target="nid_storage-reliability-ontology:CacheComponent">
+    <edge id="eid_rdfs:subClassOf134" source="nid_storage-reliability-ontology:NVMeSCM" target="nid_storage-reliability-ontology:CacheComponent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3554,7 +3543,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf136" source="nid_storage-reliability-ontology:StorageMacroComponent" target="nid_storage-reliability-ontology:DirectAttachedStorage">
+    <edge id="eid_rdfs:subClassOf135" source="nid_storage-reliability-ontology:StorageMacroComponent" target="nid_storage-reliability-ontology:DirectAttachedStorage">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3577,7 +3566,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf137" source="nid_urn:absolute://local/storage-reliability-ontology#6TotalUncorErr" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
+    <edge id="eid_rdfs:subClassOf136" source="nid_urn:absolute://local/storage-reliability-ontology#6TotalUncorErr" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3600,7 +3589,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf138" source="nid_storage-reliability-ontology:InvalidDWORDCnt" target="nid_storage-reliability-ontology:SASPhyLog">
+    <edge id="eid_rdfs:subClassOf137" source="nid_storage-reliability-ontology:InvalidDWORDCnt" target="nid_storage-reliability-ontology:SASPhyLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3623,7 +3612,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf139" source="nid_storage-reliability-ontology:StorageProcessorConnectionCutoff" target="nid_storage-reliability-ontology:SystemFault">
+    <edge id="eid_rdfs:subClassOf138" source="nid_storage-reliability-ontology:StorageProcessorConnectionCutoff" target="nid_storage-reliability-ontology:SystemFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3658,7 +3647,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf140" source="nid_storage-reliability-ontology:TestComponent-level1" target="nid_storage-reliability-ontology:TestComponent">
+    <edge id="eid_rdfs:subClassOf139" source="nid_storage-reliability-ontology:TestComponent-level1" target="nid_storage-reliability-ontology:TestComponent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3681,7 +3670,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf141" source="nid_urn:absolute://local/storage-reliability-ontology#203RunOutCancel" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf140" source="nid_urn:absolute://local/storage-reliability-ontology#203RunOutCancel" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3704,7 +3693,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf142" source="nid_urn:absolute://local/storage-reliability-ontology#183SATADownshiftErrorCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf141" source="nid_urn:absolute://local/storage-reliability-ontology#183SATADownshiftErrorCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3727,7 +3716,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf143" source="nid_storage-reliability-ontology:Non-MediumErrCnt" target="nid_storage-reliability-ontology:SCSILogParameter">
+    <edge id="eid_rdfs:subClassOf142" source="nid_storage-reliability-ontology:Non-MediumErrCnt" target="nid_storage-reliability-ontology:SCSILogParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3750,7 +3739,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf144" source="nid_storage-reliability-ontology:UserUsage" target="nid_storage-reliability-ontology:CPUUsage">
+    <edge id="eid_rdfs:subClassOf143" source="nid_storage-reliability-ontology:UserUsage" target="nid_storage-reliability-ontology:CPUUsage">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3773,7 +3762,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf145" source="nid_storage-reliability-ontology:EthernetSwitch" target="nid_storage-reliability-ontology:NetworkDevice">
+    <edge id="eid_rdfs:subClassOf144" source="nid_storage-reliability-ontology:EthernetSwitch" target="nid_storage-reliability-ontology:NetworkDevice">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3784,7 +3773,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf146" source="nid_storage-reliability-ontology:NetworkInterface" target="nid_storage-reliability-ontology:NetworkDevice">
+    <edge id="eid_rdfs:subClassOf145" source="nid_storage-reliability-ontology:NetworkInterface" target="nid_storage-reliability-ontology:NetworkDevice">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3807,7 +3796,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf147" source="nid_urn:absolute://local/storage-reliability-ontology#03Spin-UpTime" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf146" source="nid_urn:absolute://local/storage-reliability-ontology#03Spin-UpTime" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3818,7 +3807,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf148" source="nid_storage-reliability-ontology:HumanError" target="nid_storage-reliability-ontology:RiskFactor">
+    <edge id="eid_rdfs:subClassOf147" source="nid_storage-reliability-ontology:HumanError" target="nid_storage-reliability-ontology:RiskFactor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3829,7 +3818,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf149" source="nid_storage-reliability-ontology:Custom" target="nid_storage-reliability-ontology:Parameter">
+    <edge id="eid_rdfs:subClassOf148" source="nid_storage-reliability-ontology:Custom" target="nid_storage-reliability-ontology:Parameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3840,7 +3829,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf150" source="nid_storage-reliability-ontology:ProprietaryREST" target="nid_storage-reliability-ontology:Parameter">
+    <edge id="eid_rdfs:subClassOf149" source="nid_storage-reliability-ontology:ProprietaryREST" target="nid_storage-reliability-ontology:Parameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3863,7 +3852,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf151" source="nid_storage-reliability-ontology:UserError" target="nid_storage-reliability-ontology:HumanError">
+    <edge id="eid_rdfs:subClassOf150" source="nid_storage-reliability-ontology:UserError" target="nid_storage-reliability-ontology:HumanError">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3886,7 +3875,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf152" source="nid_storage-reliability-ontology:FanSpeed" target="nid_storage-reliability-ontology:ProprietaryREST">
+    <edge id="eid_rdfs:subClassOf151" source="nid_storage-reliability-ontology:FanSpeed" target="nid_storage-reliability-ontology:ProprietaryREST">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3909,7 +3898,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf153" source="nid_storage-reliability-ontology:TapeLibrary" target="nid_storage-reliability-ontology:DirectAttachedStorage">
+    <edge id="eid_rdfs:subClassOf152" source="nid_storage-reliability-ontology:TapeLibrary" target="nid_storage-reliability-ontology:DirectAttachedStorage">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3932,7 +3921,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf154" source="nid_storage-reliability-ontology:HeartbeatSignalLoss" target="nid_storage-reliability-ontology:ComponentFault">
+    <edge id="eid_rdfs:subClassOf153" source="nid_storage-reliability-ontology:HeartbeatSignalLoss" target="nid_storage-reliability-ontology:ComponentFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3955,7 +3944,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf155" source="nid_storage-reliability-ontology:AirTemperature" target="nid_storage-reliability-ontology:Ambience">
+    <edge id="eid_rdfs:subClassOf154" source="nid_storage-reliability-ontology:AirTemperature" target="nid_storage-reliability-ontology:Ambience">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -3978,7 +3967,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf156" source="nid_storage-reliability-ontology:UsedVolumeCapacityMB" target="nid_storage-reliability-ontology:ClusterSpecific">
+    <edge id="eid_rdfs:subClassOf155" source="nid_storage-reliability-ontology:UsedVolumeCapacityMB" target="nid_storage-reliability-ontology:ClusterSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4001,7 +3990,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf157" source="nid_storage-reliability-ontology:RxKB" target="nid_storage-reliability-ontology:NetworkEndPointSpecific">
+    <edge id="eid_rdfs:subClassOf156" source="nid_storage-reliability-ontology:RxKB" target="nid_storage-reliability-ontology:NetworkEndPointSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4012,7 +4001,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf158" source="nid_storage-reliability-ontology:Network" target="nid_storage-reliability-ontology:MacroComponent">
+    <edge id="eid_rdfs:subClassOf157" source="nid_storage-reliability-ontology:Network" target="nid_storage-reliability-ontology:MacroComponent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4035,7 +4024,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf159" source="nid_storage-reliability-ontology:TestParameter1-level1" target="nid_storage-reliability-ontology:TestParameter">
+    <edge id="eid_rdfs:subClassOf158" source="nid_storage-reliability-ontology:TestParameter1-level1" target="nid_storage-reliability-ontology:TestParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4058,7 +4047,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf160" source="nid_storage-reliability-ontology:MemoryFree" target="nid_storage-reliability-ontology:MemoryUsage">
+    <edge id="eid_rdfs:subClassOf159" source="nid_storage-reliability-ontology:MemoryFree" target="nid_storage-reliability-ontology:MemoryUsage">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4069,7 +4058,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf161" source="nid_storage-reliability-ontology:StorageDevice" target="nid_storage-reliability-ontology:Component">
+    <edge id="eid_rdfs:subClassOf160" source="nid_storage-reliability-ontology:StorageDevice" target="nid_storage-reliability-ontology:Component">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4092,7 +4081,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf162" source="nid_storage-reliability-ontology:ProtectionScheme" target="nid_storage-reliability-ontology:Service">
+    <edge id="eid_rdfs:subClassOf161" source="nid_storage-reliability-ontology:ProtectionScheme" target="nid_storage-reliability-ontology:Service">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4115,7 +4104,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf163" source="nid_storage-reliability-ontology:EndPoint" target="nid_storage-reliability-ontology:NetworkInterface">
+    <edge id="eid_rdfs:subClassOf162" source="nid_storage-reliability-ontology:EndPoint" target="nid_storage-reliability-ontology:NetworkInterface">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4138,7 +4127,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf164" source="nid_storage-reliability-ontology:LinkDown" target="nid_storage-reliability-ontology:ComponentSpecificFault">
+    <edge id="eid_rdfs:subClassOf163" source="nid_storage-reliability-ontology:LinkDown" target="nid_storage-reliability-ontology:ComponentSpecificFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4173,7 +4162,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf165" source="nid_storage-reliability-ontology:FileSystem" target="nid_storage-reliability-ontology:VirtualStorageSubsystem">
+    <edge id="eid_rdfs:subClassOf164" source="nid_storage-reliability-ontology:FileSystem" target="nid_storage-reliability-ontology:VirtualStorageSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4196,7 +4185,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf166" source="nid_storage-reliability-ontology:Warning" target="nid_storage-reliability-ontology:SystemHealthStatus">
+    <edge id="eid_rdfs:subClassOf165" source="nid_storage-reliability-ontology:Warning" target="nid_storage-reliability-ontology:SystemHealthStatus">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4219,7 +4208,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf167" source="nid_storage-reliability-ontology:TestParameter1-threshold" target="nid_storage-reliability-ontology:TestParameter1-level2">
+    <edge id="eid_rdfs:subClassOf166" source="nid_storage-reliability-ontology:TestParameter1-threshold" target="nid_storage-reliability-ontology:TestParameter1-level2">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4230,7 +4219,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf168" source="nid_storage-reliability-ontology:TestSubsystem" target="nid_storage-reliability-ontology:StorageSubsystem">
+    <edge id="eid_rdfs:subClassOf167" source="nid_storage-reliability-ontology:TestSubsystem" target="nid_storage-reliability-ontology:StorageSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4253,7 +4242,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf169" source="nid_urn:absolute://local/storage-reliability-ontology#12PowerCycleCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf168" source="nid_urn:absolute://local/storage-reliability-ontology#12PowerCycleCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4264,7 +4253,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf170" source="nid_storage-reliability-ontology:HDD" target="nid_storage-reliability-ontology:Disk">
+    <edge id="eid_rdfs:subClassOf169" source="nid_storage-reliability-ontology:HDD" target="nid_storage-reliability-ontology:Disk">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4287,7 +4276,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf171" source="nid_urn:absolute://local/storage-reliability-ontology#254FreeFallEventCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf170" source="nid_urn:absolute://local/storage-reliability-ontology#254FreeFallEventCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4310,7 +4299,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf172" source="nid_storage-reliability-ontology:TestComponentFailure3" target="nid_storage-reliability-ontology:TestComponentFault">
+    <edge id="eid_rdfs:subClassOf171" source="nid_storage-reliability-ontology:TestComponentFailure3" target="nid_storage-reliability-ontology:TestComponentFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4321,7 +4310,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf173" source="nid_storage-reliability-ontology:CPUUsage" target="nid_storage-reliability-ontology:CPUSpecific">
+    <edge id="eid_rdfs:subClassOf172" source="nid_storage-reliability-ontology:CPUUsage" target="nid_storage-reliability-ontology:CPUSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4344,7 +4333,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf174" source="nid_storage-reliability-ontology:MostRecentTempReading" target="nid_storage-reliability-ontology:SCSILogTemperature">
+    <edge id="eid_rdfs:subClassOf173" source="nid_storage-reliability-ontology:MostRecentTempReading" target="nid_storage-reliability-ontology:SCSILogTemperature">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4355,7 +4344,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf175" source="nid_storage-reliability-ontology:MostRecentTempReading" target="nid_storage-reliability-ontology:InformationalExceptionsLog">
+    <edge id="eid_rdfs:subClassOf174" source="nid_storage-reliability-ontology:MostRecentTempReading" target="nid_storage-reliability-ontology:InformationalExceptionsLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4378,7 +4367,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf176" source="nid_storage-reliability-ontology:TestComponentError3" target="nid_storage-reliability-ontology:TestComponentFault">
+    <edge id="eid_rdfs:subClassOf175" source="nid_storage-reliability-ontology:TestComponentError3" target="nid_storage-reliability-ontology:TestComponentFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4401,7 +4390,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf177" source="nid_urn:absolute://local/storage-reliability-ontology#10SpinRetryCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf176" source="nid_urn:absolute://local/storage-reliability-ontology#10SpinRetryCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4412,7 +4401,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf178" source="nid_storage-reliability-ontology:R_W_V_ErrCnt" target="nid_storage-reliability-ontology:SCSILogParameter">
+    <edge id="eid_rdfs:subClassOf177" source="nid_storage-reliability-ontology:R_W_V_ErrCnt" target="nid_storage-reliability-ontology:SCSILogParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4423,7 +4412,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf179" source="nid_storage-reliability-ontology:ClusterEntity" target="nid_storage-reliability-ontology:MacroComponent">
+    <edge id="eid_rdfs:subClassOf178" source="nid_storage-reliability-ontology:ClusterEntity" target="nid_storage-reliability-ontology:MacroComponent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4446,7 +4435,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf180" source="nid_storage-reliability-ontology:CPUTemperature" target="nid_storage-reliability-ontology:CPUSpecific">
+    <edge id="eid_rdfs:subClassOf179" source="nid_storage-reliability-ontology:CPUTemperature" target="nid_storage-reliability-ontology:CPUSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4469,7 +4458,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf181" source="nid_urn:absolute://local/storage-reliability-ontology#4AccumulatedStart-StopCycles" target="nid_storage-reliability-ontology:Start-StopCycleCntLog">
+    <edge id="eid_rdfs:subClassOf180" source="nid_urn:absolute://local/storage-reliability-ontology#4AccumulatedStart-StopCycles" target="nid_storage-reliability-ontology:Start-StopCycleCntLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4492,7 +4481,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf182" source="nid_storage-reliability-ontology:AckReceived" target="nid_storage-reliability-ontology:ReliabilityFactor">
+    <edge id="eid_rdfs:subClassOf181" source="nid_storage-reliability-ontology:AckReceived" target="nid_storage-reliability-ontology:ReliabilityFactor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4515,7 +4504,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf183" source="nid_storage-reliability-ontology:StorageVolume" target="nid_storage-reliability-ontology:VirtualStorageSubsystem">
+    <edge id="eid_rdfs:subClassOf182" source="nid_storage-reliability-ontology:StorageVolume" target="nid_storage-reliability-ontology:VirtualStorageSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4526,7 +4515,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf184" source="nid_storage-reliability-ontology:ClusterSpecific" target="nid_storage-reliability-ontology:ProprietaryREST">
+    <edge id="eid_rdfs:subClassOf183" source="nid_storage-reliability-ontology:ClusterSpecific" target="nid_storage-reliability-ontology:ProprietaryREST">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4549,7 +4538,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf185" source="nid_storage-reliability-ontology:HDDWearout" target="nid_storage-reliability-ontology:ComponentSpecificFault">
+    <edge id="eid_rdfs:subClassOf184" source="nid_storage-reliability-ontology:HDDWearout" target="nid_storage-reliability-ontology:ComponentSpecificFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4572,7 +4561,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf186" source="nid_urn:absolute://local/storage-reliability-ontology#190AirflowTemperature" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf185" source="nid_urn:absolute://local/storage-reliability-ontology#190AirflowTemperature" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4583,7 +4572,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf187" source="nid_urn:absolute://local/storage-reliability-ontology#190AirflowTemperature" target="nid_storage-reliability-ontology:PhysicalDiskParameter">
+    <edge id="eid_rdfs:subClassOf186" source="nid_urn:absolute://local/storage-reliability-ontology#190AirflowTemperature" target="nid_storage-reliability-ontology:PhysicalDiskParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4606,7 +4595,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf188" source="nid_storage-reliability-ontology:AverageQueueSize" target="nid_storage-reliability-ontology:VolumeSpecific">
+    <edge id="eid_rdfs:subClassOf187" source="nid_storage-reliability-ontology:AverageQueueSize" target="nid_storage-reliability-ontology:VolumeSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4629,7 +4618,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf189" source="nid_storage-reliability-ontology:HardwareRAIDArray" target="nid_storage-reliability-ontology:DiskSubsystem">
+    <edge id="eid_rdfs:subClassOf188" source="nid_storage-reliability-ontology:HardwareRAIDArray" target="nid_storage-reliability-ontology:DiskSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4652,7 +4641,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf190" source="nid_storage-reliability-ontology:PerformanceParameter" target="nid_storage-reliability-ontology:Parameter">
+    <edge id="eid_rdfs:subClassOf189" source="nid_storage-reliability-ontology:PerformanceParameter" target="nid_storage-reliability-ontology:Parameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4675,7 +4664,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf191" source="nid_storage-reliability-ontology:TestAggregateSubsystem-level2" target="nid_storage-reliability-ontology:TestAggregateSubsystem-level1">
+    <edge id="eid_rdfs:subClassOf190" source="nid_storage-reliability-ontology:TestAggregateSubsystem-level2" target="nid_storage-reliability-ontology:TestAggregateSubsystem-level1">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4686,7 +4675,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf192" source="nid_storage-reliability-ontology:InternalManagementNetwork" target="nid_storage-reliability-ontology:Network">
+    <edge id="eid_rdfs:subClassOf191" source="nid_storage-reliability-ontology:InternalManagementNetwork" target="nid_storage-reliability-ontology:Network">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4709,7 +4698,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf193" source="nid_urn:absolute://local/storage-reliability-ontology#02ThroughputPerformance" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf192" source="nid_urn:absolute://local/storage-reliability-ontology#02ThroughputPerformance" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4720,7 +4709,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf194" source="nid_storage-reliability-ontology:SMART" target="nid_storage-reliability-ontology:DiskParameter">
+    <edge id="eid_rdfs:subClassOf193" source="nid_storage-reliability-ontology:SMART" target="nid_storage-reliability-ontology:DiskParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4743,7 +4732,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf195" source="nid_urn:absolute://local/storage-reliability-ontology#6AccumulatedLoad-UnloadCycles" target="nid_storage-reliability-ontology:Start-StopCycleCntLog">
+    <edge id="eid_rdfs:subClassOf194" source="nid_urn:absolute://local/storage-reliability-ontology#6AccumulatedLoad-UnloadCycles" target="nid_storage-reliability-ontology:Start-StopCycleCntLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4766,7 +4755,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf196" source="nid_storage-reliability-ontology:TestAnotherComponent" target="nid_storage-reliability-ontology:TestComponent">
+    <edge id="eid_rdfs:subClassOf195" source="nid_storage-reliability-ontology:TestAnotherComponent" target="nid_storage-reliability-ontology:TestComponent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4789,7 +4778,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf197" source="nid_urn:absolute://local/storage-reliability-ontology#0ErrCorwoSubstDel" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
+    <edge id="eid_rdfs:subClassOf196" source="nid_urn:absolute://local/storage-reliability-ontology#0ErrCorwoSubstDel" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4812,7 +4801,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf198" source="nid_storage-reliability-ontology:TestSystemError3" target="nid_storage-reliability-ontology:TestSystemFault">
+    <edge id="eid_rdfs:subClassOf197" source="nid_storage-reliability-ontology:TestSystemError3" target="nid_storage-reliability-ontology:TestSystemFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4835,7 +4824,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf199" source="nid_urn:absolute://local/storage-reliability-ontology#191G-SensorShockCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf198" source="nid_urn:absolute://local/storage-reliability-ontology#191G-SensorShockCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4858,7 +4847,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf200" source="nid_storage-reliability-ontology:TestParameter22-level3" target="nid_storage-reliability-ontology:TestParameter2-level2">
+    <edge id="eid_rdfs:subClassOf199" source="nid_storage-reliability-ontology:TestParameter22-level3" target="nid_storage-reliability-ontology:TestParameter2-level2">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4881,7 +4870,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf201" source="nid_storage-reliability-ontology:UserLengthMB" target="nid_storage-reliability-ontology:ClusterSpecific">
+    <edge id="eid_rdfs:subClassOf200" source="nid_storage-reliability-ontology:UserLengthMB" target="nid_storage-reliability-ontology:ClusterSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4904,7 +4893,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf202" source="nid_storage-reliability-ontology:Non-RespondingState" target="nid_storage-reliability-ontology:ComponentFault">
+    <edge id="eid_rdfs:subClassOf201" source="nid_storage-reliability-ontology:Non-RespondingState" target="nid_storage-reliability-ontology:ComponentFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4927,7 +4916,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf203" source="nid_storage-reliability-ontology:SCSIDiskLoss" target="nid_storage-reliability-ontology:SCSIDiskFault">
+    <edge id="eid_rdfs:subClassOf202" source="nid_storage-reliability-ontology:SCSIDiskLoss" target="nid_storage-reliability-ontology:SCSIDiskFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4950,7 +4939,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf204" source="nid_storage-reliability-ontology:VendorHDATmpTripPoint" target="nid_storage-reliability-ontology:SCSILogTemperature">
+    <edge id="eid_rdfs:subClassOf203" source="nid_storage-reliability-ontology:VendorHDATmpTripPoint" target="nid_storage-reliability-ontology:SCSILogTemperature">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4961,7 +4950,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf205" source="nid_storage-reliability-ontology:VendorHDATmpTripPoint" target="nid_storage-reliability-ontology:InformationalExceptionsLog">
+    <edge id="eid_rdfs:subClassOf204" source="nid_storage-reliability-ontology:VendorHDATmpTripPoint" target="nid_storage-reliability-ontology:InformationalExceptionsLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -4996,7 +4985,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf206" source="nid_storage-reliability-ontology:EnterpriseStorageSystem" target="nid_storage-reliability-ontology:StorageSystem">
+    <edge id="eid_rdfs:subClassOf205" source="nid_storage-reliability-ontology:EnterpriseStorageSystem" target="nid_storage-reliability-ontology:StorageSystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5019,7 +5008,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf207" source="nid_urn:absolute://local/storage-reliability-ontology#192PowerOffRetractCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf206" source="nid_urn:absolute://local/storage-reliability-ontology#192PowerOffRetractCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5042,7 +5031,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf208" source="nid_urn:absolute://local/storage-reliability-ontology#187ReportedUncorrectedSectorCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf207" source="nid_urn:absolute://local/storage-reliability-ontology#187ReportedUncorrectedSectorCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5065,7 +5054,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf209" source="nid_storage-reliability-ontology:IdleUsage" target="nid_storage-reliability-ontology:CPUUsage">
+    <edge id="eid_rdfs:subClassOf208" source="nid_storage-reliability-ontology:IdleUsage" target="nid_storage-reliability-ontology:CPUUsage">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5076,7 +5065,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf210" source="nid_storage-reliability-ontology:TestComponent" target="nid_storage-reliability-ontology:Component">
+    <edge id="eid_rdfs:subClassOf209" source="nid_storage-reliability-ontology:TestComponent" target="nid_storage-reliability-ontology:Component">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5099,7 +5088,18 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf211" source="nid_storage-reliability-ontology:VolumeStatus" target="nid_storage-reliability-ontology:ClusterSpecific">
+    <edge id="eid_rdfs:subClassOf210" source="nid_storage-reliability-ontology:VolumeStatus" target="nid_storage-reliability-ontology:ClusterSpecific">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_rdfs:subClassOf211" source="nid_storage-reliability-ontology:ClientConnection" target="nid_storage-reliability-ontology:Network">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5394,6 +5394,29 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_storage-reliability-ontology:DualStorageNetwork">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="470.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">storage-reliability-ontology:DualStorageNetwork</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf228" source="nid_storage-reliability-ontology:DualStorageNetwork" target="nid_storage-reliability-ontology:Network">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_urn:absolute://local/storage-reliability-ontology#198OfflineUncorrectableSectorCount">
          <data key="d0">
             <y:ShapeNode>
@@ -5406,7 +5429,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf228" source="nid_urn:absolute://local/storage-reliability-ontology#198OfflineUncorrectableSectorCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf229" source="nid_urn:absolute://local/storage-reliability-ontology#198OfflineUncorrectableSectorCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5429,7 +5452,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf229" source="nid_storage-reliability-ontology:Self-TestResults" target="nid_storage-reliability-ontology:SCSILogParameter">
+    <edge id="eid_rdfs:subClassOf230" source="nid_storage-reliability-ontology:Self-TestResults" target="nid_storage-reliability-ontology:SCSILogParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5452,7 +5475,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf230" source="nid_storage-reliability-ontology:FibreChannelController" target="nid_storage-reliability-ontology:NetworkInterfaceCard">
+    <edge id="eid_rdfs:subClassOf231" source="nid_storage-reliability-ontology:FibreChannelController" target="nid_storage-reliability-ontology:NetworkInterfaceCard">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5463,7 +5486,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf231" source="nid_storage-reliability-ontology:SASPhyLog" target="nid_storage-reliability-ontology:Protocol-SpecificPort">
+    <edge id="eid_rdfs:subClassOf232" source="nid_storage-reliability-ontology:SASPhyLog" target="nid_storage-reliability-ontology:Protocol-SpecificPort">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5474,7 +5497,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf232" source="nid_storage-reliability-ontology:DASInterface" target="nid_storage-reliability-ontology:NetworkInterface">
+    <edge id="eid_rdfs:subClassOf233" source="nid_storage-reliability-ontology:DASInterface" target="nid_storage-reliability-ontology:NetworkInterface">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5497,7 +5520,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf233" source="nid_urn:absolute://local/storage-reliability-ontology#202DataAddressMarkError" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf234" source="nid_urn:absolute://local/storage-reliability-ontology#202DataAddressMarkError" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5520,7 +5543,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf234" source="nid_storage-reliability-ontology:Vibration" target="nid_storage-reliability-ontology:Ambience">
+    <edge id="eid_rdfs:subClassOf235" source="nid_storage-reliability-ontology:Vibration" target="nid_storage-reliability-ontology:Ambience">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5543,7 +5566,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf235" source="nid_storage-reliability-ontology:ReadRequestMeanTime" target="nid_storage-reliability-ontology:VolumeSpecific">
+    <edge id="eid_rdfs:subClassOf236" source="nid_storage-reliability-ontology:ReadRequestMeanTime" target="nid_storage-reliability-ontology:VolumeSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5554,7 +5577,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf236" source="nid_storage-reliability-ontology:ReadRequestMeanTime" target="nid_storage-reliability-ontology:PerformanceParameter">
+    <edge id="eid_rdfs:subClassOf237" source="nid_storage-reliability-ontology:ReadRequestMeanTime" target="nid_storage-reliability-ontology:PerformanceParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5577,7 +5600,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf237" source="nid_storage-reliability-ontology:UserAppCutoff" target="nid_storage-reliability-ontology:SystemFault">
+    <edge id="eid_rdfs:subClassOf238" source="nid_storage-reliability-ontology:UserAppCutoff" target="nid_storage-reliability-ontology:SystemFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5588,7 +5611,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf238" source="nid_storage-reliability-ontology:HBA" target="nid_storage-reliability-ontology:NetworkInterface">
+    <edge id="eid_rdfs:subClassOf239" source="nid_storage-reliability-ontology:HBA" target="nid_storage-reliability-ontology:NetworkInterface">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5611,7 +5634,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf239" source="nid_storage-reliability-ontology:TestComponentFailure1" target="nid_storage-reliability-ontology:TestComponentFault">
+    <edge id="eid_rdfs:subClassOf240" source="nid_storage-reliability-ontology:TestComponentFailure1" target="nid_storage-reliability-ontology:TestComponentFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5634,7 +5657,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf240" source="nid_storage-reliability-ontology:TestParameter2-threshold" target="nid_storage-reliability-ontology:TestParameter2-level2">
+    <edge id="eid_rdfs:subClassOf241" source="nid_storage-reliability-ontology:TestParameter2-threshold" target="nid_storage-reliability-ontology:TestParameter2-level2">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5645,7 +5668,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf241" source="nid_storage-reliability-ontology:DiskSubsystem" target="nid_storage-reliability-ontology:DirectAttachedStorage">
+    <edge id="eid_rdfs:subClassOf242" source="nid_storage-reliability-ontology:DiskSubsystem" target="nid_storage-reliability-ontology:DirectAttachedStorage">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5656,7 +5679,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf242" source="nid_storage-reliability-ontology:VirtualStorageSubsystem" target="nid_storage-reliability-ontology:VirtualSubsystem">
+    <edge id="eid_rdfs:subClassOf243" source="nid_storage-reliability-ontology:VirtualStorageSubsystem" target="nid_storage-reliability-ontology:VirtualSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5679,7 +5702,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf243" source="nid_storage-reliability-ontology:TestComponentError1" target="nid_storage-reliability-ontology:TestComponentFault">
+    <edge id="eid_rdfs:subClassOf244" source="nid_storage-reliability-ontology:TestComponentError1" target="nid_storage-reliability-ontology:TestComponentFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5702,7 +5725,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf244" source="nid_storage-reliability-ontology:AllocatedInTRAIDMB" target="nid_storage-reliability-ontology:ClusterSpecific">
+    <edge id="eid_rdfs:subClassOf245" source="nid_storage-reliability-ontology:AllocatedInTRAIDMB" target="nid_storage-reliability-ontology:ClusterSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5725,7 +5748,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf245" source="nid_urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
+    <edge id="eid_rdfs:subClassOf246" source="nid_urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5748,7 +5771,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf246" source="nid_storage-reliability-ontology:NaturalCatastrophy" target="nid_storage-reliability-ontology:EnvironmentFactor">
+    <edge id="eid_rdfs:subClassOf247" source="nid_storage-reliability-ontology:NaturalCatastrophy" target="nid_storage-reliability-ontology:EnvironmentFactor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5771,7 +5794,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf247" source="nid_storage-reliability-ontology:LossOfDWORDSyncCnt" target="nid_storage-reliability-ontology:SASPhyLog">
+    <edge id="eid_rdfs:subClassOf248" source="nid_storage-reliability-ontology:LossOfDWORDSyncCnt" target="nid_storage-reliability-ontology:SASPhyLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5794,7 +5817,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf248" source="nid_storage-reliability-ontology:RateOfPackageLoss" target="nid_storage-reliability-ontology:ReliabilityFactor">
+    <edge id="eid_rdfs:subClassOf249" source="nid_storage-reliability-ontology:RateOfPackageLoss" target="nid_storage-reliability-ontology:ReliabilityFactor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5805,7 +5828,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf249" source="nid_storage-reliability-ontology:TestComponent-level2" target="nid_storage-reliability-ontology:TestComponent-level1">
+    <edge id="eid_rdfs:subClassOf250" source="nid_storage-reliability-ontology:TestComponent-level2" target="nid_storage-reliability-ontology:TestComponent-level1">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5828,7 +5851,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf250" source="nid_storage-reliability-ontology:DRAMcache" target="nid_storage-reliability-ontology:CacheComponent">
+    <edge id="eid_rdfs:subClassOf251" source="nid_storage-reliability-ontology:DRAMcache" target="nid_storage-reliability-ontology:CacheComponent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5851,7 +5874,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf251" source="nid_urn:absolute://local/storage-reliability-ontology#2TotalRetries" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
+    <edge id="eid_rdfs:subClassOf252" source="nid_urn:absolute://local/storage-reliability-ontology#2TotalRetries" target="nid_storage-reliability-ontology:R_W_V_ErrCnt">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5874,7 +5897,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf252" source="nid_storage-reliability-ontology:AtmosphericPressure" target="nid_storage-reliability-ontology:Ambience">
+    <edge id="eid_rdfs:subClassOf253" source="nid_storage-reliability-ontology:AtmosphericPressure" target="nid_storage-reliability-ontology:Ambience">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5897,7 +5920,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf253" source="nid_storage-reliability-ontology:NetworkDown" target="nid_storage-reliability-ontology:SystemFault">
+    <edge id="eid_rdfs:subClassOf254" source="nid_storage-reliability-ontology:NetworkDown" target="nid_storage-reliability-ontology:SystemFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5920,7 +5943,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf254" source="nid_storage-reliability-ontology:OK" target="nid_storage-reliability-ontology:SystemHealthStatus">
+    <edge id="eid_rdfs:subClassOf255" source="nid_storage-reliability-ontology:OK" target="nid_storage-reliability-ontology:SystemHealthStatus">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5943,7 +5966,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf255" source="nid_storage-reliability-ontology:ClusterQuorumLoss" target="nid_storage-reliability-ontology:ClusterFault">
+    <edge id="eid_rdfs:subClassOf256" source="nid_storage-reliability-ontology:ClusterQuorumLoss" target="nid_storage-reliability-ontology:ClusterFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5966,7 +5989,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf256" source="nid_urn:absolute://local/storage-reliability-ontology#05ReallocatedSectorCount" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf257" source="nid_urn:absolute://local/storage-reliability-ontology#05ReallocatedSectorCount" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -5989,7 +6012,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf257" source="nid_storage-reliability-ontology:ReadOperationsRate" target="nid_storage-reliability-ontology:VolumeSpecific">
+    <edge id="eid_rdfs:subClassOf258" source="nid_storage-reliability-ontology:ReadOperationsRate" target="nid_storage-reliability-ontology:VolumeSpecific">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6000,7 +6023,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf258" source="nid_storage-reliability-ontology:IntelligentDiskSubsystem" target="nid_storage-reliability-ontology:DiskSubsystem">
+    <edge id="eid_rdfs:subClassOf259" source="nid_storage-reliability-ontology:IntelligentDiskSubsystem" target="nid_storage-reliability-ontology:DiskSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6023,7 +6046,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf259" source="nid_storage-reliability-ontology:SCSIPHYFault" target="nid_storage-reliability-ontology:SCSIDiskFault">
+    <edge id="eid_rdfs:subClassOf260" source="nid_storage-reliability-ontology:SCSIPHYFault" target="nid_storage-reliability-ontology:SCSIDiskFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6034,7 +6057,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf260" source="nid_storage-reliability-ontology:NetworkDevice" target="nid_storage-reliability-ontology:Component">
+    <edge id="eid_rdfs:subClassOf261" source="nid_storage-reliability-ontology:NetworkDevice" target="nid_storage-reliability-ontology:Component">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6045,7 +6068,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf261" source="nid_storage-reliability-ontology:SCSILogParameter" target="nid_storage-reliability-ontology:DiskParameter">
+    <edge id="eid_rdfs:subClassOf262" source="nid_storage-reliability-ontology:SCSILogParameter" target="nid_storage-reliability-ontology:DiskParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6068,7 +6091,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf262" source="nid_storage-reliability-ontology:Vulnurable" target="nid_storage-reliability-ontology:SystemHealthStatus">
+    <edge id="eid_rdfs:subClassOf263" source="nid_storage-reliability-ontology:Vulnurable" target="nid_storage-reliability-ontology:SystemHealthStatus">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6091,7 +6114,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf263" source="nid_storage-reliability-ontology:ClusterManagementFailure" target="nid_storage-reliability-ontology:ClusterFault">
+    <edge id="eid_rdfs:subClassOf264" source="nid_storage-reliability-ontology:ClusterManagementFailure" target="nid_storage-reliability-ontology:ClusterFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6114,7 +6137,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf264" source="nid_urn:absolute://local/storage-reliability-ontology#07SeekErrorRate" target="nid_storage-reliability-ontology:SMART">
+    <edge id="eid_rdfs:subClassOf265" source="nid_urn:absolute://local/storage-reliability-ontology#07SeekErrorRate" target="nid_storage-reliability-ontology:SMART">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6137,7 +6160,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf265" source="nid_storage-reliability-ontology:Software" target="nid_storage-reliability-ontology:VirtualSubsystem">
+    <edge id="eid_rdfs:subClassOf266" source="nid_storage-reliability-ontology:Software" target="nid_storage-reliability-ontology:VirtualSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6148,7 +6171,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf266" source="nid_storage-reliability-ontology:NetworkInterfaceCard" target="nid_storage-reliability-ontology:NetworkInterface">
+    <edge id="eid_rdfs:subClassOf267" source="nid_storage-reliability-ontology:NetworkInterfaceCard" target="nid_storage-reliability-ontology:NetworkInterface">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6171,7 +6194,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf267" source="nid_storage-reliability-ontology:TestSystemError1" target="nid_storage-reliability-ontology:TestSystemFault">
+    <edge id="eid_rdfs:subClassOf268" source="nid_storage-reliability-ontology:TestSystemError1" target="nid_storage-reliability-ontology:TestSystemFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6194,7 +6217,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf268" source="nid_storage-reliability-ontology:BackgroundScanStatus" target="nid_storage-reliability-ontology:SCSILogParameter">
+    <edge id="eid_rdfs:subClassOf269" source="nid_storage-reliability-ontology:BackgroundScanStatus" target="nid_storage-reliability-ontology:SCSILogParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6205,7 +6228,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf269" source="nid_storage-reliability-ontology:PhysicalDiskParameter" target="nid_storage-reliability-ontology:DiskParameter">
+    <edge id="eid_rdfs:subClassOf270" source="nid_storage-reliability-ontology:PhysicalDiskParameter" target="nid_storage-reliability-ontology:DiskParameter">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6228,7 +6251,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf270" source="nid_storage-reliability-ontology:NVMeNAND" target="nid_storage-reliability-ontology:CacheComponent">
+    <edge id="eid_rdfs:subClassOf271" source="nid_storage-reliability-ontology:NVMeNAND" target="nid_storage-reliability-ontology:CacheComponent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6239,7 +6262,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf271" source="nid_storage-reliability-ontology:TestParameter1-level2" target="nid_storage-reliability-ontology:TestParameter1-level1">
+    <edge id="eid_rdfs:subClassOf272" source="nid_storage-reliability-ontology:TestParameter1-level2" target="nid_storage-reliability-ontology:TestParameter1-level1">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6262,7 +6285,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf272" source="nid_storage-reliability-ontology:StorageProcessor" target="nid_storage-reliability-ontology:ProcessingDevice">
+    <edge id="eid_rdfs:subClassOf273" source="nid_storage-reliability-ontology:StorageProcessor" target="nid_storage-reliability-ontology:ProcessingDevice">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6285,7 +6308,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf273" source="nid_storage-reliability-ontology:PHYResetProblemCnt" target="nid_storage-reliability-ontology:SASPhyLog">
+    <edge id="eid_rdfs:subClassOf274" source="nid_storage-reliability-ontology:PHYResetProblemCnt" target="nid_storage-reliability-ontology:SASPhyLog">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6308,7 +6331,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf274" source="nid_storage-reliability-ontology:DeadmanTimer" target="nid_storage-reliability-ontology:ReliabilityFactor">
+    <edge id="eid_rdfs:subClassOf275" source="nid_storage-reliability-ontology:DeadmanTimer" target="nid_storage-reliability-ontology:ReliabilityFactor">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6331,7 +6354,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf275" source="nid_storage-reliability-ontology:DataVulnurability" target="nid_storage-reliability-ontology:SystemFault">
+    <edge id="eid_rdfs:subClassOf276" source="nid_storage-reliability-ontology:DataVulnurability" target="nid_storage-reliability-ontology:SystemFault">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6354,7 +6377,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf276" source="nid_storage-reliability-ontology:Fan" target="nid_storage-reliability-ontology:Component">
+    <edge id="eid_rdfs:subClassOf277" source="nid_storage-reliability-ontology:Fan" target="nid_storage-reliability-ontology:Component">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6377,7 +6400,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf277" source="nid_storage-reliability-ontology:StoragePool" target="nid_storage-reliability-ontology:VirtualStorageSubsystem">
+    <edge id="eid_rdfs:subClassOf278" source="nid_storage-reliability-ontology:StoragePool" target="nid_storage-reliability-ontology:VirtualStorageSubsystem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -6388,7 +6411,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf278" source="nid_storage-reliability-ontology:VolumeSpecific" target="nid_storage-reliability-ontology:ProprietaryREST">
+    <edge id="eid_rdfs:subClassOf279" source="nid_storage-reliability-ontology:VolumeSpecific" target="nid_storage-reliability-ontology:ProprietaryREST">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
