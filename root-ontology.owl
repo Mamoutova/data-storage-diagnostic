@@ -73,7 +73,14 @@
     <!-- urn:absolute://local/storage-reliability-ontology#depends_on -->
 
     <owl:ObjectProperty rdf:about="urn:absolute://local/storage-reliability-ontology#depends_on">
-        <rdfs:domain rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
+                    <rdf:Description rdf:about="urn:absolute://local/storage-reliability-ontology#StorageSystem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -546,6 +553,14 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#CacheStoragePool -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CacheStoragePool">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ServicePool"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#ClientAppNetwork -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ClientAppNetwork">
@@ -823,7 +838,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
-                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#Resource"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -988,6 +1003,14 @@
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#PowerSupplyUnit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#DiskSubsystemBreakdown -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DiskSubsystemBreakdown">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemFault"/>
     </owl:Class>
     
 
@@ -1197,7 +1220,13 @@
     <!-- urn:absolute://local/storage-reliability-ontology#FileSystem -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#FileSystem">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageVolume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1215,6 +1244,14 @@
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HBA">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#HBAFailure -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HBAFailure">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"/>
     </owl:Class>
     
 
@@ -1352,6 +1389,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CacheComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CacheStoragePool"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1543,6 +1586,15 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#MetaStoragePool -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#MetaStoragePool">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ServicePool"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">служебный пул для выполнения задач репликации, клонирования и создания снимков файловой системы (snapshot)</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#MostRecentTempReading -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#MostRecentTempReading">
@@ -1700,6 +1752,28 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#ObjectNamespace -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ObjectNamespace">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#FileSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#OperatingSystem -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#OperatingSystem">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualComponent"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#OperationalEnvironment -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment">
@@ -1833,6 +1907,15 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#ProtectedVolume -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ProtectedVolume">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Volume"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.ibm.com/support/knowledgecenter/SSESK4_6.1.2/com.ibm.storage.csm.help.doc/frg_c_protected_volumes.html</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#ProtectionScheme -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ProtectionScheme">
@@ -1938,7 +2021,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#RemoteMirroringDiskSubsystem -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#RemoteMirroringDiskSubsystem">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#IntelligentDiskSubsystem"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DirectAttachedStorage"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#majorly_depends_on"/>
@@ -1949,6 +2032,22 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#Network"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.ibm.com/support/knowledgecenter/STXKQY_5.0.1/com.ibm.spectrum.scale.v5r01.doc/bl1adv_dr.htm</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">удаленная репликация</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#Resource -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#Resource">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#Service"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2299,10 +2398,46 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#ServerBreakdown -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ServerBreakdown">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#Service -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#Service">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#MacroComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#ClusterEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#ServiceEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#ServiceEntity -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ServiceEntity">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#ServicePool -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ServicePool">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#StoragePool"/>
     </owl:Class>
     
 
@@ -2359,7 +2494,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#StoragePool -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#StoragePool">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#MacroComponent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on"/>
@@ -2387,7 +2522,19 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#ProtectionScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#StoragePool"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#Volume"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>https://www.ibm.com/support/knowledgecenter/en/STXKQY_4.2.3/com.ibm.spectrum.scale.v4r23.doc/bl1adv_storagepool.htm</rdfs:comment>
@@ -2462,7 +2609,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#StorageVolume -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#StorageVolume">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Volume"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#strongly_depends_on"/>
@@ -3258,18 +3405,18 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem -->
-
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"/>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute://local/storage-reliability-ontology#VirtualSubsystem -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#Volume -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#Volume">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Resource"/>
     </owl:Class>
     
 
