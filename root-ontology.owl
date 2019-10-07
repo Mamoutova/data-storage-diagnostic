@@ -51,6 +51,15 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#can_be_solved_by_or_with -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute://local/storage-reliability-ontology#can_be_solved_by_or_with">
+        <rdfs:domain rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdfs:range rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultManagementSolution"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#causes -->
 
     <owl:ObjectProperty rdf:about="urn:absolute://local/storage-reliability-ontology#causes">
@@ -174,6 +183,15 @@
         <rdfs:domain rdf:resource="urn:absolute://local/storage-reliability-ontology#Component"/>
         <rdfs:range rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentFault"/>
         <rdfs:label>manifests_in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#may_lead_to -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute://local/storage-reliability-ontology#may_lead_to">
+        <rdfs:domain rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <rdfs:range rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentFault"/>
     </owl:ObjectProperty>
     
 
@@ -316,6 +334,14 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#AccessValidationError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#AccessValidationError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ConditionValidationError"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#AckReceived -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#AckReceived">
@@ -385,6 +411,14 @@
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#AtmosphericPressure">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Ambience"/>
         <proprietaryTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atm_pressure</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#AtomicityError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#AtomicityError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SynchronizationError"/>
     </owl:Class>
     
 
@@ -520,6 +554,41 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#BoundaryConditionError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#BoundaryConditionError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ConditionValidationError"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#CPUOverload -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CPUOverload">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentFault"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CPUUsage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#InputNetworkPacketDropCounter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#ServiceStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Symptoms include processes with high CPU utilization percentages, input queue drops, slow performance, router services such as Telnet and ping are slow or fail to respond, or there are no routing updates. One of the causes of CPU overload in a router is high traffic. If some interfaces are regularly overloaded with traffic, consider redesigning the traffic flow in the network or upgrading the hardware.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#CPUSpecific -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CPUSpecific">
@@ -541,6 +610,60 @@
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CPUUsage">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#CPUSpecific"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#CableAttenuation -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CableAttenuation">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkComponentFault"/>
+        <rdfs:comment>Attenuation - Attenuation can be caused if a cable length exceeds the design limit for the media, or when there is a poor connection resulting from a loose cable or dirty or oxidized contacts. If attenuation is severe, the receiving device cannot always successfully distinguish the component bits of the stream from each other.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#CableExchange -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CableExchange">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultManagementSolution"/>
+        <rdfs:comment>When performing a physical inspection, look for damaged cables, improper cable types, and poorly crimped RJ-45s. Suspect cables should be tested or exchanged with a known functioning cable.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#CableFail -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CableFail">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkConnectionProblem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#ConnectivityLoss"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#CableReseating -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CableReseating">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultManagementSolution"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#CablingFault -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CablingFault">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkConnectionProblem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#can_be_solved_by_or_with"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CableExchange"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -675,10 +798,19 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#CodingFault -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CodingFault">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#OperatingSystemError"/>
+        <synonym>Programmer Error</synonym>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#CommunicationSWStackFailure -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#CommunicationSWStackFailure">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkComponentFault"/>
     </owl:Class>
     
 
@@ -692,8 +824,16 @@
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#BadHealth"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CPUOverload"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#Event"/>
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultManagementSolution"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#Parameter"/>
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSystem"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"/>
@@ -718,12 +858,46 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#ConditionValidationError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ConditionValidationError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#CodingFault"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#ConfigurationError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ConfigurationError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#AdministratorError"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#EmergentFault"/>
+        <rdfs:comment>These may result when software is adapted to new environments or from
+a failure to adhere to the security policy. Configuration errors consist of faults introduced after software has been developed and are faults introduced during the maintenance phase of the software life-cycle</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#ConfigurationParameter -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ConfigurationParameter">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Parameter"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#PerformanceParameter"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#ConnectivityLoss -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ConnectivityLoss">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkComponentFault"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#LinkIsUp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <synonym>Connectivity Loss</synonym>
     </owl:Class>
     
 
@@ -788,6 +962,14 @@
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DRAMcache">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#CacheComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#DamagedCable -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DamagedCable">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#CablingFault"/>
     </owl:Class>
     
 
@@ -895,6 +1077,15 @@
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DeadmanTimer">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#DevicePowerDown -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DevicePowerDown">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#HardwareFault"/>
+        <rdfs:comment>Power-related issues are the most fundamental reason for network failure. Also, check the operation of the fans, and ensure that the chassis intake and exhaust vents are clear. If other nearby units have also powered down, suspect a power failure at the main power supply.</rdfs:comment>
     </owl:Class>
     
 
@@ -1063,6 +1254,14 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#EmergentFault -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#EmergentFault">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#OperatingSystemError"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#EndPoint -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#EndPoint">
@@ -1070,7 +1269,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in"/>
-                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#LinkDown"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#ConnectivityLoss"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <proprietaryTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endpnt</proprietaryTerm>
@@ -1094,6 +1293,16 @@
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#DataPath"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#EnvironmentError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#EnvironmentError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#EmergentFault"/>
+        <rdfs:comment>These errors are dependent on the operational environment, which makes
+them difficult to detect. It is possible that these vulnerabilities manifest themselves only when the software is run on a particular machine, under a particular operating system, or a particular configuration.</rdfs:comment>
     </owl:Class>
     
 
@@ -1134,10 +1343,49 @@
     <!-- urn:absolute://local/storage-reliability-ontology#Event -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#Event">
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultManagementSolution"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#Parameter"/>
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSystem"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#ExceededDesignLimits -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ExceededDesignLimits">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentFault"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkInterfaceErrorRate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A component may be operating suboptimally at the physical layer because it is being utilized at a higher average rate than it is configured to operate. When troubleshooting this type of problem, it becomes evident that resources for the device are operating at or near the maximum capacity and there is an increase in the number of interface errors.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#ExceedinglyLongCable -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ExceedinglyLongCable">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#CablingFault"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CableAttenuation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#FailureToHandleExceptionalConditionError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#FailureToHandleExceptionalConditionError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#CodingFault"/>
     </owl:Class>
     
 
@@ -1209,6 +1457,18 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#FaultManagementSolution -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#FaultManagementSolution">
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#Parameter"/>
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSystem"/>
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#FibreChannelController -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#FibreChannelController">
@@ -1240,6 +1500,20 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#GroundingProblem -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#GroundingProblem">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#HardwareFault"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkTransmissionFault"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#HBA -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HBA">
@@ -1251,7 +1525,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#HBAFailure -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HBAFailure">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkComponentFault"/>
     </owl:Class>
     
 
@@ -1284,6 +1558,44 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#HardwareDesignError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HardwareDesignError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#HardwareFault"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#HardwareFailure -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HardwareFailure">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#HardwareFault"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#HardwareFault -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HardwareFault">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultInComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#HardwareMalfunction -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HardwareMalfunction">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#HardwareFault"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkTransmissionFault"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#HardwareRAIDArray -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HardwareRAIDArray">
@@ -1306,6 +1618,14 @@
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#RAIDController"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#HardwareUpgrade -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HardwareUpgrade">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultManagementSolution"/>
     </owl:Class>
     
 
@@ -1333,6 +1653,32 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#DeadmanTimer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#HighNetworkTraffic -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HighNetworkTraffic">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#can_be_solved_by_or_with"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#HardwareUpgrade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#can_be_solved_by_or_with"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#TopologyRedesign"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CPUOverload"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1373,10 +1719,34 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#ImproperCableType -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ImproperCableType">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#CablingFault"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#InformationalExceptionsLog -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#InformationalExceptionsLog">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSILogParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#InputNetworkPacketDropCounter -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#InputNetworkPacketDropCounter">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#PerformanceParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#InputValidationError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#InputValidationError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ConditionValidationError"/>
     </owl:Class>
     
 
@@ -1409,6 +1779,29 @@
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#RedundandStorageController"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#InterfaceConfigurationErrors -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#InterfaceConfigurationErrors">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#HardwareDesignError"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#ConnectivityLoss"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Many things can be misconfigured on an interface to cause it to go down, such as incorrect clock rate, incorrect clock source, and interface not being turned on. This causes a loss of connectivity with attached network segments.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#IntermittentConnectivityLoss -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#IntermittentConnectivityLoss">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkComponentFault"/>
     </owl:Class>
     
 
@@ -1494,20 +1887,6 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#LinkDown -->
-
-    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#LinkDown">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
-                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#LinkIsUp"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- urn:absolute://local/storage-reliability-ontology#LinkIsUp -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#LinkIsUp">
@@ -1519,6 +1898,32 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <proprietaryTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link_is_up</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#LooseConnection -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#LooseConnection">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkConnectionProblem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#can_be_solved_by_or_with"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CableReseating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CableAttenuation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#IntermittentConnectivityLoss"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1656,6 +2061,23 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#NetworkComponentFault -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#NetworkComponentFault">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#NetworkConnectionProblem -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#NetworkConnectionProblem">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultInComponent"/>
+        <rdfs:seeAlso>https://static-course-assets.s3.amazonaws.com/CN50ENU/module9/9.2.2.1/9.2.2.1.html</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#NetworkDevice -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#NetworkDevice">
@@ -1673,7 +2095,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#NetworkDeviceDegradation -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#NetworkDeviceDegradation">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentFault"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkComponentFault"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
@@ -1712,6 +2134,32 @@
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#NetworkInterfaceCard">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#NetworkInterfaceErrorRate -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#NetworkInterfaceErrorRate">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#PerformanceParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#NetworkTransmissionFault -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#NetworkTransmissionFault">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkComponentFault"/>
+        <rdfs:comment>Faulty network interface cards (NICs) can be the cause of network transmission errors due to late collisions, short frames, and jabber. Jabber is often defined as the condition in which a network device continually transmits random, meaningless data onto the network. Other likely causes of jabber are faulty or corrupt NIC driver files, bad cabling, or grounding problems.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#Noise -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#Noise">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment"/>
+        <rdfs:comment>Local electromagnetic interference (EMI) is commonly known as noise. Noise can be generated by many sources, such as FM radio stations, police radio, building security, and avionics for automated landing, crosstalk (noise induced by other cables in the same pathway or adjacent cables), nearby electric cables, devices with large electric motors, or anything that includes a transmitter more powerful than a cell phone.</rdfs:comment>
     </owl:Class>
     
 
@@ -1774,10 +2222,46 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#OperatingSystemError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#OperatingSystemError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SoftwareError"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#OperationalEnvironment -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#OperationalEnvironment">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#EnvironmentFactor"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#OriginValidationError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#OriginValidationError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ConditionValidationError"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#OxidizedConnection -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#OxidizedConnection">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#NetworkConnectionProblem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#CableAttenuation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#may_lead_to"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#IntermittentConnectivityLoss"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1807,6 +2291,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#Parameter -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#Parameter">
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#RiskFactor"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSystem"/>
         <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"/>
@@ -1842,6 +2327,14 @@
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#PhysicalDiskParameter">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DiskParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#PoorlyCrimpedConnection -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#PoorlyCrimpedConnection">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#CablingFault"/>
     </owl:Class>
     
 
@@ -1956,6 +2449,14 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#RaceConditionError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#RaceConditionError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SynchronizationError"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#RandomTestClass -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#RandomTestClass"/>
@@ -2057,10 +2558,13 @@
     <!-- urn:absolute://local/storage-reliability-ontology#RiskFactor -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#RiskFactor">
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSubsystem"/>
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#StorageSystem"/>
+        <owl:disjointWith rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://books.google.com.ua/books?id=Z0xRCgAAQBAJ</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isbn 978-0-470-74143-6</rdfs:seeAlso>
         <russianTerm>непредвиденное обстоятельство</russianTerm>
-        <synonym>Eventuality</synonym>
+        <synonym>Eventuality, threat</synonym>
     </owl:Class>
     
 
@@ -2398,6 +2902,14 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#SerializationError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SerializationError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SynchronizationError"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#ServerBreakdown -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ServerBreakdown">
@@ -2442,10 +2954,36 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#ServiceStatus -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#ServiceStatus">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#SoftError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SoftError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#HardwareFault"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#Software -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#Software">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#VirtualSubsystem"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#SoftwareError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SoftwareError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultInComponent"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T. Aslam, I. Krsul, and E. Spafford. Use of a taxonomy of security faults. 19th NISSC, 1996.
+https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/proceedings-of-the-19th-nissc-1996/documents/paper057/paper.pdf</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2617,6 +3155,14 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <proprietaryTerm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volume</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#SynchronizationError -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SynchronizationError">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#CodingFault"/>
     </owl:Class>
     
 
@@ -3302,6 +3848,14 @@
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#TopologyRedesign -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#TopologyRedesign">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultManagementSolution"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#TotalVolumeCapacityMB -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#TotalVolumeCapacityMB">
@@ -3962,14 +4516,6 @@
     
 
 
-    <!-- urn:absolute://local/storage-reliability-ontology#HW_error -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#HW_error">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultInComponent"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- urn:absolute://local/storage-reliability-ontology#ISO_IEC_14776_454_2018 -->
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#ISO_IEC_14776_454_2018"/>
@@ -3997,14 +4543,6 @@
 
     <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#SPM">
         <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#ControlPathService"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute://local/storage-reliability-ontology#SW_error -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#SW_error">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultInComponent"/>
     </owl:NamedIndividual>
     
 
@@ -4734,14 +5272,6 @@
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#ip-sp-0-2-525400a60478"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#sp-0-1-ec6"/>
         <consists_of rdf:resource="urn:absolute://local/storage-reliability-ontology#sp-0-2/qemu_virtio-net-pci00000006"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute://local/storage-reliability-ontology#programmer_error -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute://local/storage-reliability-ontology#programmer_error">
-        <rdf:type rdf:resource="urn:absolute://local/storage-reliability-ontology#FaultInComponent"/>
     </owl:NamedIndividual>
     
 
