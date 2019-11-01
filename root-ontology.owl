@@ -132,6 +132,7 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute://local/storage-reliability-ontology#if_fatal_manifests_in">
         <rdfs:subPropertyOf rdf:resource="urn:absolute://local/storage-reliability-ontology#manifests_in"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label>if_fatal_manifests_in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -150,6 +151,7 @@
 
     <owl:ObjectProperty rdf:about="urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in">
         <rdfs:subPropertyOf rdf:resource="urn:absolute://local/storage-reliability-ontology#manifests_in"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:label>if_warning_manifests_in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -158,6 +160,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#interprets_as -->
 
     <owl:ObjectProperty rdf:about="urn:absolute://local/storage-reliability-ontology#interprets_as">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute://local/storage-reliability-ontology#Event"/>
         <rdfs:range rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"/>
         <rdfs:label>interprets_as</rdfs:label>
@@ -187,6 +190,7 @@
     <!-- urn:absolute://local/storage-reliability-ontology#manifests_in -->
 
     <owl:ObjectProperty rdf:about="urn:absolute://local/storage-reliability-ontology#manifests_in">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="urn:absolute://local/storage-reliability-ontology#Component"/>
         <rdfs:range rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentFault"/>
         <rdfs:label>manifests_in</rdfs:label>
@@ -367,6 +371,25 @@
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#AccountingProblems">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#BindingDenied"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#AccumulatedPowerOnHours -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#AccumulatedPowerOnHours">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSILogParameter"/>
+        <proprietaryTerm>pwh</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#AccumulatedPowerOnMinutes -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#AccumulatedPowerOnMinutes">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#BackgroundScanLog"/>
+        <rdfs:comment>The ACCUMULATED POWER ON MINUTES field indicates the number of minutes the device server has been powered on since manufacturing</rdfs:comment>
+        <proprietaryTerm>pwm</proprietaryTerm>
     </owl:Class>
     
 
@@ -558,10 +581,18 @@ A problem at the application layer may cause users to complain that the network 
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#BackgroundScanLog -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#BackgroundScanLog">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSILogParameter"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#BackgroundScanStatus -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#BackgroundScanStatus">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSILogParameter"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#BackgroundScanLog"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_above"/>
@@ -1640,6 +1671,14 @@ a failure to adhere to the security policy. Configuration errors consist of faul
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#DiskModelName -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DiskModelName">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DiskParameter"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#DiskParameter -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DiskParameter">
@@ -1678,6 +1717,14 @@ a failure to adhere to the security policy. Configuration errors consist of faul
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DiskSubsystemBreakdown">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemFault"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#DiskVendorName -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DiskVendorName">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DiskParameter"/>
     </owl:Class>
     
 
@@ -2960,6 +3007,7 @@ them difficult to detect. It is possible that these vulnerabilities manifest the
                 <owl:allValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <proprietaryTerm>tmpm</proprietaryTerm>
     </owl:Class>
     
 
@@ -3211,6 +3259,12 @@ Note: DHCPv6 from an IPv6 client can be forwarded by the router using the ipv6 d
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#NetworkDown">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemFault"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#interprets_as"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#Warning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -5668,6 +5722,12 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#TestSystemAggrError-level2">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TestSystemAggrError"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#interprets_as"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#Fatal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -6080,6 +6140,20 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Errors corrected without substantial delay. An error correction was applied to get perfect data
+(a.k.a., ECC on-the-fly). “Without Substantial Delay” means the correction did not postpone reading
+of later sectors (e.g., a revolution was not lost). The counter is incremented once for each logical
+block that requires correction. Two different blocks corrected during the same command are
+counted as two events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#0RErrCorwoSubstDel -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#0RErrCorwoSubstDel">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#0ErrCorwoSubstDel"/>
+        <proprietaryTerm>r_ewod</proprietaryTerm>
     </owl:Class>
     
 
@@ -6094,6 +6168,25 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
                 <owl:allValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#1ReferenceTemperature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <proprietaryTerm>tmp</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#0VErrCorwoSubstDel -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#0VErrCorwoSubstDel">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#0ErrCorwoSubstDel"/>
+        <proprietaryTerm>v_ewod</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#0WErrCorwoSubstDel -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#0WErrCorwoSubstDel">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#0ErrCorwoSubstDel"/>
+        <proprietaryTerm>w_ewod</proprietaryTerm>
     </owl:Class>
     
 
@@ -6175,7 +6268,21 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <proprietaryTerm>diskErrors</proprietaryTerm>
+        <rdfs:comment>Errors corrected with possible delays. An error code or algorithm (e.g.,ECC, checksum) is applied
+in order to get perfect data with substantial delay. “With possible delay” means the correction took
+longer than a sector time so that reading/writing of subsequent sectors was delayed (e.g, a lost
+revolution). The counter is incremented once for each logical block that requires correction. A
+block with a double error that is correctable counts as one event and two different blocks corrected
+during the same command count as two events.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#1RErrCorwPosDel -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#1RErrCorwPosDel">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel"/>
+        <proprietaryTerm>r_ewd</proprietaryTerm>
     </owl:Class>
     
 
@@ -6184,6 +6291,24 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#1ReferenceTemperature">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureLog"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#1VErrCorwPosDel -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#1VErrCorwPosDel">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel"/>
+        <proprietaryTerm>v_ewd</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#1WErrCorwPosDel -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#1WErrCorwPosDel">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#1ErrCorwPosDel"/>
+        <proprietaryTerm>w_ewd</proprietaryTerm>
     </owl:Class>
     
 
@@ -6341,6 +6466,15 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#2RTotalRetries -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#2RTotalRetries">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#2TotalRetries"/>
+        <proprietaryTerm>r_ewr</proprietaryTerm>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#2TotalRetries -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#2TotalRetries">
@@ -6351,6 +6485,31 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Total (e.g., rewrites or rereads). This parameter code specifies the counter counting the number of
+errors that are corrected by applying retries. This counts errors recovered, not the number of
+retries. If five retries were required to recover one block of data, the counter increments by one,
+not five. The counter is incremented once for each logical block that is recovered using retries. If
+an error is not recoverable while applying retries and is recovered by ECC, it isn’t counted by this
+counter; it will be counted by the counter specified by parameter code 01h–Error Corrected With
+Possible Delay.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#2VTotalRetries -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#2VTotalRetries">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#2TotalRetries"/>
+        <proprietaryTerm>v_ewr</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#2WTotalRetries -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#2WTotalRetries">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#2TotalRetries"/>
+        <proprietaryTerm>w_ewr</proprietaryTerm>
     </owl:Class>
     
 
@@ -6416,6 +6575,16 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog"/>
+        <proprietaryTerm>sscm</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#3RTotalErrCor -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#3RTotalErrCor">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#3TotalErrCor"/>
+        <proprietaryTerm>r_et</proprietaryTerm>
     </owl:Class>
     
 
@@ -6430,6 +6599,28 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Total errors corrected. This counter counts the total of parameter code errors 00h, 01h, and 02h.
+There is to be no “double counting” of data errors among these three counters. The sum of all correctable
+errors can be reached by adding parameter code 01h and 02h errors, not by using this
+total.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#3VTotalErrCor -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#3VTotalErrCor">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#3TotalErrCor"/>
+        <proprietaryTerm>v_et</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#3WTotalErrCor -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#3WTotalErrCor">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#3TotalErrCor"/>
+        <proprietaryTerm>w_et</proprietaryTerm>
     </owl:Class>
     
 
@@ -6450,6 +6641,15 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <proprietaryTerm>ssc</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#4RTotalTCorAlgProc -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#4RTotalTCorAlgProc">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc"/>
     </owl:Class>
     
 
@@ -6464,7 +6664,29 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <proprietaryTerm></proprietaryTerm>
+        <rdfs:comment>Total times correction algorithm processed. This parameter code specifies the counter that counts
+the total number of retries, or “times the retry algorithm is invoked.” If after five attempts a counter
+02h type error is recovered, then five is added to this counter. If three retries are required to get a
+stable ECC syndrome before a counter 01h type error is corrected, then those three retries are
+also counted here. The number of retries applied to unsuccessfully recover an error (counter 06h
+type error) are also counted by this counter.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#4VTotalTCorAlgProc -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#4VTotalTCorAlgProc">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#4WTotalTCorAlgProc -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#4WTotalTCorAlgProc">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc"/>
+        <proprietaryTerm>w_cor</proprietaryTerm>
     </owl:Class>
     
 
@@ -6473,6 +6695,7 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog"/>
+        <proprietaryTerm>lucm</proprietaryTerm>
     </owl:Class>
     
 
@@ -6487,6 +6710,16 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
                 <owl:allValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <proprietaryTerm>luc</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#6RTotalUncorErr -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#6RTotalUncorErr">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#6TotalUncorErr"/>
+        <proprietaryTerm>r_eut</proprietaryTerm>
     </owl:Class>
     
 
@@ -6501,6 +6734,26 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Total uncorrected errors. This parameter code specifies the counter that contains the total number
+of blocks for which an uncorrected data error has occurred.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#6VTotalUncorErr -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#6VTotalUncorErr">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#6TotalUncorErr"/>
+        <proprietaryTerm>v_eut</proprietaryTerm>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#6WTotalUncorErr -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#6WTotalUncorErr">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#6TotalUncorErr"/>
+        <proprietaryTerm>w_eut</proprietaryTerm>
     </owl:Class>
     
 
