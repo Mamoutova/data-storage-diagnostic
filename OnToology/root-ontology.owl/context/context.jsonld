@@ -6,19 +6,55 @@
     "AverageRequestSize" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#AverageRequestSize"
     },
+    "TapeDrive" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#TapeDrive"
+    },
+    "WrongServiceFeatureDescription" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#WrongServiceFeatureDescription"
+    },
     "interprets_as" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#interprets_as",
       "@type" : "@id"
+    },
+    "DroppedFrames" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DroppedFrames"
+    },
+    "NetworkManagementSolution" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkManagementSolution"
     },
     "if_failed_causes" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#if_failed_causes",
       "@type" : "@id"
     },
+    "SpanningTreeMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SpanningTreeMisconfiguration"
+    },
     "NetworkEndPointSpecific" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkEndPointSpecific"
     },
+    "VErrCorwPosDel" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#1VErrCorwPosDel"
+    },
     "SCSILogParameter" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSILogParameter"
+    },
+    "VTotalRetries" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#2VTotalRetries"
+    },
+    "RangeExceeded" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RangeExceeded"
+    },
+    "BrokenCableConnector" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BrokenCableConnector"
+    },
+    "WrongMemoryReadResult" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#WrongMemoryReadResult"
+    },
+    "DirtyContacts" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DirtyContacts"
+    },
+    "WErrCorwoSubstDel" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#0WErrCorwoSubstDel"
     },
     "DiskSubsystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DiskSubsystem"
@@ -39,24 +75,60 @@
     "Battery" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Battery"
     },
+    "synonym" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#synonym"
+    },
+    "LineCodingErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LineCodingErrors"
+    },
+    "NetworkInterfaceUtilization" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterfaceUtilization"
+    },
     "SASHBA" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SASHBA"
+    },
+    "RouteFlapping" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RouteFlapping"
     },
     "ClusterSpecific" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterSpecific"
     },
+    "ServiceCompositionTimeOut" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceCompositionTimeOut"
+    },
     "Software" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Software"
+    },
+    "SerializationError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SerializationError"
+    },
+    "CableOpen" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CableOpen"
     },
     "TemperatureLog" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TemperatureLog"
     },
+    "InputQueueDrops" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#InputQueueDrops"
+    },
     "DiskEnclosureOffline" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DiskEnclosureOffline"
+    },
+    "WrongServiceFound" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#WrongServiceFound"
+    },
+    "DescribedServiceFeaturesMissing" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DescribedServiceFeaturesMissing"
     },
     "depends_with_ecc_on" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#depends_with_ecc_on",
       "@type" : "@id"
+    },
+    "InterfaceResetsStatistics" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#InterfaceResetsStatistics"
+    },
+    "SoftwareUpdate" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SoftwareUpdate"
     },
     "Humidity" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Humidity"
@@ -64,8 +136,17 @@
     "TestAggregateSubsystem-level1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestAggregateSubsystem-level1"
     },
+    "WrongSourceAndDestinationPorts" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#WrongSourceAndDestinationPorts"
+    },
     "TotalUncorErr" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#6TotalUncorErr"
+    },
+    "ChassisIntakeAndExhaustVentsUnclear" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ChassisIntakeAndExhaustVentsUnclear"
+    },
+    "BackupClient" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BackupClient"
     },
     "TestSubsystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem"
@@ -73,11 +154,17 @@
     "MemoryFree" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MemoryFree"
     },
+    "SynchronizationErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SynchronizationErrors"
+    },
     "DeadmanTimer" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DeadmanTimer"
     },
     "WriteRequestMeanTime" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#WriteRequestMeanTime"
+    },
+    "RealAndDocumentedTopologyMismatch" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RealAndDocumentedTopologyMismatch"
     },
     "ClusterFailure" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterFailure"
@@ -88,6 +175,9 @@
     "ReallocatedSectorCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#05ReallocatedSectorCount"
     },
+    "InsufficientServiceSecurity" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#InsufficientServiceSecurity"
+    },
     "protection_scheme_n" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#protection_scheme_n",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
@@ -97,6 +187,12 @@
     },
     "DRAMcache" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DRAMcache"
+    },
+    "SoftwareError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SoftwareError"
+    },
+    "LinkConfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LinkConfiguration"
     },
     "manifests_in" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#manifests_in",
@@ -111,12 +207,24 @@
     "TotalErrCor" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#3TotalErrCor"
     },
+    "ServerFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServerFault"
+    },
     "TestParameter" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter"
     },
     "majorly_depends_on" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#majorly_depends_on",
       "@type" : "@id"
+    },
+    "FaultyCompositionEngine" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FaultyCompositionEngine"
+    },
+    "ServiceCrashed" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceCrashed"
+    },
+    "NoServiceFound" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NoServiceFound"
     },
     "DataPath" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DataPath"
@@ -127,14 +235,20 @@
     "WriteOperationsRate" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#WriteOperationsRate"
     },
-    "LinkDown" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#LinkDown"
-    },
     "SolidStateMediaLog" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SolidStateMediaLog"
     },
     "TestComponentError1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError1"
+    },
+    "NetworkPerformanceLowerThanBaseline" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkPerformanceLowerThanBaseline"
+    },
+    "ServiceRestart" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceRestart"
+    },
+    "ServiceContentError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceContentError"
     },
     "ProprietaryREST" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ProprietaryREST"
@@ -148,8 +262,23 @@
     "SpindleVibrationFrequency" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SpindleVibrationFrequency"
     },
+    "ServiceExecutionFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceExecutionFault"
+    },
+    "ShortFrames" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ShortFrames"
+    },
+    "AccumulatedPowerOnHours" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AccumulatedPowerOnHours"
+    },
     "AttachedReason" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#AttachedReason"
+    },
+    "NetworkInterfaceErrorRate" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterfaceErrorRate"
+    },
+    "CablingFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CablingFault"
     },
     "VolumeState" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#VolumeState"
@@ -163,8 +292,8 @@
     "RiskFactor" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RiskFactor"
     },
-    "Thing" : {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "Volume" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Volume"
     },
     "DataAddressMarkError" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#202DataAddressMarkError"
@@ -172,8 +301,17 @@
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
+    "HardwareMalfunction" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HardwareMalfunction"
+    },
+    "BoundaryConditionError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BoundaryConditionError"
+    },
     "ReadRequestMeanTime" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ReadRequestMeanTime"
+    },
+    "VTotalUncorErr" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#6VTotalUncorErr"
     },
     "Non-MediumErrCnt" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Non-MediumErrCnt"
@@ -181,8 +319,8 @@
     "Fatal" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Fatal"
     },
-    "Tape" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#Tape"
+    "ApplyingACLToIncorrectTraffic" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ApplyingACLToIncorrectTraffic"
     },
     "FreeFallEventCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#254FreeFallEventCount"
@@ -190,17 +328,38 @@
     "RandomTestClass" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RandomTestClass"
     },
+    "TransportLayerProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#TransportLayerProblem"
+    },
+    "VTotalTCorAlgProc" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#4VTotalTCorAlgProc"
+    },
     "NaturalCatastrophy" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NaturalCatastrophy"
     },
+    "AccumulatedPowerOnMinutes" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AccumulatedPowerOnMinutes"
+    },
+    "FaultyNIC" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FaultyNIC"
+    },
+    "IncorrectSearchCriteria" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#IncorrectSearchCriteria"
+    },
     "NetworkInterfaceCard" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterfaceCard"
+    },
+    "LANSwitchPortMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LANSwitchPortMisconfiguration"
     },
     "BadHealth" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#BadHealth"
     },
     "AdditionalSenseCodeQualifier" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#AdditionalSenseCodeQualifier"
+    },
+    "ErroneousAddressesAndIPv4WildcardMask" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ErroneousAddressesAndIPv4WildcardMask"
     },
     "NVMeDisk" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NVMeDisk"
@@ -229,11 +388,20 @@
     "SCSIPHYFault" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIPHYFault"
     },
+    "NoValidComposition" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NoValidComposition"
+    },
     "DirectAttachedStorage" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DirectAttachedStorage"
     },
-    "SoftwareRAID" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#SoftwareRAID"
+    "ServiceDiscoveryTimeOut" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceDiscoveryTimeOut"
+    },
+    "ServiceDescriptionIncomplete" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceDescriptionIncomplete"
+    },
+    "WTotalUncorErr" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#6WTotalUncorErr"
     },
     "ReadOperationsRate" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ReadOperationsRate"
@@ -241,20 +409,53 @@
     "TestComponent-level2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level2"
     },
+    "IncorrectResult" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#IncorrectResult"
+    },
     "DataVulnurability" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DataVulnurability"
+    },
+    "LinkLoss" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LinkLoss"
+    },
+    "ServicePublishingFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServicePublishingFault"
+    },
+    "OperatingSystemError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#OperatingSystemError"
+    },
+    "CacheStoragePool" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CacheStoragePool"
+    },
+    "AccessValidationError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AccessValidationError"
     },
     "HeadFlyingHours" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#240HeadFlyingHours"
     },
+    "NetworkDeviceFailure" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDeviceFailure"
+    },
     "TestSystemError3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError3"
+    },
+    "TopologyRedesign" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#TopologyRedesign"
+    },
+    "DeviceReplacementAndServiceRestoration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DeviceReplacementAndServiceRestoration"
     },
     "RunningDisparityErrCnt" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RunningDisparityErrCnt"
     },
+    "DevicePowerDown" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DevicePowerDown"
+    },
     "MemoryUsed" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MemoryUsed"
+    },
+    "LostCarrierErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LostCarrierErrors"
     },
     "CurrentPendingSectorCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#197CurrentPendingSectorCount"
@@ -265,14 +466,38 @@
     "MacroComponent" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MacroComponent"
     },
+    "InputErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#InputErrors"
+    },
+    "PoorlyCrimpedConnection" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PoorlyCrimpedConnection"
+    },
     "TestComponentFault" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFault"
+    },
+    "InconsistentConfigurationOfSTPTimers" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#InconsistentConfigurationOfSTPTimers"
+    },
+    "RTotalErrCor" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#3RTotalErrCor"
+    },
+    "LowCapacityLink" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LowCapacityLink"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
+    "WrongLogicalStateInMemory" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#WrongLogicalStateInMemory"
+    },
+    "AuthorizationDenied" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AuthorizationDenied"
+    },
     "TestComponent" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent"
+    },
+    "RoutingProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RoutingProblem"
     },
     "SCSIDisk" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDisk"
@@ -283,14 +508,59 @@
     "ReportedUncorrectedSectorCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#187ReportedUncorrectedSectorCount"
     },
+    "HBAFailure" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HBAFailure"
+    },
+    "HardwareUpgrade" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HardwareUpgrade"
+    },
+    "BrokenCableAdapter" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BrokenCableAdapter"
+    },
+    "ServerBreakdown" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServerBreakdown"
+    },
+    "ExceedinglyLongCable" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ExceedinglyLongCable"
+    },
+    "InputValidationError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#InputValidationError"
+    },
     "TestComponentFailure3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure3"
+    },
+    "ServiceBindingFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceBindingFault"
+    },
+    "TapeFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#TapeFault"
     },
     "NetworkDeviceDegradation" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDeviceDegradation"
     },
+    "RouterMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RouterMisconfiguration"
+    },
+    "CableAttenuation" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CableAttenuation"
+    },
+    "RTotalRetries" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#2RTotalRetries"
+    },
+    "CableKink" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CableKink"
+    },
+    "DiskSubsystemBreakdown" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DiskSubsystemBreakdown"
+    },
+    "DamagedCable" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DamagedCable"
+    },
     "ClusterQuorumLoss" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterQuorumLoss"
+    },
+    "NetworkInterfaceFailure" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterfaceFailure"
     },
     "HeartbeatSignalLoss" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#HeartbeatSignalLoss"
@@ -307,14 +577,26 @@
     "TestRandomSubsystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestRandomSubsystem"
     },
+    "Router" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Router"
+    },
     "is_normal_when" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_when"
+    },
+    "BindingRelatedError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BindingRelatedError"
+    },
+    "ChronicFrameLoss" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ChronicFrameLoss"
     },
     "Redriver" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Redriver"
     },
     "TestParameter11-level3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter11-level3"
+    },
+    "STPLoop" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#STPLoop"
     },
     "is_normal" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal"
@@ -325,11 +607,17 @@
     "VendorHDATmpTripPoint" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint"
     },
+    "RaceConditionError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RaceConditionError"
+    },
     "Temperature" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#194Temperature"
+      "@id" : "urn:absolute://local/storage-reliability-ontology#0Temperature"
     },
     "StorageDevice" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageDevice"
+    },
+    "ConfigurationError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ConfigurationError"
     },
     "Event" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Event"
@@ -340,20 +628,38 @@
     "CacheComponent" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#CacheComponent"
     },
+    "ExceededDesignLimits" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ExceededDesignLimits"
+    },
     "FanFailure" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#FanFailure"
     },
     "ClusterManagementFailure" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterManagementFailure"
     },
+    "OxidizedConnection" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#OxidizedConnection"
+    },
     "SCSISSD" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSISSD"
+    },
+    "FaultyService" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FaultyService"
+    },
+    "AddressMappingErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AddressMappingErrors"
     },
     "FileSystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#FileSystem"
     },
+    "EncapsulationTypeMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#EncapsulationTypeMisconfiguration"
+    },
     "DynamicQuorum" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DynamicQuorum"
+    },
+    "ImproperCablePinout" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ImproperCablePinout"
     },
     "HardwareECCRecovered" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#195HardwareECCRecovered"
@@ -361,8 +667,23 @@
     "UserLengthMB" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#UserLengthMB"
     },
+    "NoKeepalives" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NoKeepalives"
+    },
     "End-to-EndError" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#184End-to-EndError"
+    },
+    "ClientConnection" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ClientConnection"
+    },
+    "ManagementAlarm" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ManagementAlarm"
+    },
+    "LineProtocolDownMessage" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LineProtocolDownMessage"
+    },
+    "ContractNotMet" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ContractNotMet"
     },
     "InvalidDWORDCnt" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#InvalidDWORDCnt"
@@ -370,11 +691,33 @@
     "HDD" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#HDD"
     },
-    "VirtualStorageSubsystem" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualStorageSubsystem"
+    "ServiceNotListedInLookupService" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceNotListedInLookupService"
     },
     "TestSystemFail1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail1"
+    },
+    "RouterConsoleMessage" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RouterConsoleMessage"
+    },
+    "FramingErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FramingErrors"
+    },
+    "can_be_solved_by_or_with" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#can_be_solved_by_or_with",
+      "@type" : "@id"
+    },
+    "RequiredResourceMissing" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RequiredResourceMissing"
+    },
+    "russianTerm" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#russianTerm"
+    },
+    "OutputErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#OutputErrors"
+    },
+    "FailureToHandleExceptionalConditionError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FailureToHandleExceptionalConditionError"
     },
     "RateOfPackageLoss" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RateOfPackageLoss"
@@ -382,11 +725,29 @@
     "OfflineUncorrectableSectorCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#198OfflineUncorrectableSectorCount"
     },
+    "NetworkErrorCounter" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkErrorCounter"
+    },
     "UnloadCycleCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#193Load/UnloadCycleCount"
     },
+    "EncapsulationProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#EncapsulationProblem"
+    },
+    "Jabber" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Jabber"
+    },
     "TestParameter1-level2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level2"
+    },
+    "RErrCorwoSubstDel" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#0RErrCorwoSubstDel"
+    },
+    "LooseCableConnection" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LooseCableConnection"
+    },
+    "ServiceServerIncompatible" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceServerIncompatible"
     },
     "TestSubsystem1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem1"
@@ -394,31 +755,61 @@
     "ComponentFault" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ComponentFault"
     },
+    "DiskVendorName" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DiskVendorName"
+    },
     "G-SensorShockCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#191G-SensorShockCount"
     },
     "BackgroundScanStatus" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#BackgroundScanStatus"
     },
+    "NetworkInterfaceParameter" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterfaceParameter"
+    },
+    "HardwareFailure" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HardwareFailure"
+    },
     "HighFlyWrites" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#189HighFlyWrites"
+    },
+    "NetworkConnectionProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkConnectionProblem"
+    },
+    "ServiceFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceFault"
     },
     "protection_scheme_k" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#protection_scheme_k",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
+    "WTotalRetries" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#2WTotalRetries"
+    },
     "TestAggregateSubsystem-level2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestAggregateSubsystem-level2"
+    },
+    "PoorlyProgrammedApplication" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PoorlyProgrammedApplication"
     },
     "shows_in_parameter" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#shows_in_parameter",
       "@type" : "@id"
+    },
+    "RoutingLoop" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RoutingLoop"
+    },
+    "UnsuitableRouterOrSwitchConfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#UnsuitableRouterOrSwitchConfiguration"
     },
     "TestRandomComponent" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestRandomComponent"
     },
     "TestSystemError1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError1"
+    },
+    "AtomicityError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AtomicityError"
     },
     "TestSystemFail3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail3"
@@ -434,6 +825,9 @@
     },
     "StoragePool" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StoragePool"
+    },
+    "RequiredServiceNotExisting" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RequiredServiceNotExisting"
     },
     "TestParameter2-level1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level1"
@@ -451,6 +845,25 @@
     "TestParameter2-level2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level2"
     },
+    "may_lead_to" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#may_lead_to",
+      "@type" : "@id"
+    },
+    "BroadcastStatistics" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BroadcastStatistics"
+    },
+    "SpeedAndDuplexManualSetup" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SpeedAndDuplexManualSetup"
+    },
+    "BackupService" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BackupService"
+    },
+    "ServiceDescriptionMismatch" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceDescriptionMismatch"
+    },
+    "Alert" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Alert"
+    },
     "causes" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#causes",
       "@type" : "@id"
@@ -458,11 +871,17 @@
     "GLISTGrowthRate" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#GLISTGrowthRate"
     },
+    "BoundToWrongService" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BoundToWrongService"
+    },
     "Protocol-SpecificPort" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Protocol-SpecificPort"
     },
     "RemoteMirroringDiskSubsystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RemoteMirroringDiskSubsystem"
+    },
+    "ObjectOrientedSoftwareError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ObjectOrientedSoftwareError"
     },
     "consists_of" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#consists_of",
@@ -474,8 +893,23 @@
     "TestAnotherComponent" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestAnotherComponent"
     },
+    "DuplexNegotiationFail" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DuplexNegotiationFail"
+    },
+    "CISCONetworkInterfaceParameter" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CISCONetworkInterfaceParameter"
+    },
+    "ServiceDiscoveryFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceDiscoveryFault"
+    },
     "RxKB" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#RxKB"
+    },
+    "ConflictingContent" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ConflictingContent"
+    },
+    "ExcessiveBroadcast" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ExcessiveBroadcast"
     },
     "ConfigurationParameter" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ConfigurationParameter"
@@ -486,29 +920,65 @@
     "Warning" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Warning"
     },
+    "ServiceDescriptionError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceDescriptionError"
+    },
+    "DiscoveryRelatedError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DiscoveryRelatedError"
+    },
     "AverageQueueSize" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#AverageQueueSize"
     },
     "Spin-UpTime" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#03Spin-UpTime"
     },
+    "RedundandDescription" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RedundandDescription"
+    },
     "SCSIDiskFault" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskFault"
+    },
+    "WrongOrderOfAccessControlEntries" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#WrongOrderOfAccessControlEntries"
     },
     "TestParameter2-level3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter2-level3"
     },
-    "DataPathService" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#DataPathService"
+    "ServiceExecutionTimeOut" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceExecutionTimeOut"
+    },
+    "ServiceFormatError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceFormatError"
+    },
+    "NoFunctionalityOrConnectivityAtAboveLayers" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NoFunctionalityOrConnectivityAtAboveLayers"
     },
     "ProcessingDevice" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ProcessingDevice"
     },
+    "IgnoresStatistics" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#IgnoresStatistics"
+    },
+    "BindingDenied" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BindingDenied"
+    },
     "AtmosphericPressure" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#AtmosphericPressure"
     },
+    "ServiceStatus" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceStatus"
+    },
+    "EnvironmentError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#EnvironmentError"
+    },
     "ProprietaryPrivateNetwork" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ProprietaryPrivateNetwork"
+    },
+    "ProtectedVolume" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ProtectedVolume"
+    },
+    "DataLinkLayerProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DataLinkLayerProblem"
     },
     "MemoryUsage" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MemoryUsage"
@@ -516,14 +986,38 @@
     "Network" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Network"
     },
+    "CPUOverload" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CPUOverload"
+    },
     "PHYResetProblemCnt" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#PHYResetProblemCnt"
+    },
+    "Message" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Message"
+    },
+    "RTotalUncorErr" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#6RTotalUncorErr"
     },
     "InternalManagementNetwork" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#InternalManagementNetwork"
     },
+    "DiskModelName" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DiskModelName"
+    },
+    "SecurityAttack" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SecurityAttack"
+    },
+    "RTotalTCorAlgProc" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#4RTotalTCorAlgProc"
+    },
     "SCSIDiskSectorUnavailable" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskSectorUnavailable"
+    },
+    "CRCInputErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CRCInputErrors"
+    },
+    "VTotalErrCor" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#3VTotalErrCor"
     },
     "IdleUsage" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#IdleUsage"
@@ -546,6 +1040,9 @@
     "HumanError" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#HumanError"
     },
+    "AuthenticationFailed" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AuthenticationFailed"
+    },
     "HumanActionEnvironment" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#HumanActionEnvironment"
     },
@@ -555,14 +1052,32 @@
     "PerformanceParameter" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#PerformanceParameter"
     },
+    "NetworkLayerProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkLayerProblem"
+    },
+    "RouterFailure" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RouterFailure"
+    },
     "NumberOfSpin-UpTimes" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#04NumberOfSpin-UpTimes"
     },
     "TestComponent-level1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level1"
     },
+    "MediaTypeMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#MediaTypeMisconfiguration"
+    },
     "Parameter" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Parameter"
+    },
+    "IncorrectUseOfEstablishedKeyword" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#IncorrectUseOfEstablishedKeyword"
+    },
+    "CableReseating" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CableReseating"
+    },
+    "PoorlyConfiguredApplication" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PoorlyConfiguredApplication"
     },
     "ClusterEntity" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ClusterEntity"
@@ -576,15 +1091,30 @@
     "ThroughputPerformance" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#02ThroughputPerformance"
     },
+    "ConversationFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ConversationFault"
+    },
     "depends_on" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#depends_on",
       "@type" : "@id"
+    },
+    "RouterACLMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RouterACLMisconfiguration"
     },
     "RunOutCancel" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#203RunOutCancel"
     },
     "TestSystemError2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemError2"
+    },
+    "ImproperCableType" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ImproperCableType"
+    },
+    "TrapMessage" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#TrapMessage"
+    },
+    "DuplexMismatch" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DuplexMismatch"
     },
     "NetworkInterface" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterface"
@@ -601,14 +1131,29 @@
     "TestComponentError2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError2"
     },
+    "NetworkConnectionLoss" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkConnectionLoss"
+    },
     "StorageMacroComponent" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageMacroComponent"
+    },
+    "LooseConnectorScrews" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LooseConnectorScrews"
+    },
+    "RestartsStatistics" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#RestartsStatistics"
     },
     "EthernetSwitch" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#EthernetSwitch"
     },
     "Ambience" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Ambience"
+    },
+    "HighNetworkTraffic" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HighNetworkTraffic"
+    },
+    "TapeWearOut" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#TapeWearOut"
     },
     "SCSIDiskLoss" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskLoss"
@@ -617,11 +1162,20 @@
       "@id" : "urn:absolute://local/storage-reliability-ontology#structural",
       "@type" : "@id"
     },
+    "OutputQueueDrops" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#OutputQueueDrops"
+    },
     "PowerSupplyUnit" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#PowerSupplyUnit"
     },
     "AirflowTemperature" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#190AirflowTemperature"
+    },
+    "IncompatibleServiceComponents" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#IncompatibleServiceComponents"
+    },
+    "PhysicalCableProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PhysicalCableProblem"
     },
     "VirtualComponent" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#VirtualComponent"
@@ -636,31 +1190,59 @@
     "MostRecentTempReading" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MostRecentTempReading"
     },
+    "PortSpeedMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PortSpeedMisconfiguration"
+    },
+    "NetworkComponentFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkComponentFault"
+    },
     "TestComponentFailure1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentFailure1"
     },
     "CycleCountOverDeviceLifetime" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime"
     },
+    "PartsOfCompositionMissing" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PartsOfCompositionMissing"
+    },
     "FanSpeed" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#FanSpeed"
     },
-    "has_info_at" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#has_info_at",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    "ConfiguringIPv4HelperFeature" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ConfiguringIPv4HelperFeature"
     },
     "AccumulatedLoad-UnloadCycles" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#6AccumulatedLoad-UnloadCycles"
     },
-    "has_russian_term" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#has_russian_term",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    "RErrCorwPosDel" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#1RErrCorwPosDel"
+    },
+    "ConsoleErrorMessage" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ConsoleErrorMessage"
+    },
+    "FaultyLookupService" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FaultyLookupService"
     },
     "TxKB" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TxKB"
     },
+    "ServiceCompositionFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceCompositionFault"
+    },
+    "FaultyOrCorruptNICDriverFiles" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FaultyOrCorruptNICDriverFiles"
+    },
+    "GroundingProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#GroundingProblem"
+    },
+    "CompositionRelatedErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CompositionRelatedErrors"
+    },
     "EnterpriseStorageSystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#EnterpriseStorageSystem"
+    },
+    "NetworkTransmissionErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkTransmissionErrors"
     },
     "Disk" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Disk"
@@ -711,11 +1293,38 @@
     "ControlPath" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ControlPath"
     },
+    "BindingTimeOut" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BindingTimeOut"
+    },
     "TestParameter1-level1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestParameter1-level1"
     },
+    "AccountingProblems" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#AccountingProblems"
+    },
+    "CriteriaNotMet" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CriteriaNotMet"
+    },
+    "TapeFailure" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#TapeFailure"
+    },
+    "ProblemInterpretingIncomingFrames" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ProblemInterpretingIncomingFrames"
+    },
+    "LargeLayer2BroadcastDomain" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LargeLayer2BroadcastDomain"
+    },
+    "CablingProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CablingProblem"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
     "StorageSubsystem" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageSubsystem"
+    },
+    "CodingFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CodingFault"
     },
     "Component" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Component"
@@ -723,11 +1332,17 @@
     "ProprietaryRDMANetwork" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ProprietaryRDMANetwork"
     },
+    "BackupSubsystem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BackupSubsystem"
+    },
     "StorageVolume" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageVolume"
     },
     "PhysicalDiskParameter" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#PhysicalDiskParameter"
+    },
+    "OriginValidationError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#OriginValidationError"
     },
     "EnvironmentFactor" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#EnvironmentFactor"
@@ -742,11 +1357,20 @@
     "SeekTimePerformance" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#08SeekTimePerformance"
     },
+    "ImplicitDenyAll" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ImplicitDenyAll"
+    },
     "DataLoss" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DataLoss"
     },
     "EndPoint" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#EndPoint"
+    },
+    "FaultyComposition" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FaultyComposition"
+    },
+    "UnreachableOrUnusableResource" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#UnreachableOrUnusableResource"
     },
     "PowerUnitFailure" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#PowerUnitFailure"
@@ -754,24 +1378,32 @@
     "Fault" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Fault"
     },
-    "has_another_name" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#has_another_name",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "TestSubsystem2-level1" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSubsystem2-level1"
     },
     "Load-UnloadCountOverDeviceLifetime" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime"
     },
-    "ClientConnections" : {
-      "@id" : "urn:absolute://local/storage-reliability-ontology#ClientConnections"
+    "SWSynchronizationError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SWSynchronizationError"
+    },
+    "ConditionValidationError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ConditionValidationError"
     },
     "TestSystemFail2" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemFail2"
     },
+    "Resource" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Resource"
+    },
     "CPUUsage" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#CPUUsage"
+    },
+    "WTotalErrCor" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#3WTotalErrCor"
+    },
+    "DualStorageNetwork" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DualStorageNetwork"
     },
     "RawReadErrorRate" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#01RawReadErrorRate"
@@ -781,6 +1413,15 @@
     },
     "DiskShift" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#220DiskShift"
+    },
+    "EncapsulationErrors" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#EncapsulationErrors"
+    },
+    "VErrCorwoSubstDel" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#0VErrCorwoSubstDel"
+    },
+    "NativeVLANMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NativeVLANMisconfiguration"
     },
     "UserAppCutoff" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#UserAppCutoff"
@@ -794,11 +1435,17 @@
     "FibreChannelController" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#FibreChannelController"
     },
+    "PhysicalLayerProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PhysicalLayerProblem"
+    },
     "ControlPathService" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ControlPathService"
     },
     "StorageProcessorDataConnection" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessorDataConnection"
+    },
+    "BackupServer" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BackupServer"
     },
     "is_normal_above" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#is_normal_above",
@@ -822,11 +1469,17 @@
     "StorageProcessorConnectionCutoff" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessorConnectionCutoff"
     },
+    "MetaStoragePool" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#MetaStoragePool"
+    },
     "UltraDMACRCErrorCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#199UltraDMACRCErrorCount"
     },
     "SystemUsage" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SystemUsage"
+    },
+    "InappropriateHighBandwidthLinkUsage" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#InappropriateHighBandwidthLinkUsage"
     },
     "SoftReadErrorRate" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#201SoftReadErrorRate"
@@ -840,6 +1493,12 @@
     "SCSIDiskMediaExpectedDegradation" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SCSIDiskMediaExpectedDegradation"
     },
+    "SystemLog" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SystemLog"
+    },
+    "NetworkInterfaceConfigurationError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkInterfaceConfigurationError"
+    },
     "CalibrationRetryCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#11CalibrationRetryCount"
     },
@@ -850,17 +1509,53 @@
     "TestSystemAggrFail" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemAggrFail"
     },
+    "ExecutionRelatedError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ExecutionRelatedError"
+    },
     "TestComponent-level3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponent-level3"
     },
+    "ServerUnderpowered" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServerUnderpowered"
+    },
+    "HardwareDesignError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HardwareDesignError"
+    },
+    "WErrCorwPosDel" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#1WErrCorwPosDel"
+    },
+    "proprietaryTerm" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#proprietaryTerm"
+    },
+    "MemoryDeviceFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#MemoryDeviceFault"
+    },
     "TotalTCorAlgProc" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#4TotalTCorAlgProc"
+    },
+    "CableFail" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CableFail"
     },
     "NetworkDevice" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkDevice"
     },
     "CPUTemperature" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#CPUTemperature"
+    },
+    "BackgroundScanLog" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#BackgroundScanLog"
+    },
+    "IntermittentConnectivityLoss" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#IntermittentConnectivityLoss"
+    },
+    "InvalidARPReply" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#InvalidARPReply"
+    },
+    "SoftError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SoftError"
+    },
+    "CableNotProperlyShielded" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CableNotProperlyShielded"
     },
     "NVMeSCM" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NVMeSCM"
@@ -874,11 +1569,23 @@
     "VolumeStatus" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#VolumeStatus"
     },
+    "ServicePool" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServicePool"
+    },
     "StorageProcessor" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#StorageProcessor"
     },
     "ReallocatedEventCount" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#196ReallocatedEventCount"
+    },
+    "LateCollisions" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#LateCollisions"
+    },
+    "ServiceDescriptionIncorrect" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceDescriptionIncorrect"
+    },
+    "ServiceEntity" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceEntity"
     },
     "NVMeNAND" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#NVMeNAND"
@@ -886,11 +1593,35 @@
     "HardwareRAIDArray" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#HardwareRAIDArray"
     },
+    "ServiceOrientedArchitectureError" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceOrientedArchitectureError"
+    },
     "SASExpander" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SASExpander"
     },
+    "MicroprocessorDesignFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#MicroprocessorDesignFault"
+    },
+    "IncorrectInput" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#IncorrectInput"
+    },
+    "PortTrunkMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#PortTrunkMisconfiguration"
+    },
+    "FaultManagementSolution" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FaultManagementSolution"
+    },
     "MaxTemperature" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#MaxTemperature"
+    },
+    "WrongSelectionOfTransportLayerProtocol" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#WrongSelectionOfTransportLayerProtocol"
+    },
+    "ServiceDeploymentFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ServiceDeploymentFault"
+    },
+    "DuplexMisconfiguration" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#DuplexMisconfiguration"
     },
     "Self-TestResults" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Self-TestResults"
@@ -898,11 +1629,35 @@
     "LossOfDWORDSyncCnt" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#LossOfDWORDSyncCnt"
     },
+    "ObjectNamespace" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ObjectNamespace"
+    },
     "ErrCorwoSubstDel" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#0ErrCorwoSubstDel"
     },
+    "NetworkCongestion" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NetworkCongestion"
+    },
     "SystemHealthStatus" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#SystemHealthStatus"
+    },
+    "WTotalTCorAlgProc" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#4WTotalTCorAlgProc"
+    },
+    "OperatingSystem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#OperatingSystem"
+    },
+    "CableExchange" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CableExchange"
+    },
+    "HardwareFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#HardwareFault"
+    },
+    "ApplicationLayerProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#ApplicationLayerProblem"
+    },
+    "InconsistentContent" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#InconsistentContent"
     },
     "protection_scheme_property" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#protection_scheme_property"
@@ -922,23 +1677,47 @@
     "LinkIsUp" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#LinkIsUp"
     },
+    "OverrunsStatistics" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#OverrunsStatistics"
+    },
     "TestSystemAggrError" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestSystemAggrError"
     },
     "DataPathNetwork" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#DataPathNetwork"
     },
+    "FramingProblem" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#FramingProblem"
+    },
     "CommunicationSWStackFailure" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#CommunicationSWStackFailure"
+    },
+    "EmergentFault" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#EmergentFault"
+    },
+    "NATIssues" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#NATIssues"
     },
     "Start-StopCycleCntLog" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#Start-StopCycleCntLog"
     },
+    "IncorrectChannelSettings" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#IncorrectChannelSettings"
+    },
+    "CSULineClockIncorrectlyConfigured" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#CSULineClockIncorrectlyConfigured"
+    },
     "TestComponentError3" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#TestComponentError3"
     },
+    "SharpBentCable" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#SharpBentCable"
+    },
     "ReliabilityFactor" : {
       "@id" : "urn:absolute://local/storage-reliability-ontology#ReliabilityFactor"
+    },
+    "Noise" : {
+      "@id" : "urn:absolute://local/storage-reliability-ontology#Noise"
     }
   }
 }
