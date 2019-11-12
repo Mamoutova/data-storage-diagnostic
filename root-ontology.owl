@@ -1671,6 +1671,14 @@ a failure to adhere to the security policy. Configuration errors consist of faul
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#DiskFault -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DiskFault">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"/>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#DiskModelName -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DiskModelName">
@@ -1717,6 +1725,14 @@ a failure to adhere to the security policy. Configuration errors consist of faul
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DiskSubsystemBreakdown">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SystemFault"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#DiskUtilizationActivityCharacteristic -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#DiskUtilizationActivityCharacteristic">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DiskParameter"/>
     </owl:Class>
     
 
@@ -2323,7 +2339,27 @@ them difficult to detect. It is possible that these vulnerabilities manifest the
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#HDDShortenedLife"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#if_warning_manifests_in"/>
                 <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#HDDWearout"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute://local/storage-reliability-ontology#HDDShortenedLife -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HDDShortenedLife">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DiskFault"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureDiskParameter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2333,7 +2369,7 @@ them difficult to detect. It is possible that these vulnerabilities manifest the
     <!-- urn:absolute://local/storage-reliability-ontology#HDDWearout -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#HDDWearout">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DiskFault"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
@@ -3001,13 +3037,21 @@ them difficult to detect. It is possible that these vulnerabilities manifest the
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#MaxTemperature">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#InformationalExceptionsLog"/>
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSILogTemperature"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureDiskParameter"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"/>
-                <owl:allValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <proprietaryTerm>tmpm</proprietaryTerm>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_below"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Maximum Temperature field is the maximum temperature in degrees Celsius measured and logged by the device. This parameter value
+never decreases. The parameter content of this field ranges from 00h to FFh.</rdfs:comment>
     </owl:Class>
     
 
@@ -3088,12 +3132,24 @@ them difficult to detect. It is possible that these vulnerabilities manifest the
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#MostRecentTempReading">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#InformationalExceptionsLog"/>
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSILogTemperature"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureDiskParameter"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"/>
-                <owl:allValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_below"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The MOST RECENT TEMPERATURE READING field indicates the temperature in degrees Celsius of the SCSI target device at the time
+the LOG SENSE command is performed. Temperatures equal to or less than zero degrees Celsius shall be indicated by a value of zero. If
+the device server is unable to detect a valid temperature because of a sensor failure or other condition, the value returned shall be FFh.
+The temperature should be reported with an accuracy of plus or minus three Celsius degrees while the device is operating at a steady
+state within the environmental limits specified for the device.</rdfs:comment>
     </owl:Class>
     
 
@@ -4318,7 +4374,7 @@ Routing table - Check the routing table for anything unexpected, such as missing
     <!-- urn:absolute://local/storage-reliability-ontology#SCSIDiskFault -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SCSIDiskFault">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#ComponentSpecificFault"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#DiskFault"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
@@ -4363,13 +4419,13 @@ Routing table - Check the routing table for anything unexpected, such as missing
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
-                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#MaxTemperature"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#shows_in_parameter"/>
-                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#PercentageUsedEnduranceIndicator"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureDiskParameter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4457,8 +4513,8 @@ Routing table - Check the routing table for anything unexpected, such as missing
     <!-- urn:absolute://local/storage-reliability-ontology#SCSILogTemperature -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#SCSILogTemperature">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#PhysicalDiskParameter"/>
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSILogParameter"/>
+        <rdfs:seeAlso>https://blog.codinghorror.com/hard-drive-temperatures-be-afraid/</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -5232,6 +5288,22 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
     
 
 
+    <!-- urn:absolute://local/storage-reliability-ontology#TemperatureDiskParameter -->
+
+    <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#TemperatureDiskParameter">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#PhysicalDiskParameter"/>
+        <rdfs:comment>valid research:
+1. Eduardo Pinheiro, Wolf-Dietrich Weber, and Luiz André Barroso. 2007. Failure trends in a large disk drive population. In Proceedings of the 5th USENIX conference on File and Storage Technologies (FAST &apos;07). USENIX Association, Berkeley, CA, USA, 2-2.
+https://static.googleusercontent.com/media/research.google.com/ru//archive/disk_failures.pdf
+
+2. DOI10.1145/0000000.0000000
+https://www.cs.virginia.edu/~gurumurthi/papers/acmtos13.pdf
+
+misleading info: https://www.backblaze.com/blog/hard-drive-temperature-does-it-matter/</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- urn:absolute://local/storage-reliability-ontology#TemperatureLog -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#TemperatureLog">
@@ -5972,6 +6044,8 @@ https://csrc.nist.gov/csrc/media/publications/conference-paper/1996/10/22/procee
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#VendorHDATmpTripPoint">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#InformationalExceptionsLog"/>
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SCSILogTemperature"/>
+        <rdfs:comment>This field indicates the drive HDA temperature, in degrees Celsius, at which the drive will post a status with Sense Key of RECOVERED
+ERROR or UNIT ATTENTION and ASC/ASCQ Warning—Specified Temperature Exceeded</rdfs:comment>
     </owl:Class>
     
 
@@ -6161,13 +6235,28 @@ counted as two events.</rdfs:comment>
     <!-- urn:absolute://local/storage-reliability-ontology#0Temperature -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#0Temperature">
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureDiskParameter"/>
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureLog"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"/>
-                <owl:allValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#1ReferenceTemperature"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#1ReferenceTemperature"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_below"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>TEMPERATURE field
+The TEMPERATURE field indicates the temperature of the SCSI target device in degrees Celsius at the time the LOG SENSE command
+is performed. Temperatures equal to or less than zero degrees Celsius shall cause the TEMPERATURE field to be set to zero. If the device
+server is unable to detect a valid temperature because of a sensor failure or other condition, then the TEMPERATURE field shall be set to
+FFh. The temperature should be reported with an accuracy of plus or minus three Celsius degrees while the SCSI target device is operating
+at a steady state within its environmental limits.
+No comparison is performed between the contents of the TEMPERATURE field and the contents of the optional REFERENCE TEMPERATURE
+field.</rdfs:comment>
         <proprietaryTerm>tmp</proprietaryTerm>
     </owl:Class>
     
@@ -6291,6 +6380,13 @@ during the same command count as two events.</rdfs:comment>
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#1ReferenceTemperature">
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureLog"/>
+        <owl:versionInfo>REFERENCE TEMPERATURE field
+The REFERENCE TEMPERATURE field indicates the maximum reported sensor temperature in degrees Celsius at which the SCSI target
+device is capable of operating continuously without degrading the SCSI target device&apos;s operation or reliability beyond manufacturer
+accepted limits. If the device server is unable to return a reference temperature and the optional Reference Temperature log parameter is
+included in the Temperature log page being returned, then REFERENCE TEMPERATURE field is set to FFh.
+The reference temperature may change for vendor specific reasons.</owl:versionInfo>
+        <proprietaryTerm>tmpm</proprietaryTerm>
     </owl:Class>
     
 
@@ -6382,8 +6478,8 @@ during the same command count as two events.</rdfs:comment>
     <!-- urn:absolute://local/storage-reliability-ontology#190AirflowTemperature -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#190AirflowTemperature">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#PhysicalDiskParameter"/>
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SMART"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureDiskParameter"/>
     </owl:Class>
     
 
@@ -6417,8 +6513,8 @@ during the same command count as two events.</rdfs:comment>
     <!-- urn:absolute://local/storage-reliability-ontology#194Temperature -->
 
     <owl:Class rdf:about="urn:absolute://local/storage-reliability-ontology#194Temperature">
-        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#PhysicalDiskParameter"/>
         <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#SMART"/>
+        <rdfs:subClassOf rdf:resource="urn:absolute://local/storage-reliability-ontology#TemperatureDiskParameter"/>
         <synonym>HDA temperature</synonym>
         <synonym>HDD temperature</synonym>
     </owl:Class>
@@ -6632,7 +6728,7 @@ total.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"/>
-                <owl:allValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#3CycleCountOverDeviceLifetime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6707,7 +6803,7 @@ type error) are also counted by this counter.</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="urn:absolute://local/storage-reliability-ontology#is_normal_with_threshold"/>
-                <owl:allValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute://local/storage-reliability-ontology#5Load-UnloadCountOverDeviceLifetime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <proprietaryTerm>luc</proprietaryTerm>
